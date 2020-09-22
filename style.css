@@ -51,3 +51,9 @@ p {
   font-family: "Italiana-regular";
   src: url("/Italiana-Regular.ttf");
 }
+
+@media screen and (max-width: 758px) {
+    body {
+        width: 95%;
+    }
+}
