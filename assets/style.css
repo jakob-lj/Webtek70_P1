@@ -16,7 +16,7 @@ body {
 
 header h4 {
   margin-bottom: 4px;
-  font-family: "Italiana-regular", "sans-serif";
+  font-family: "Italiana-regular", sans-serif;
 }
 
 section {
@@ -44,7 +44,7 @@ p {
 }
 
 #logo {
-  font-family: "Italiana-regular", "sans-serif";
+  font-family: "Italiana-regular", sans-serif;
 }
 
 @font-face {
