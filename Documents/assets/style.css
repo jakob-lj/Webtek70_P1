@@ -94,6 +94,13 @@ img.small {
 
 label {
   display: block;
+  margin: 2em;
+  margin-bottom: 3em;
+}
+
+section > h2,
+section > h3 {
+  margin-top: 4em;
 }
 
 .menu {
@@ -118,12 +125,14 @@ thead {
   border-bottom-width: 3px;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   padding: 2em;
 }
 
-th, td:first-child {
+th,
+td:first-child {
   font-weight: bold;
   font-size: 1.12em;
 }
@@ -134,7 +143,10 @@ tr {
   border-bottom: 1px solid black;
 }
 
-tr:nth-child(even), thead > tr {background-color: #f2f2f2;}
+tr:nth-child(even),
+thead > tr {
+  background-color: #f2f2f2;
+}
 
 tbody > tr:last-child {
   border: 0;
