@@ -56,6 +56,11 @@ p {
   font-size: 17px;
 }
 
+section > p {
+  text-align: justify;
+  line-height: 150%;
+}
+
 #logo {
   font-family: "Italiana-regular", sans-serif;
 }
@@ -80,8 +85,11 @@ p {
 
 img {
   max-width: 100%;
-  max-height: 300px;
   text-align: center;
+}
+
+img.small {
+  max-height: 300px;
 }
 
 label {
@@ -100,13 +108,36 @@ label {
   padding-right: 0.5em;
 }
 
-td {
-  border: 2px solid black;
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
 }
 
-.divider {
-  display: block;
-  height: 1.5em;
+thead {
+  border-bottom-width: 3px;
+}
+
+th, td {
+  text-align: left;
+  padding: 2em;
+}
+
+th, td:first-child {
+  font-weight: bold;
+  font-size: 1.12em;
+}
+
+tr {
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(even), thead > tr {background-color: #f2f2f2;}
+
+tbody > tr:last-child {
+  border: 0;
 }
 
 ul > li {
