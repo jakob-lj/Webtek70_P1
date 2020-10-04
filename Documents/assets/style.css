@@ -1,11 +1,13 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-header, section {
+header,
+section {
   background: #fefefe;
   width: 60%;
   margin: auto;
@@ -54,6 +56,11 @@ p {
   font-size: 17px;
 }
 
+section > p {
+  text-align: justify;
+  line-height: 150%;
+}
+
 #logo {
   font-family: "Italiana-regular", sans-serif;
 }
@@ -64,7 +71,87 @@ p {
 }
 
 @media screen and (max-width: 758px) {
-  header, section {
+  header,
+  section {
     width: 95%;
   }
+}
+
+.media-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  text-align: center;
+}
+
+img.small {
+  max-height: 300px;
+}
+
+label {
+  display: block;
+  margin: 2em;
+  margin-bottom: 3em;
+}
+
+section > h2,
+section > h3 {
+  margin-top: 4em;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 1em;
+}
+.menu li:before {
+  content: "-";
+  padding-right: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+thead {
+  border-bottom-width: 3px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 2em;
+}
+
+th,
+td:first-child {
+  font-weight: bold;
+  font-size: 1.12em;
+}
+
+tr {
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(even),
+thead > tr {
+  background-color: #f2f2f2;
+}
+
+tbody > tr:last-child {
+  border: 0;
+}
+
+ul > li {
+  margin: 1em;
 }
