@@ -70,13 +70,6 @@ section > p {
   src: url("Italiana-Regular.ttf");
 }
 
-@media screen and (max-width: 758px) {
-  header,
-  section {
-    width: 95%;
-  }
-}
-
 .media-wrapper {
   display: block;
   width: 100%;
@@ -154,4 +147,11 @@ tbody > tr:last-child {
 
 ul > li {
   margin: 1em;
+}
+
+@media screen and (max-width: 758px) {
+  header,
+  section {
+    width: 95%;
+  }
 }
