@@ -103,3 +103,12 @@ label {
 td {
   border: 2px solid black;
 }
+
+.divider {
+  display: block;
+  height: 1.5em;
+}
+
+ul > li {
+  margin: 1em;
+}
