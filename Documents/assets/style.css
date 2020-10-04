@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Italiana-regular";
+  src: url("Italiana-Regular.ttf");
+}
+
 html,
 body {
   margin: 0;
@@ -12,6 +17,13 @@ section {
   width: 60%;
   margin: auto;
   color: black;
+}
+
+@media screen and (max-width: 758px) {
+  header,
+  section {
+    width: 95%;
+  }
 }
 
 #divider {
@@ -63,18 +75,6 @@ section > p {
 
 #logo {
   font-family: "Italiana-regular", sans-serif;
-}
-
-@font-face {
-  font-family: "Italiana-regular";
-  src: url("Italiana-Regular.ttf");
-}
-
-@media screen and (max-width: 758px) {
-  header,
-  section {
-    width: 95%;
-  }
 }
 
 figure {
@@ -155,11 +155,4 @@ tbody > tr:last-child {
 
 ul > li {
   margin: 1em;
-}
-
-@media screen and (max-width: 758px) {
-  header,
-  section {
-    width: 95%;
-  }
 }
