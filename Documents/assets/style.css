@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Italiana-regular";
+  src: url("Italiana-Regular.ttf");
+}
+
 html,
 body {
   margin: 0;
@@ -71,15 +76,11 @@ section > p {
   font-family: "Italiana-regular", sans-serif;
 }
 
-@font-face {
-  font-family: "Italiana-regular";
-  src: url("Italiana-Regular.ttf");
-}
-
-.media-wrapper {
+figure {
   display: block;
   width: 100%;
   text-align: center;
+  margin: 0;
 }
 
 img {
@@ -91,7 +92,7 @@ img.small {
   max-height: 300px;
 }
 
-label {
+figcaption {
   display: block;
   margin: 2em;
   margin-bottom: 3em;
