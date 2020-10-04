@@ -155,3 +155,10 @@ tbody > tr:last-child {
 ul > li {
   margin: 1em;
 }
+
+@media screen and (max-width: 758px) {
+  header,
+  section {
+    width: 95%;
+  }
+}
