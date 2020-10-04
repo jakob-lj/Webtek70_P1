@@ -102,3 +102,8 @@ label {
   content: "-";
   padding-right: .5em;
 }
+
+
+td {
+  border: 2px solid black;
+}
