@@ -19,13 +19,6 @@ section {
   color: black;
 }
 
-@media screen and (max-width: 758px) {
-  header,
-  section {
-    width: 95%;
-  }
-}
-
 #divider {
   width: 100%;
   height: 1px;
@@ -60,8 +53,13 @@ h1 {
   font-size: 40px;
 }
 
-h2 {
-  font-size: 30px;
+section > h2,
+section > h3 {
+  margin-top: 4em;
+}
+
+section > h2:first-child {
+  margin-top: 2em;
 }
 
 p {
@@ -70,7 +68,8 @@ p {
 
 section > p {
   text-align: justify;
-  line-height: 150%;
+  line-height: 1.5;
+  overflow: scroll;
 }
 
 #logo {
@@ -99,10 +98,6 @@ figcaption {
   margin-bottom: 3em;
 }
 
-section > h2,
-section > h3 {
-  margin-top: 4em;
-}
 
 .menu {
   list-style-type: none;
@@ -155,4 +150,17 @@ tbody > tr:last-child {
 
 ul > li {
   margin: 1em;
+}
+
+@media screen and (max-width: 758px) {
+  header,
+  section {
+    width: 95%;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: scroll;
+  }
 }
