@@ -5,7 +5,9 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.content{
+.content {
+  width: 90%;
+  margin: 0 auto;
   background-color: #171e28;
 }
 
