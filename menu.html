@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <script src="./assets/info/items.js"></script>
-		<link rel="stylesheet" href="./assets/styles/menu.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./assets/styles/menu.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap"
+      rel="stylesheet"
+    />
     <script src="./assets/scripts/menu.js"></script>
   </head>
   <body onload="renderItems()">
@@ -18,7 +22,13 @@
                 <img id="dish_img" src="" />
                 <div id="order_ammount">
                   <label for="ammount">Antall: </label><br />
-                  <input name="ammount" type="number" min="0" max="10" value="0" />
+                  <input
+                    name="ammount"
+                    type="number"
+                    min="0"
+                    max="10"
+                    value="0"
+                  />
                 </div>
               </div>
               <div class="menu_text">
@@ -52,19 +62,35 @@
         </div>
       </div>
       <section class="orderSection">
-        <div class="orderButtonContainer">
-          <h3>Hvor vil du spise?</h3>
-          <button class="orderButton" aria-label="Spis her" >Spis her</button>
-          <button class="orderButton" aria-label="Bestill takeaway">Takeaway</button>
+        <div class="orderButtonContainer" id="order1">
+          <h2>Hvor vil du spise?</h2>
+          <button class="orderButton" aria-label="Spis her">Spis her</button>
+          <button class="orderButton" aria-label="Bestill takeaway">
+            Takeaway
+          </button>
         </div>
-        <div class="orderButtonContainer">
-          <h3>Samarbeidspartnere</h3> 
-          <button class="orderButton" aria-label="Bestill fra Foodora">Foodora</button>
-          <button class="orderButton" aria-label="Bestill fra Wolt">Wolt</button>
-        </div>
-        <div class="orderImagesContainer">
-          <img class="partnerLogo" src="./assets/images/foodora.png" alt="Foodora logo"/><br>
-          <img class="partnerLogo" src="./assets/images/wolt.png" alt="Wolt logo"/>
+        <div class="partnerContainer">
+          <div class="orderButtonContainer">
+            <h2>Samarbeidspartnere</h2>
+            <button class="orderButton" aria-label="Bestill fra Foodora">
+              Foodora
+            </button>
+            <button class="orderButton" aria-label="Bestill fra Wolt">
+              Wolt
+            </button>
+          </div>
+          <div class="orderImagesContainer">
+            <img
+              class="partnerLogo"
+              src="./assets/images/foodora.png"
+              alt="Foodora logo"
+            /><br />
+            <img
+              class="partnerLogo"
+              src="./assets/images/wolt.png"
+              alt="Wolt logo"
+            />
+          </div>
         </div>
       </section>
     </div>

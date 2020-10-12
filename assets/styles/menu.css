@@ -118,37 +118,72 @@ input[type="number"] {
 }
 
 .orderSection {
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 17%;
 }
 
 .orderButtonContainer {
-    display: grid;
-    grid-template-columns: 250px,250px;
-    max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.orderButtonContainer>h2{
+  margin-bottom: 12px;
+}
+
+.partnerContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-self: end;
 }
 
 .orderImagesContainer{
-    
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-self: flex-end;
 }
 
-.orderButton {
-  width: 250px;
-  height: 40px;
-  background-color: #171e28;
-  color:#d5c7ac;
-  border: 1px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 10px;
-  margin: 12px;
+.orderImages{
+  width: 200px;
 }
 
 .partnerLogo {
-  max-width: 100px;
+  max-width: 150px;
+  padding: 24px;
 }
 
-h3{
-    padding: 12px;
+@media only screen and (max-width: 683px) {
+  .partnerLogo{
+    max-width: 64px;
+    padding: 8px;
+    padding-bottom: 24px;
+  }
+}
+
+@media only screen and (max-width: 1140px){
+  #order1{
+    padding-right: 115px;
+  }
+  
+  #order1>button{
+    width: 450px;
+  }
+
+  .orderSection{
+    justify-content: center;
+    margin: 0 auto;
+  }
 }

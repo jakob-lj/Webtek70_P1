@@ -1,7 +1,16 @@
+
 body {
-  background: #171e28;
-  color: #E5E5E5;
+  background:  #E5E5E5;
+  color:#d5c7ac;
   font-family: Roboto, sans-serif;
+}
+
+.content{
+  background-color: #171e28;
+}
+
+h1 h2 h3 p {
+  color:#d5c7ac;
 }
 
 section {
@@ -12,14 +21,22 @@ section {
 }
 
 button {
-  width: 250px;
-  height: 40px;
+  font-size: 22pt;
+  padding: 4px;
+  width: 400px;
+  min-height: 64px;
   background-color: #171e28;
   color:#d5c7ac;
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 10px;
   margin: 12px;
+}
+
+button:hover{
+  background-color: #d5c7ac;
+  color: #000;
+  transition: .15s;
 }
 
 ul li a {
