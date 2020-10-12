@@ -38,6 +38,11 @@ section {
     background-image: url('../images/hero3.jpg');
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
 button {
     background-color: transparent;
     border: 2px solid #D5C7AC;
