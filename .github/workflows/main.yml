@@ -22,7 +22,7 @@ jobs:
       - name: ls -a via ssh
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: cd webtek && git pull
           host: ${{ secrets.HOST }}
           username: ubuntu
           passphrase: ${{ secrets.PASSPHRASE }}
