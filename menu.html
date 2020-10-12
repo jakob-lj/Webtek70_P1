@@ -61,35 +61,43 @@
           </div>
         </div>
       </div>
+
       <section class="orderSection">
-        <div class="orderButtonContainer" id="order1">
-          <h2>Hvor vil du spise?</h2>
-          <button class="orderButton" aria-label="Spis her">Spis her</button>
-          <button class="orderButton" aria-label="Bestill takeaway">
-            Takeaway
-          </button>
-        </div>
-        <div class="partnerContainer">
-          <div class="orderButtonContainer">
-            <h2>Samarbeidspartnere</h2>
-            <button class="orderButton" aria-label="Bestill fra Foodora">
-              Foodora
-            </button>
-            <button class="orderButton" aria-label="Bestill fra Wolt">
-              Wolt
+        <div class="processOrderContainer">
+          <div class="orderSummary">
+            <h2>Din ordre:</h2>
+            <h3>Antall retter: <span id="orderedDishes"></span></h3>
+            <h3>Sum: <span id="totalPrice"></span> ,-</h2>
+          </div>  
+          <div class="orderButtonContainer" id="order1">
+            <h2>Hvor vil du spise?</h2>
+            <button class="orderButton" aria-label="Spis her">Spis her</button>
+            <button class="orderButton" aria-label="Bestill takeaway">
+              Takeaway
             </button>
           </div>
-          <div class="orderImagesContainer">
-            <img
-              class="partnerLogo"
-              src="./assets/images/foodora.png"
-              alt="Foodora logo"
-            /><br />
-            <img
-              class="partnerLogo"
-              src="./assets/images/wolt.png"
-              alt="Wolt logo"
-            />
+          <div class="partnerContainer">
+            <div class="orderButtonContainer">
+              <h2>Samarbeidspartnere</h2>
+              <button class="orderButton" aria-label="Bestill fra Foodora">
+                Foodora
+              </button>
+              <button class="orderButton" aria-label="Bestill fra Wolt">
+                Wolt
+              </button>
+            </div>
+            <div class="orderImagesContainer">
+              <img
+                class="partnerLogo"
+                src="./assets/images/foodora.png"
+                alt="Foodora logo"
+              /><br />
+              <img
+                class="partnerLogo"
+                src="./assets/images/wolt.png"
+                alt="Wolt logo"
+              />
+            </div>
           </div>
         </div>
       </section>

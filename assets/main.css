@@ -15,6 +15,18 @@ h1 h2 h3 p {
   color:#d5c7ac;
 }
 
+h1{
+  font-size: 26pt;
+}
+
+h2{
+  font-size: 24pt;
+}
+
+h3{
+  font-size: 22pt;
+}
+
 section {
   margin: auto;
   margin-top: 6em;
@@ -25,8 +37,8 @@ section {
 button {
   font-size: 22pt;
   padding: 4px;
-  width: 400px;
-  min-height: 64px;
+  width: 300px;
+  min-height: 48px;
   background-color: #171e28;
   color:#d5c7ac;
   border: 1px solid #ffffff;

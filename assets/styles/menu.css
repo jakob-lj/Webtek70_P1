@@ -33,12 +33,6 @@ h2 {
   justify-content: space-around;
 }
 
-.content {
-  width: 90%;
-  margin: 0 auto;
-  background-color: #171e28;
-}
-
 .dish_container {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -117,15 +111,29 @@ input[type="number"] {
   }
 }
 
+.orderSummary{
+  min-width: 300px;
+  text-align: start;
+  padding-left: 24px;
+  margin-right: 48px;
+}
+
 .orderSection {
-  width: 80%;
+  width: 85%;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+.processOrderContainer{
+  min-width: 600px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-left: 17%;
+  border: 2px dotted #d5c7ac ;
+  padding: 12px;
 }
 
 .orderButtonContainer {
@@ -144,7 +152,7 @@ input[type="number"] {
 .partnerContainer{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-self: end;
 }
@@ -167,7 +175,7 @@ input[type="number"] {
 
 @media only screen and (max-width: 683px) {
   .partnerLogo{
-    max-width: 64px;
+    max-width: 48px;
     padding: 8px;
     padding-bottom: 24px;
   }
@@ -177,13 +185,21 @@ input[type="number"] {
   #order1{
     padding-right: 115px;
   }
+
+  button{
+    max-width: 250px;
+  }
   
   #order1>button{
-    width: 450px;
+    width: 400px;
   }
 
   .orderSection{
     justify-content: center;
     margin: 0 auto;
+    padding-left: 100px;
+  }
+  .orderSummary{
+    max-width: 100px;
   }
 }
