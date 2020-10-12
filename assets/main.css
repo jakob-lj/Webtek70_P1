@@ -1,6 +1,6 @@
 body {
   background: #171e28;
-  color: white;
+  color: #E5E5E5;
   font-family: Roboto, sans-serif;
 }
 
@@ -9,6 +9,17 @@ section {
   margin-top: 6em;
   width: 50%;
   text-align: center;
+}
+
+button {
+  width: 250px;
+  height: 40px;
+  background-color: #171e28;
+  color:#d5c7ac;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 12px;
 }
 
 ul li a {
