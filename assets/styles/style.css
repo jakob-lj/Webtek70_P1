@@ -1,0 +1,47 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #171E28;
+}
+
+nav {
+    color: #D5C7AC;
+}
+
+section {
+    color: #D5C7AC;
+    margin: 40px;
+}
+
+.hero {
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero1 {
+    background-image: url('../images/hero1.jpg');
+}
+
+#hero2 {
+    background-image: url('../images/hero2.jpg');
+}
+
+#hero3 {
+    background-image: url('../images/hero3.jpg');
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid #D5C7AC;
+    color: #D5C7AC;
+    padding: 10px;
+    border-radius: 4px;
+}
