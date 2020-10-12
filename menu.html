@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./assets/info/items.js"></script>
+		<link rel="stylesheet" href="./assets/styles/menu.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet"> 
+    <script src="./assets/scripts/menu.js"></script>
+  </head>
+  <body onload="renderItems()">
+    <div class="content">
+      <img id="menu_poster" src="./assets/images/menu_poster.jpg" />
+      <div id="menu_container">
+        <div id="dishes_container">
+          <template id="dish_template">
+            <div class="dish_container">
+              <div class="img_container">
+                <img id="dish_img" src="" />
+                <div id="order_ammount">
+                  <label for="ammount">Antall: </label><br />
+                  <input name="ammount" type="number" min="0" max="10" value="0" />
+                </div>
+              </div>
+              <div class="menu_text">
+                <h2 id="item_name"></h2>
+                <p id="item_description"></p>
+                <p id="price"></p>
+              </div>
+            </div>
+          </template>
+          <div id="subsection_container1">
+            <h1>Meny</h1>
+            <div class="menu_subsection">
+              <h2>Antipasti</h2>
+              <div id="menu_antipasti"></div>
+            </div>
+            <div class="menu_subsection">
+              <h2>Paste</h2>
+              <div id="menu_paste"></div>
+            </div>
+            <div class="menu_subsection">
+              <h2>Dolci</h2>
+              <div id="menu_dolci"></div>
+            </div>
+          </div>
+          <div id="subsection_container2">
+            <div class="menu_subsection">
+              <h2 class="extra_padding">Pizze</h2>
+              <div id="menu_pizze"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
