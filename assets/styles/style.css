@@ -1,17 +1,29 @@
-html,body {
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+html,
+body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    border: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Playfair Display', serif;
     background-color: #171E28;
+    color: #D5C7AC;
+    border-left: 5vw solid #f3f3f3;
+    border-right: 5vw solid #f3f3f3;
 }
 
-nav {
+a,
+a:visited,
+a:hover {
     color: #D5C7AC;
+    text-decoration: none;
 }
+
+
+/* Content */
 
 section {
     color: #D5C7AC;
@@ -38,15 +50,33 @@ section {
     background-image: url('../images/hero3.jpg');
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
 button {
     background-color: transparent;
     border: 2px solid #D5C7AC;
     color: #D5C7AC;
     padding: 10px;
     border-radius: 4px;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #D5C7AC;
+}
+
+.footer-col {
+    margin: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+    }
 }
