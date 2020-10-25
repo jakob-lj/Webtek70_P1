@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #171E28;
+    color: #D5C7AC;
+    border-left: 5vw solid #f3f3f3;
+    border-right: 5vw solid #f3f3f3;
+}
+
+a,
+a:visited,
+a:hover {
+    color: #D5C7AC;
+    text-decoration: none;
+}
+
+fieldset{
+  width: 250px;
+}
+
+header{
+  background-color: #f3f3f3;
+  border-left: 5vw solid #f3f3f3;
+  border-right: 5vw solid #f3f3f3;
+}
+
+header img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content */
+
+section {
+    color: #D5C7AC;
+    margin: 40px;
+}
+
+/* Video */
+
+  #screen {
+    position: relative;
+  }
+
+  video {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+  }
+
+.hero {
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#hero1 {
+    background-image: url('../images/hero1.jpg');
+}
+
+#hero2 {
+    background-image: url('../images/hero2.jpg');
+}
+
+#hero3 {
+    background-image: url('../images/hero3.jpg');
+}
+
+#hero4{
+  background-image: url("../images/bilder/Rob_Italian.png");
+
+}
+
+#apple {
+  width: 50px;
+  padding-right: 10px;
+}
+
+#logo {
+  width: 140px;
+  padding-left: 20px;
+}
+
+#kontaktInfo{
+  list-style-type: none;
+}
+
+ul img {
+  width: 15px;
+}
+
+ul{
+  padding-left: 20px;
+  text-align: left;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #D5C7AC;
+    color: #D5C7AC;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 300px;
+}
+
+#bluebutton{
+  background-color: #152846;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+#bluebutton button{
+  border-color: #152846;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid #D5C7AC;
+}
+
+footer div p a{
+  color: #FF841E;
+}
+
+.footer-col {
+    margin: 20px;
+    margin-left: 50px;
+    text-align: center;
+    flex: 1;
+
+}
+
+@media (max-width: 800px) {
+    footer {
+        flex-direction: column;
+    }
+}
