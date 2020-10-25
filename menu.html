@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <script src="./assets/info/items.js"></script>
-		<link rel="stylesheet" href="./assets/styles/menu.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="./assets/styles/menu.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
     <script src="./assets/scripts/menu.js"></script>
   </head>
+
+  <header>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <nav></nav>
+    <img src="assets/images/bilder/PrietzeriaLOGO.png" width="500px" alt="">
+  </header>
+
   <body onload="renderItems()">
     <div class="content">
-      <img id="menu_poster" src="./assets/images/menu_poster.jpg" />
+      <img id="menu_poster" src="./assets/images/menu_poster.jpg"/>
       <div id="menu_container">
         <div id="dishes_container">
           <template id="dish_template">
@@ -52,5 +59,32 @@
         </div>
       </div>
     </div>
+    <section>
+    <button id="button" type="button" name="button" position="center">Informasjon om allergener</button>
+    </section>
+
+    <section>
+      <h1>Hvor vil du spise?</h1>
+      <button type="button" >Spis her</button><br>
+      <button type="button" >Takeaway</button>
+      <h1>Samarbeidspartnere</h1>
+      <button type="button" ><img src="./assets/images/bilder/meny/kisspng-foodora-pico-de-gallo-delivery-restaurant-5af9942b79b412.6476376415263058354985.png"   width="50px"> </button>
+      <button type="button" ><img src="./assets/images/bilder/meny/Wolt_Engawa.png" width="75px"></button>
+    </section>
+    <br><br>
+    <div class="hero" id="hero4"></div>
+    <br><br>
+
+    <footer>
+      <link rel="stylesheet" href="./assets/styles/style.css">
+        <div class="footer-col">
+        <p><a href="privacy.html">Personvernerklæring</a></p>
+        <p><a href="covid-19.html">Smittesporing</a></p>
+        <p>© 1970 Prietz AS // Webteknologi </p>
+        </div>
+        <div class="footer-col">
+      <button><img id="apple" src="./assets/images/bilder/apple_logo_PNG19692.png">Download on App Store</button>
+      <img id="logo" src="./assets/images/bilder/logo.png">
+    </footer>
   </body>
 </html>
