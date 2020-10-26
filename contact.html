@@ -11,6 +11,31 @@
       <nav></nav>
       <img src="assets/images/bilder/PrietzeriaLOGO.png" width="500px" alt="">
     </header>
+    <div class="footer-col flex">
+      <ul id="kontaktInfo">
+      </ul>
+      <div class="hamburger-container" onclick="toggleNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <nav id="navigation" class="hide" >
+        <ul class="nav-items">
+          <a href="index.html">
+            <li>Hjem</li>
+          </a>
+          <a href="menu.html">
+            <li>Meny</li>
+          </a>
+          <a href="reservations.html">
+            <li>Book Bord</li>
+          </a>
+          <a href="contact.html">
+            <li class="nav-active">Kontakt oss</li>
+          </a>
+        </ul>
+      </nav>
+    </div>
 
     <section>
       <h1>Kontakt oss</h1>
@@ -20,11 +45,14 @@
         +47 980 46 690 <br>
         <br>
         <li>E-postadresse: </li>
-        post@prietzeria.xyz <br>
+        <a href="mailto:post@prietzeria.xyz">
+        post@prietzeria.xyz <br></a>
         <br>
         <li>Adresse: </li>
+        <a target="_blank" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
         Kristianstenbakken 60 <br>
         7014 Trondheim <br>
+        </a>
       </p>
       <br>
       </ul>
@@ -32,13 +60,11 @@
 
       <section>
       <h1>KART</h1>
-      <img id="kart" src="./assets/images/bilder/kontakt oss/kart.png"/>
-
-      <style media="screen">
-        #kart {
-          width: 1200px;
-        }
-      </style>
+      <iframe src="./assets/images/bilder/kontakt oss/map1.png" width="700" height="350" style="border: 1px solid black"></iframe>
+      <!--<img id="kart" src="./assets/images/bilder/kontakt oss/map1.png" width="700" height="350" />-->
+      <iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=10.407646894454958%2C63.426034647052546%2C10.413494110107424%2C63.42760166521223&amp;layer=mapnik"
+      style="border: 1px solid black"></iframe><br/><small>
+        <a href="https://www.openstreetmap.org/#map=18/63.42682/10.41057">Vis større kart</a></small>
 
       <h1>Gavekort</h1>
       <p>
@@ -110,6 +136,6 @@
                 <button><img id="apple" src="./assets/images/bilder/apple_logo_PNG19692.png">Download on App Store</button>
                 <img id="logo" src="./assets/images/bilder/logo.png">
         </footer>
-
+        <script src="./assets/scripts/mobileNav.js"></script>
   </body>
 </html>
