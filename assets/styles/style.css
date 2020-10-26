@@ -143,6 +143,7 @@ footer div p a:hover {
 }
 
 .footer-col {
+  position: relative;
   margin: 20px;
   margin-left: 50px;
   text-align: center;
@@ -157,7 +158,7 @@ footer div p a:hover {
 
 /* Navigation */
 
-.navigation ul {
+#navigation ul {
   list-style: none;
   padding: 0;
 }
@@ -184,4 +185,65 @@ footer div p a:hover {
 .nav-items li.nav-active {
   border-top: 2px solid #d5c7ac;
   border-bottom: none;
+}
+
+/* Mobile nav */
+
+.hamburger-container {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .flex {
+    flex-direction: column;
+  }
+  .hamburger-container {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .hide {
+    display: none;
+  }
+  #navigation ul {
+    flex-direction: column;
+  }
+  .nav-items li {
+    padding: 10px;
+    margin: 5px 20px;
+    border: none;
+  }
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #d5c7ac;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.show {
+  display: flex;
 }
