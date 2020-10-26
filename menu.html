@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
     <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/menuSort.js"></script>
   </head>
   <body onload="renderItems()">
     <header>
@@ -17,6 +18,7 @@
     </header>
     <div class="content">
       <img id="menu_poster" src="./assets/images/menu_poster.jpg" alt=""/>
+      <button onclick="reRender(renderMode)">RERENDER!!!!</button>
       <div id="menu_container">
         <div id="dishes_container">
           <template id="dish_template">
