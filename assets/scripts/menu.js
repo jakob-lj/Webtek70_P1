@@ -10,14 +10,21 @@ function renderItems(){
     pizze.forEach((item) => {render(item,'#menu_pizze')});
 }
 
+function removeItems(){
+    document.querySelectorAll('.dish_container').forEach((container) => {container.remove()});
+}
+
 function render(item, id){
+    // Removes existing elements
     if(supportsTemplate()){
         console.log('Browser supports templates');
         let t = document.querySelector('#dish_template');
         let content = t.content;
+        /*
         console.log(item.name);
         console.log(item.desc);
         console.log(item.price);
+        */
         content.querySelector('#item_name').innerHTML = item.name;
         content.querySelector('#item_description').innerHTML = item.desc;
         content.querySelector('#price').innerHTML = item.price + ",-";
@@ -25,7 +32,7 @@ function render(item, id){
         content.querySelector('input').id = "item_" + item.id;
         const clone = document.importNode(content, true);
         document.querySelector(id).appendChild(clone);
-        }else{
-            console.log('Browser does not support templates');
-        }
+    }else{
+        console.log('Browser does not support templates');
+    }
 }

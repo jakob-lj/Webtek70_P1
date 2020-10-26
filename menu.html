@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
     <script src="./assets/scripts/menu.js"></script>
+    <script src="./assets/scripts/menuSort.js"></script>
   </head>
   <body onload="renderItems()">
     <header>
@@ -68,7 +69,18 @@
             </div>
           </template>
           <div id="subsection_container1">
-            <h1>Meny</h1>
+            <div class="filter_container">
+              <h1>Meny</h1>
+              <div id="selectContainer">
+                <label for="filter">Filtrer meny:</label><br>
+                <select name="filter" id="menuFilter" onchange="reRender()">
+                  <option value=0>Normal</option>
+                  <option value=1>Alfabetisk</option>
+                  <option value=2>Pris lav-høy</option>
+                  <option value=3>Pris høy-lav</option>
+                </select> 
+              </div>
+            </div>
             <div class="menu_subsection">
               <h2>Antipasti</h2>
               <div id="menu_antipasti"></div>
