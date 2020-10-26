@@ -70,20 +70,32 @@ video {
 }
 
 #hero1 {
-  background-image: url("../images/hero1.jpg");
+  background-image: url('../images/hero1.jpg');
 }
 
 #hero2 {
-  background-image: url("../images/hero2.jpg");
+  background-image: url("../images/bilder/hjemmeside/CAS-Venezia-Italian-Restaurant-Interior-Design-6.jpg");
 }
 
 #hero3 {
-  background-image: url("../images/hero3.jpg");
+  background-image: url("../images/bilder/hjemmeside/ines-wine-bar-bar-supplied-1920x1080.jpeg");
 }
 
 #hero4 {
   background-image: url("../images/bilder/Rob_Italian.png");
 }
+
+#hero5 {
+  background-image: url("../images/bilder/book bord/best-north-end-restaurants-guide-boston-la-famiglia-giorgios.jpg");
+} /*Bilde nederst på book bord*/
+
+#hero6 {
+  background-image: url("../images/bilder/book bord/best-north-end-restaurants-guide-boston-la-famiglia-giorgios.jpg");
+} /*Bilde nederst på book bord*/
+
+#hero7 {
+  background-image: url("../images/bilder/smitte/image.jpg");
+} /*Bilde nederst på Smittesporing*/
 
 #apple {
   width: 50px;
