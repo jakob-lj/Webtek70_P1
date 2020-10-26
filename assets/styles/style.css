@@ -45,6 +45,10 @@ section {
   margin: 40px;
 }
 
+#contactList {
+  list-style-type: none;
+}
+
 /* Video */
 
 #screen {
@@ -111,17 +115,23 @@ button {
   padding: 10px;
   border-radius: 4px;
   font-weight: bold;
-  width: 300px;
+  width: 200px;
 }
 
 #bluebutton {
-  background-color: #152846;
-  text-align: center;
+  /*background-color: #152846;
+  text-align: center;*/
   border-radius: 10px;
 }
 
 #bluebutton button {
   border-color: #152846;
+  /*border: 1px solid black;*/
+}
+
+#appleButton {
+  padding: 10px;
+  width: 300px;
 }
 
 /* Footer */
