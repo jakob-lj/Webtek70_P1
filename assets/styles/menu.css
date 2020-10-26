@@ -181,3 +181,7 @@ button{
     min-width: 250px;
   }
 }
+
+.orderSection{
+  padding-top: 12px;
+}
