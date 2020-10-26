@@ -104,7 +104,7 @@ input[type="number"] {
 
 @media only screen and (max-width: 1489px) {
   .content {
-    width: 95%;
+    width: 100%;
   }
   .extra_padding {
     padding-top: 0px;
@@ -112,14 +112,13 @@ input[type="number"] {
 }
 
 .orderSummary{
-  min-width: 300px;
+  min-width: 200px;
   text-align: start;
   padding-left: 24px;
-  margin-right: 48px;
 }
 
 .orderSection {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   padding: 100px;
 }
@@ -130,8 +129,8 @@ input[type="number"] {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: space-evenly;
+  align-items: flex-start;
   border: 2px dotted #d5c7ac ;
   padding: 12px;
 }
@@ -139,7 +138,7 @@ input[type="number"] {
 .orderButtonContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   max-width: 800px;
   margin-right: 12px;
   margin-left: 12px;
@@ -154,52 +153,20 @@ input[type="number"] {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-self: end;
+}
+button{
+  margin:4px;
 }
 
-.orderImagesContainer{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-self: flex-end;
-}
-
-.orderImages{
-  width: 200px;
-}
-
-.partnerLogo {
-  max-width: 150px;
-  padding: 24px;
-}
-
-@media only screen and (max-width: 683px) {
-  .partnerLogo{
-    max-width: 48px;
-    padding: 8px;
-    padding-bottom: 24px;
-  }
-}
-
-@media only screen and (max-width: 1140px){
-  #order1{
-    padding-right: 115px;
-  }
-
-  button{
-    max-width: 250px;
-  }
-  
-  #order1>button{
-    width: 400px;
-  }
-
+@media only screen and (max-width: 1600px){
   .orderSection{
     justify-content: center;
     margin: 0 auto;
-    padding-left: 100px;
   }
   .orderSummary{
     max-width: 100px;
+  }
+  .processOrderContainer{
+    min-width: 250px;
   }
 }
