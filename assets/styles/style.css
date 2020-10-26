@@ -135,8 +135,11 @@ footer {
     border-top: 3px solid #D5C7AC;
 }
 
-footer div p a{
+footer div p a, footer div p a:link, footer div p a:visited{
   color: #FF841E;
+}
+footer div p a:hover{
+  color: #D5C7AC;
 }
 
 .footer-col {
