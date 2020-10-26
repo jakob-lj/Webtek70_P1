@@ -1,4 +1,8 @@
-var renderMode = 0;
+
+function getRenderMode(){
+  return document.querySelector('#menuFilter').value;
+}
+
 function sortAlphapetically(menu){
   let menuClone = Array.from(menu);
   menuClone.sort((a,b)=> a.name > b.name );
@@ -20,7 +24,11 @@ function sortByPriceDescending(menu){
   return menuClone;
 }
 
-function reRender(renderMode){
+function reRender(){
+  renderMode = getRenderMode();
+  if(renderMode == null){
+    return;
+  }
   removeItems();
   if(renderMode == 0){
     antipasti.forEach((item) => {render(item,'#menu_antipasti')});
