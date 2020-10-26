@@ -26,6 +26,17 @@ h2 {
   flex-direction: column;
 }
 
+.filter_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#selectContainer{
+  margin-right: 64px;
+}
+
 #dishes_container {
   display: flex;
   flex-direction: row;
@@ -157,7 +168,6 @@ input[type="number"] {
 button{
   margin:4px;
 }
-
 @media only screen and (max-width: 1600px){
   .orderSection{
     justify-content: center;
@@ -169,4 +179,8 @@ button{
   .processOrderContainer{
     min-width: 250px;
   }
+}
+
+.orderSection{
+  padding-top: 12px;
 }
