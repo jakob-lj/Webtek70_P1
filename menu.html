@@ -15,6 +15,32 @@
       <nav></nav>
       <img src="assets/images/bilder/PrietzeriaLOGO.png" width="500" alt="">
     </header>
+    <div class="footer-col flex">
+      <ul id="kontaktInfo">
+      </ul>
+      <div class="hamburger-container" onclick="toggleNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <nav id="navigation" class="hide" >
+        <ul class="nav-items">
+          <a href="index.html">
+            <li>Hjem</li>
+          </a>
+          <a href="menu.html">
+            <li class="nav-active">Meny</li>
+          </a>
+          <a href="reservations.html">
+            <li>Book Bord</li>
+          </a>
+          <a href="contact.html">
+            <li>Kontakt oss</li>
+          </a>
+        </ul>
+      </nav>
+    </div>
+
     <div class="content">
       <img id="menu_poster" src="./assets/images/menu_poster.jpg" alt=""/>
       <div id="menu_container">
@@ -70,7 +96,6 @@
             <h2>Din ordre:</h2>
             <h3>Antall retter: <span id="orderedDishes"></span></h3>
             <h3>Sum: <span id="totalPrice"></span> ,-</h3>
-          </div>  
           <div class="orderButtonContainer" id="order1">
             <h2>Hvor vil du spise?</h2>
             <button class="orderButton" aria-label="Spis her">Spis her</button>
@@ -80,7 +105,6 @@
             <button class="orderButton" aria-label="Bestill fra Wolt">
               Wolt
             </button>
-          </div>  
         </div>
       </section>
     </div>
