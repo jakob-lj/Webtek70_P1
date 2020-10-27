@@ -54,10 +54,10 @@ button {
 }
 
 .border {
+    display: inline-block;
     border: 1px solid #d5c7ac;
     border-radius: 5px;
-    padding: 0 0 0 15px;
-    width: 250px;
+    padding: 0 15px 0 15px;
 }
 
 
