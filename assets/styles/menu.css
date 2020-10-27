@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-#menu_poster {
-    width: 100%;
-}
-
 #menu_container {
     margin: 100px;
     display: flex;
