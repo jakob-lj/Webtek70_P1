@@ -1,140 +1,193 @@
 <!DOCTYPE html>
-<html lang="nb">
-  <head>
+<html lang="no">
+
+<head>
     <meta charset="UTF-8" />
-    <script src="./assets/info/items.js"></script>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <title>Kontakt oss - Prietzeria</title>
+
+    <style>
+        .quotes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 2%;
+            grid-row-gap: 6%;
+            text-align: center;
+        }
+        
+        .quotes>* {
+            border: 1px solid #152846;
+            background-color: #152846;
+            border-radius: 20px;
+            padding: 5%;
+        }
+        
+        .quote-1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        
+        .quote-2 {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        
+        .quote-3 {
+            grid-area: 1 / 3 / 2 / 4;
+        }
+        
+        .quote-4 {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        
+        .quote-5 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        
+        .quote-6 {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+    </style>
+
+</head>
+
+<body>
     <header>
-      <nav></nav>
-      <img src="assets/images/bilder/PrietzeriaLOGO.png" width="500px" alt="">
+        <img src="assets/images/logo.png" alt="Prietzeria">
     </header>
-    <div class="footer-col flex">
-      <ul id="kontaktInfo">
-      </ul>
-      <div class="hamburger-container" onclick="toggleNav(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <nav id="navigation" class="hide" >
-        <ul class="nav-items">
-          <a href="index.html">
-            <li>Hjem</li>
-          </a>
-          <a href="menu.html">
-            <li>Meny</li>
-          </a>
-          <a href="reservations.html">
-            <li>Book Bord</li>
-          </a>
-          <a href="contact.html">
-            <li class="nav-active">Kontakt oss</li>
-          </a>
+
+    <div class="nav-col flex">
+        <ul class="noList">
+            <li>
+                <img src="assets/images/icons/location.png" alt="Location">
+                <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70, 7014 Trondheim</a></li>
+            <li>
+                <img src="assets/images/icons/facebook.png" alt="Facebook">
+                <a href="#" target="_blank" rel="nofollow">Følg oss på Facebook</a></li>
+            <li>
+                <img src="assets/images/icons/mail.png" alt="Mail">
+                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a></li>
+            <li>
+                <img src="assets/images/icons/language.png" alt="Language">
+                <a href="#">Bytt språk</a></li>
         </ul>
-      </nav>
+        <div class="hamburger-container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav id="navigation" class="hide">
+            <ul class="nav-items">
+                <a href="index.html">
+                    <li>Hjem</li>
+                </a>
+                <a href="menu.html">
+                    <li>Meny</li>
+                </a>
+                <a href="reservations.html">
+                    <li>Book bord</li>
+                </a>
+                <a href="contact.html">
+                    <li class="nav-active">Kontakt oss</li>
+                </a>
+            </ul>
+        </nav>
     </div>
 
     <section>
-      <h1>Kontakt oss</h1>
-      <ul id="contactList">
-      <p>
-        <li>Telefonnummer: </li>
-        +47 980 46 690 <br>
-        <br>
-        <li>E-postadresse: </li>
-        <a href="mailto:post@prietzeria.xyz">
-        post@prietzeria.xyz <br></a>
-        <br>
-        <li>Adresse: </li>
-        <a target="_blank" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
-        Kristianstenbakken 60 <br>
-        7014 Trondheim <br>
-        </a>
-      </p>
-      <br>
-      </ul>
-    </section>
-
-      <section>
-      <h1>KART</h1>
-      <img src="./assets/images/bilder/kontakt oss/map1.png" width="700" height="350" style="border: 1px solid black"></img>
-      <iframe width="500" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=10.407646894454958%2C63.426034647052546%2C10.413494110107424%2C63.42760166521223&amp;layer=mapnik"
-      style="border: 1px solid black"></iframe><br/><small>
-        <a href="https://www.openstreetmap.org/#map=18/63.42682/10.41057">Vis større kart</a></small>
-
-      <h1>Gavekort</h1>
-      <p>
-        Vi tilbyr elektronisk gavekort og betaling via vipps.
-        Kontakt oss på post@prietzeria.xyz for mer informasjon.
-        Du kan også vippse ønsket sum til vipps nr. 446842.
-        Noter ned Prietzeria og din e-post slik at vi kan sende gavekortet til deg på mail.
-      </p>
+        <h1>Kontakt oss</h1>
+        <ul id="contactList">
+            <p>
+                <li>Telefonnummer: </li>
+                +47 980 46 690 <br>
+                <br>
+                <li>E-postadresse: </li>
+                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
+                <br><br>
+                <li>Adresse: </li>
+                <a target="_blank" rel="nofollow" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
+                Kristianstenbakken 60 <br>
+                7014 Trondheim <br>
+                </a>
+            </p>
+            <br>
+        </ul>
     </section>
 
     <section>
-      <h1>Jobb hos oss</h1>
-      <p>
-        Dyktige, engasjerte mennesker med sans for lun og sjarmerende service er det alltid plass for i Prietzeria.
-        Ønsker du å jobbe hos oss kan du bruke lenken under og fortelle hvorfor vi, du og kundene våre er en god match. Dersom du søker til en spesifikk stilling velg kun den restauranten det gjelder for at søknaden skal gå til rett restaurant.
-        <br> <br>
-        Klikk her for å se hvilke stillinger som ligge ute for øyeblikket.
-      </p>
-      <button type="søk">
-        <p>Søk her</p>
-      </button>
+        <h1>Kart</h1>
+
+        <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=10.407646894454958%2C63.426034647052546%2C10.413494110107424%2C63.42760166521223&amp;layer=mapnik"
+            style="filter: grayscale(100%);">
+            <img src="assets/images/bilder/kontakt oss/map1.png" width="100%" alt="Kart av Trondheim">
+        </iframe>
+
+        <br/>
+        <small><a href="https://www.openstreetmap.org/#map=18/63.42682/10.41057">Vis større kart</a></small>
+
+        <h1>Gavekort</h1>
+        <p>
+            Vi tilbyr elektronisk gavekort og betaling via vipps. Kontakt oss på <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a> for mer informasjon. Du kan også vippse ønsket sum til vipps nr. 446842. Noter ned Prietzeria og din e-post slik
+            at vi kan sende gavekortet til deg på mail.
+        </p>
     </section>
 
     <section>
-      <h1>Quotes</h1>
-      <div class="div" id="bluebutton">
-      <button type="button" >
-      <p>
-        “Verdt hver eneste krone!” <br>
-        - Hanne Theisen
-      </p></button>
-      <button type="button" >
-      <p>
-        “10 av 10! “ <br>
-        - Anonym
-      </p></button>
-      <button type="button" >
-      <p>
-        “Fantastisk opplevelse ” <br>
-        - Vilde Aurora Berg
-      </p></button>
-      <br>
-      <button type="button" >
-      <p>
-        “Magnifico ” <br>
-        - Mario Italiana
-      </p></button>
-      <button type="button" >
-      <p>
-        “Nydelig service!” <br>
-        - Thomas Theisen
-      </p></button>
-      <button type="button" >
-      <p>
-        “Verdt hver eneste krone!” <br>
-        - Olav Kjevik
-      </p></button>
-      </div>
+        <h1>Jobb hos oss</h1>
+        <p>
+            Dyktige, engasjerte mennesker med sans for lun og sjarmerende service er det alltid plass for i Prietzeria. Ønsker du å jobbe hos oss kan du bruke lenken under og fortelle hvorfor vi, du og kundene våre er en god match. Dersom du søker til en spesifikk
+            stilling velg kun den restauranten det gjelder for at søknaden skal gå til rett restaurant.
+            <br> <br> Klikk her for å se hvilke stillinger som ligge ute for øyeblikket.
+        </p>
+        <button>Søk stilling</button>
     </section>
 
-        <footer>
-            <div class="footer-col">
-                <p><a href="privacy.html">Personvernerklæring</a></p>
-                <p><a href="covid-19.html">Smittesporing</a></p>
-                <p>© 1970 Prietz AS // Webteknologi </p>
+    <section>
+        <h1>Anmeldelser</h1>
+        <div class="quotes">
+            <div class="quote-1">
+                “Verdt hver eneste krone!” <br /> - Hanne Theisen
             </div>
 
-            <div class="footer-col">
-                <button id="appleButton"><img id="apple" src="./assets/images/bilder/apple_logo_PNG19692.png">Download on the App Store</button>
-                <img id="logo" src="./assets/images/bilder/logo.png">
-        </footer>
-        <script src="./assets/scripts/mobileNav.js"></script>
-  </body>
+            <div class="quote-2">
+                “10 av 10!” <br /> - Anonym
+            </div>
+
+            <div class="quote-3">
+                “Fantastisk opplevelse” <br /> - Vilde Aurora Berg
+            </div>
+
+            <div class="quote-4">
+                ““Magnifico” <br /> - Mario Italiana
+            </div>
+
+            <div class="quote-5">
+                “Nydelig service!” <br /> - Thomas Theisen
+            </div>
+
+            <div class="quote-6">
+                “Verdt hver eneste krone!” <br /> - Olav Kjevik
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-col">
+            <p><a href="privacy.html">Personvernerklæring</a></p>
+            <p><a href="covid-19.html">Smittesporing</a></p>
+            <p>© 1970 Prietz AS // Webteknologi </p>
+        </div>
+
+        <div class="footer-col">
+            <a href="#"><img class="footerIcon" src="assets/images/icons/apple.png" alt="Download on App Store"></a>
+        </div>
+
+        <div class="footer-col">
+            <a href="#"><img class="footerIcon" src="assets/images/icons/resturantchoice.png" alt="The Restaurant Choice"></a>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/mobileNav.js"></script>
+</body>
+
 </html>
