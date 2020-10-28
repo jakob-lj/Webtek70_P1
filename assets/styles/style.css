@@ -53,6 +53,13 @@ button {
     width: 200px;
 }
 
+button:hover{
+    background-color: #d5c7ac;
+    color: black;
+    transition: .35s;
+    cursor: pointer;
+}
+
 .border {
     display: inline-block;
     border: 1px solid #d5c7ac;
@@ -176,6 +183,7 @@ footer div p a:hover {
     margin: 20px;
     text-align: center;
     flex: 1;
+    padding-top: 24px;
 }
 
 .flex {
@@ -216,6 +224,17 @@ footer div p a:hover {
         border-left:0px;
         border-right:0px;
     }
+    .nav-col {
+        padding-top: 24px;
+    }
+    
+    header img {
+        max-width: 250px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .flex {
         flex-direction: column;
     }
