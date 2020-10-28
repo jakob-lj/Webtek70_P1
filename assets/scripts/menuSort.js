@@ -5,7 +5,17 @@ function getRenderMode(){
 
 function sortAlphapetically(menu){
   let menuClone = Array.from(menu);
-  menuClone.sort((a,b)=> a.name > b.name );
+  menuClone.sort((a,b)=>{
+  if(a.name > b.name){
+    return 1;
+  }
+  else if (a.name < b.name){
+    return -1;
+  }
+  else{
+    return 0;
+  }
+  });
   console.log(menuClone);
   return menuClone;
 }

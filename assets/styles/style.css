@@ -212,6 +212,10 @@ footer div p a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+    body{
+        border-left:0px;
+        border-right:0px;
+    }
     .flex {
         flex-direction: column;
     }

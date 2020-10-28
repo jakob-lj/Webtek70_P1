@@ -29,7 +29,7 @@
 .dish_container {
     color: #d5c7ac;
     background-color: #171e28;
-    width: 600px;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -151,7 +151,7 @@ button {
     margin: 4px;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1200px) {
     .orderSection {
         justify-content: center;
         margin: 0 auto;
