@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 #menu_container {
     margin: 100px;
     display: flex;
@@ -61,22 +62,19 @@
 .menu_text>h2 {
     padding: 0px;
     margin: 4px;
-    font-size: 26pt;
     max-width: 300px;
 }
 
 .menu_text>p {
-    max-width: 400px;
+    max-width: 300px;
     padding: 0px;
     margin: 4px;
-    font-size: 18pt;
 }
 
 #order_ammount {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: block;
+    text-align: center;
+    padding-top: 8px;
 }
 
 .extra_padding {
@@ -106,17 +104,15 @@ input[type="number"] {
 .orderSummary {
     min-width: 200px;
     text-align: start;
-    padding-left: 24px;
 }
 
 .orderSection {
     width: 100%;
     margin: 0 auto;
-    padding: 100px;
 }
 
 .processOrderContainer {
-    min-width: 600px;
+    max-width: 300px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -125,6 +121,7 @@ input[type="number"] {
     align-items: flex-start;
     border: 2px dotted #d5c7ac;
     padding: 12px;
+    margin-bottom: 100px;
 }
 
 .orderButtonContainer {
@@ -132,8 +129,6 @@ input[type="number"] {
     flex-direction: column;
     align-items: center;
     max-width: 800px;
-    margin-right: 12px;
-    margin-left: 12px;
 }
 
 .orderButtonContainer>h2 {
@@ -148,7 +143,7 @@ input[type="number"] {
 }
 
 button {
-    margin: 4px;
+    margin: 8px;
 }
 
 @media only screen and (max-width: 1200px) {
