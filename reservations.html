@@ -16,6 +16,7 @@
             padding: 20px;
             border: 1px solid #d5c7ac;
             border-radius: 5px;
+            align-items: end;
         }
         
         .form-grid-1 {
@@ -50,13 +51,19 @@
             padding: 10px;
         }
         
-        input[type="submit"] {
+        input[type="submit"],
+        input[type="button"] {
             background-color: #40916c;
             color: #f3f3f3;
             width: 100%;
             margin: auto;
             font-weight: bold;
             border-radius: 5px;
+            border: 0;
+        }
+        
+        #submitBackPart2 {
+            background-color: #d62828;
         }
         
         input:valid,
@@ -115,7 +122,7 @@
 
     <section>
         <h2>Book bord hos Prietzerria</h2>
-        <form action="" method="POST" id="bookingForm">
+        <form id="bookingForm" onsubmit="goPart1();">
             <div class="form-grid" id="formPart1">
                 <div class="form-grid-1">
                     <label for="name">Fullt navn:</label> <br />
@@ -132,8 +139,8 @@
                 </div>
 
                 <div class="form-grid-2">
-                    <label for="qantity">Antall besøkende: </label>
-                    <select name="qantity" id="qantity">
+                    <label for="quantity">Antall besøkende: </label>
+                    <select name="quantity" id="quantity">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -177,47 +184,34 @@
                 </div>
 
                 <div class="form-grid-3">
-                    <input type="submit" value="Fortsett reservasjon" id="submitPart1" onclick="goPart1();">
+                    <input type="submit" value="Gjennomgå reservasjon" id="submitPart1">
                 </div>
             </div>
 
             <div class="form-grid" id="formPart2" style="display: none;">
-
                 <div class="form-grid-1">
-                    <label for="location">Lokasjon: </label> <br />
-                    <select name="location" id="location">
-                        <optgroup label="Trondheim">
-                            <option value="Trondheim, Solsiden">Solsiden</option>
-                            <option value="Trondheim, Tårnet">Tårnet</option>
-                            <option value="Trondheim, Torget">Torget</option>
-                        </optgroup>
-    
-                        <optgroup label="Oslo">
-                            <option value="Oslo, Karl Johan">Karl Johan</option>
-                            <option value="Oslo, Majorstuen">Majorstuen</option>
-                            <option value="Oslo, Holmenkollen">Holmenkollen</option>
-                        </optgroup>
-    
-                        <optgroup label="Bergen">
-                            <option value="Bergen, Bryggen">Bryggen</option>
-                        </optgroup>
-                    </select>
-
+                    <p id="finalOutput"></p>
+                    <input type="button" value="Endre reservasjon" onclick="backPart2()" id="submitBackPart2">
                 </div>
 
                 <div class="form-grid-2">
-                    <p id="finalOutput">Din reservasjon gjelder mellom 10:00-12:00, 12.12.2020 hos Prietzeria Solsiden.</p>
+                    <input type="button" value="Bekreft reservasjon" onclick="goPart2();" id="submitPart2">
                 </div>
 
                 <div class="form-grid-3">
-                    <input type="submit" value="Bekreft reservasjon" id="submitPart2" onclick="goPart2();">
                 </div>
             </div>
+
             <div class="form-grid" id="formPart3" style="display: none;">
+                <div class="form-grid-1">
+                    <h3>Takk! Din reservasjon er nå registrert</h3>
+                </div>
+
+                <div class="form-grid-2">
+                </div>
 
                 <div class="form-grid-3">
-                    <h3>Takk! Din reservasjon er nå registrert.</h3>
-                    <p><strong>Vi sees!</strong></p>
+                    <p><strong>Vi sees! Venligst ta kontakt med oss dersom du ønsker å endre din reservasjon.</strong></p>
                 </div>
             </div>
         </form>
@@ -253,64 +247,7 @@
     </footer>
 
     <script src="assets/scripts/mobileNav.js"></script>
-
-    <script>
-        /* Bare tillatt reservasjoner fra dagens dato og en måned frem i tid */
-        var dateInput = document.getElementById('date');
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
-        var mmtwo = today.getMonth() + 2;
-        var yyyy = today.getFullYear();
-        var time = today.getHours();
-
-        /* Legger til 0 før string, hvis string er under tallet 10 */
-        if (dd < '10') {
-            dd = '0' + dd;
-        }
-        if (mm < '10') {
-            mm = '0' + mm;
-        }
-        if (time < '10') {
-            time = '0' + time;
-        }
-        dateInput.setAttribute('value', yyyy + '-' + mm + '-' + dd);
-        dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
-        dateInput.setAttribute('max', yyyy + '-' + mmtwo + '-' + dd);
-
-        var formPart1 = document.getElementById('formPart1');
-        var submitPart1 = document.getElementById('submitPart1');
-
-        var formPart2 = document.getElementById('formPart2');
-        var submitPart2 = document.getElementById('submitPart2');
-
-        var formPart3 = document.getElementById('formPart3');
-
-        submitPart1.addEventListener("click", function(e) {
-            e.preventDefault();
-        });
-
-        submitPart2.addEventListener("click", function(e) {
-            e.preventDefault();
-        });
-
-        function goPart1() {
-            formPart1.style.display = "none";
-            formPart2.style.display = "";
-            var finalOutput = document.getElementById('finalOutput');
-            var inputName = document.getElementById('name').value;
-            var inputDate = document.getElementById('date').value;
-            var inputTime = document.getElementById('time').value;
-            var inputLocation = document.getElementById('location').value;
-
-            finalOutput.innerHTML = "Hei " + inputName + "!<br /> Reservasjon: " + inputDate + ", kl. " + time + ".<br />" + inputLocation
-        };
-
-        function goPart2() {
-            formPart2.style.display = "none";
-            formPart3.style.display = "";
-        };
-    </script>
+    <script src="assets/scripts/booking.js"></script>
 
 </body>
 
