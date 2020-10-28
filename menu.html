@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <title>Meny</title>
-    <script src="./assets/info/items.js"></script>
-    <link rel="stylesheet" href="./assets/styles/menu.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/menu.css" />
+
+    <script src="./assets/info/items.js"></script>
     <script src="./assets/scripts/menu.js"></script>
     <script src="./assets/scripts/menuSort.js"></script>
-  </head>
-  <body onload="renderItems()">
+
+    <title>Meny - Prietzeria</title>
+</head>
+
+<body onload="renderItems()">
     <header>
-      <link rel="stylesheet" href="./assets/styles/style.css">
-      <nav></nav>
-      <img src="assets/images/bilder/PrietzeriaLOGO.png" width="500" alt="">
+        <img src="assets/images/logo.png" alt="Prietzeria">
     </header>
-    <div class="footer-col flex">
-      <ul id="kontaktInfo">
-      </ul>
-      <div class="hamburger-container" onclick="toggleNav(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <nav id="navigation" class="hide" >
-        <ul class="nav-items">
-          <a href="index.html">
-            <li>Hjem</li>
-          </a>
-          <a href="menu.html">
-            <li class="nav-active">Meny</li>
-          </a>
-          <a href="reservations.html">
-            <li>Book Bord</li>
-          </a>
-          <a href="contact.html">
-            <li>Kontakt oss</li>
-          </a>
+
+    <div class="nav-col flex">
+        <ul class="noList">
+            <li>
+                <img src="assets/images/icons/location.png" alt="Location">
+                <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70, 7014 Trondheim</a></li>
+            <li>
+                <img src="assets/images/icons/facebook.png" alt="Facebook">
+                <a href="#" target="_blank" rel="nofollow">Følg oss på Facebook</a></li>
+            <li>
+                <img src="assets/images/icons/mail.png" alt="Mail">
+                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a></li>
+            <li>
+                <img src="assets/images/icons/language.png" alt="Language">
+                <a href="#">Bytt språk</a></li>
         </ul>
-      </nav>
+        <div class="hamburger-container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav id="navigation" class="hide">
+            <ul class="nav-items">
+                <a href="index.html">
+                    <li>Hjem</li>
+                </a>
+                <a href="menu.html">
+                    <li class="nav-active">Meny</li>
+                </a>
+                <a href="reservations.html">
+                    <li>Book bord</li>
+                </a>
+                <a href="contact.html">
+                    <li>Kontakt oss</li>
+                </a>
+            </ul>
+        </nav>
     </div>
 
-    <div class="content">
-      <img id="menu_poster" src="./assets/images/menu_poster.jpg" alt=""/>
-      <div id="menu_container">
+    <div class="hero" id="hero4"></div>
+
+    <div id="menu_container">
         <div id="dishes_container">
-          <template id="dish_template">
+            <template id="dish_template">
             <div class="dish_container">
               <div class="img_container">
                 <img id="dish_img" src="" />
@@ -68,68 +83,80 @@
               </div>
             </div>
           </template>
-          <div id="subsection_container1">
-            <div class="filter_container">
-              <h1>Meny</h1>
-              <div id="selectContainer">
-                <label for="filter">Filtrer meny:</label><br>
-                <select name="filter" id="menuFilter" onchange="reRender()">
+            <div id="subsection_container1">
+                <div class="filter_container">
+                    <h1>Meny</h1>
+                    <div id="selectContainer">
+                        <label for="filter">Filtrer meny:</label><br>
+                        <select name="filter" id="menuFilter" onchange="reRender()">
                   <option value=0>Normal</option>
                   <option value=1>Alfabetisk</option>
                   <option value=2>Pris lav-høy</option>
                   <option value=3>Pris høy-lav</option>
-                </select> 
-              </div>
+                </select>
+                    </div>
+                </div>
+                <div class="menu_subsection">
+                    <h2>Antipasti</h2>
+                    <div id="menu_antipasti"></div>
+                </div>
+                <div class="menu_subsection">
+                    <h2>Paste</h2>
+                    <div id="menu_paste"></div>
+                </div>
+                <div class="menu_subsection">
+                    <h2>Dolci</h2>
+                    <div id="menu_dolci"></div>
+                </div>
             </div>
-            <div class="menu_subsection">
-              <h2>Antipasti</h2>
-              <div id="menu_antipasti"></div>
+            <div id="subsection_container2">
+                <div class="menu_subsection">
+                    <h2 class="extra_padding">Pizze</h2>
+                    <div id="menu_pizze"></div>
+                </div>
             </div>
-            <div class="menu_subsection">
-              <h2>Paste</h2>
-              <div id="menu_paste"></div>
-            </div>
-            <div class="menu_subsection">
-              <h2>Dolci</h2>
-              <div id="menu_dolci"></div>
-            </div>
-          </div>
-          <div id="subsection_container2">
-            <div class="menu_subsection">
-              <h2 class="extra_padding">Pizze</h2>
-              <div id="menu_pizze"></div>
-            </div>
-          </div>
         </div>
-      </div>
-      <section class="orderSection">
+    </div>
+    <section class="orderSection">
         <div class="processOrderContainer">
-          <div class="orderSummary">
-            <h2>Din ordre:</h2>
-            <h3>Antall retter: <span id="orderedDishes"></span></h3>
-            <h3>Sum: <span id="totalPrice"></span> ,-</h3>
-          <div class="orderButtonContainer" id="order1">
-            <h2>Hvor vil du spise?</h2>
-            <button class="orderButton" aria-label="Spis her">Spis her</button>
-            <button class="orderButton" aria-label="Bestill fra Foodora">
+            <div class="orderSummary">
+                <h2>Din ordre:</h2>
+                <h3>Antall retter: <span id="orderedDishes"></span></h3>
+                <h3>Sum: <span id="totalPrice"></span> ,-</h3>
+                <div class="orderButtonContainer" id="order1">
+                    <h2>Hvor vil du spise?</h2>
+                    <button class="orderButton" aria-label="Spis her">Spis her</button>
+                    <button class="orderButton" aria-label="Bestill fra Foodora">
               Foodora
             </button>
-            <button class="orderButton" aria-label="Bestill fra Wolt">
+                    <button class="orderButton" aria-label="Bestill fra Wolt">
               Wolt
             </button>
-        </div>
-      </section>
-    </div>
-     <footer>
+                </div>
+    </section>
+
+    <div class="hero" id="hero5"></div>
+
+    <br /><br /><br /><br /><br />
+
+
+    <footer>
         <div class="footer-col">
-        <p><a href="privacy.html">Personvernerklæring</a></p>
-        <p><a href="covid-19.html">Smittesporing</a></p>
-        <p>© 1970 Prietz AS // Webteknologi </p>
+            <p><a href="privacy.html">Personvernerklæring</a></p>
+            <p><a href="covid-19.html">Smittesporing</a></p>
+            <p>© 1970 Prietz AS // Webteknologi </p>
         </div>
+
         <div class="footer-col">
-      <button><img id="apple" src="./assets/images/bilder/apple_logo_PNG19692.png" alt="Download on appstore" >Download on App Store</button>
-      <img id="logo" src="./assets/images/bilder/logo.png" alt="logo"/>
-      </div>
+            <a href="#"><img class="footerIcon" src="assets/images/icons/apple.png" alt="Download on App Store"></a>
+        </div>
+
+        <div class="footer-col">
+            <a href="#"><img class="footerIcon" src="assets/images/icons/resturantchoice.png" alt="The Restaurant Choice"></a>
+        </div>
     </footer>
-  </body>
+
+    <script src="assets/scripts/mobileNav.js"></script>
+</body>
+
 </html>
