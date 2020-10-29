@@ -50,10 +50,10 @@ button {
     padding: 10px;
     border-radius: 4px;
     font-weight: bold;
-    width: 200px;
+    min-width: 200px;
 }
 
-button:hover{
+button:hover {
     background-color: #d5c7ac;
     color: black;
     transition: .35s;
@@ -220,21 +220,19 @@ footer div p a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
-    body{
-        border-left:0px;
-        border-right:0px;
+    body {
+        border-left: 0px;
+        border-right: 0px;
     }
     .nav-col {
         padding-top: 24px;
     }
-    
     header img {
         max-width: 250px;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    
     .flex {
         flex-direction: column;
     }

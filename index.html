@@ -95,7 +95,27 @@
         <p>Omvisninger av vinkjelleren vår foregår den siste søndagen hver måned. Send oss en mail ved interesse! Vil du vite hva som skjer på spisestedene våre, om nyheter på menyen, tilbud, arrangementer eller andre matgleder? Mel deg på nyhetsbrevet vårt,
             så sender vi deg sisste nytt.</p>
 
-        <button>Ja, jeg vil ha nyhetsbrev</button>
+        <p>
+            <button onclick="showNewsletter();">Ja, jeg vil ha nyhetsbrev</button>
+        </p>
+        <!-- Needs styling + some fixes, coming soon-->
+        <div class="border" style="display: none" id="newsletterForm">
+            <form action="" id="">
+                <input type="email" name="" id="">
+                <input type="submit" name="" id="">
+            </form>
+        </div>
+
+        <script>
+            function showNewsletter() { // Vis del: Nyhetsbrevskjema
+                var newsletterForm = document.getElementById('newsletterForm').style;
+                if (newsletterForm.display == "none") {
+                    newsletterForm.display = "";
+                } else {
+                    newsletterForm.display = "none";
+                }
+            }
+        </script>
 
         <h3>Kontakt oss</h3>
         <ul>
