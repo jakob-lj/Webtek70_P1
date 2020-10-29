@@ -2,12 +2,19 @@
 //I items.js filen så har hver enkelt rett en id property. Hver input på siden blir så merket med #item_[id]:
 
 //Navn på rettene addName() - din ordre #item_[id]
-function addName(){
-  var food = document.createElement("el")
-  var rett = document.getElementById("ordre?").value; //id til rettene
+function addName(){ // sette denne ved ordre?
+  var liOrder = document.createElement("li")
+  var rett = document.getElementById("item_[id]????").name; //id til rettene
   var t = document.createTextNode(rett);
-  el.appendChild(t); //navn på rett etter din ordre:
-  document.getElementById("myOrder?").prepend(el); //ny id ved h2
+  liOrder.appendChild(t); //navn på rett
+  document.getElementById("orderedDishes").prepend(liOrder); //ny id ved h2
+
+  for (var i = 0; i < item_name.length; i++) { //#item_[id] ? antipasti paste dolci pizze
+    item_name[i]
+    if (order_ammount > 0) {
+      return item_name[i].("name") //orderedDishes
+    }
+  }
 }
 
 //Antall retter orderedDishes
@@ -21,12 +28,13 @@ function addOrder(){
   if (rett === "") {
     total.textContent = +total.textContent + 0;
   }
-  //hva skriver man hcis man tar vekk en rett?
+  //hva skriver man hvis man tar vekk en rett?
   else {
     total.textContent = +total.textContent + 1;
   }
 }
-//Totalsummen totalPrice
+
+//Totalsummen totalPrice  -  #item_[id] paste osv .price
 function totalPrice(){
   var retter = [];
   //console.log(retter.reduce((a, b,osv) => a + b, 0));
