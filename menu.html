@@ -10,6 +10,7 @@
     <script src="./assets/info/items.js"></script>
     <script src="./assets/scripts/menu.js"></script>
     <script src="./assets/scripts/menuSort.js"></script>
+    <script src="./assets/scripts/foodOrder.js"></script>
 
     <title>Meny - Prietzeria</title>
 </head>
@@ -69,6 +70,7 @@
                   <label for="ammount">Antall: </label><br />
                   <input
                     name="ammount"
+                    class="orderInput"
                     type="number"
                     min="0"
                     max="10"
@@ -121,7 +123,7 @@
     <section class="orderSection">
         <div class="processOrderContainer">
             <div class="orderSummary">
-                <h2>Din ordre:</h2>
+                <h2>Din ordre</h2>
                 <h3>Antall retter: <span id="orderedDishes">0</span></h3>
                 <h3>Sum: <span id="totalPrice"></span> ,-</h3>
                 <div class="orderButtonContainer" id="order1">
