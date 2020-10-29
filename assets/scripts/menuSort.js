@@ -36,6 +36,8 @@ function sortByPriceDescending(menu){
 
 function reRender(){
   renderMode = getRenderMode();
+  // At the moment, reRendring does not update order ammounts.
+  dishes = [];
   if(renderMode == null){
     return;
   }
@@ -71,4 +73,6 @@ function reRender(){
   else{
     console.log("ERROR!! renderMode out of bounds!");
   }
+  // Adds event listner to inputs
+  queryInput();
 }

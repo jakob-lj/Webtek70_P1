@@ -8,6 +8,8 @@ function renderItems(){
     paste.forEach((item) => {render(item,'#menu_paste')});
     dolci.forEach((item) => {render(item,'#menu_dolci')});
     pizze.forEach((item) => {render(item,'#menu_pizze')});
+    // Adds event listner to inputs
+    queryInput();
 }
 
 function removeItems(){
