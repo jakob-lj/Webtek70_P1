@@ -1,37 +1,14 @@
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 
-//Navn på rettene addName() - din ordre #item_[id]
-function addName(){ // sette denne ved ordre?
-  var liOrder = document.createElement("li")
-  var rett = document.getElementById("item_[id]????").name; //id til rettene
+//Henter navnene på rettene
+function addName(){
+  var li = document.createElement("li")
+  var rett = document.getElementById(dishes).name;
   var t = document.createTextNode(rett);
-  liOrder.appendChild(t); //navn på rett
-  document.getElementById("orderedDishes").prepend(liOrder); //ny id ved h2
-
-  for (var i = 0; i < item_name.length; i++) { //#item_[id] ? antipasti paste dolci pizze
-    item_name[i]
-    if (order_ammount > 0) {
-      return item_name[i].name //orderedDishes
-    }
-  }
-}
-
-//Antall retter orderedDishes
-function addOrder(){
-  var button = document.getElementById("order_ammount"); //ved trykk på pil
-  var total = document.getElementById("orderedDishes");
-  button.addEventListener("onclick", addOrder);
-  button.addEventListener("onclick", function(event) {
-    event.preventDefault();
-  });
-  if (rett === "") {
-    total.textContent = +total.textContent + 0;
-  }
-  //hva skriver man hvis man tar vekk en rett?
-  else {
-    total.textContent = +total.textContent + 1;
-  }
+  var rett = li.appendChild(t);
+  //document.getElementById("dishes").prepend(li); //item_name item_name[i].name
+  document.querySelector("#dishes").innerHTML= rett;
 }
 
 //Henter totalprisen basert på dishes[]
@@ -103,8 +80,3 @@ function getFoodById(id){
     }
   }
 }
-
-
-//for (var i = 0; i < order_ammount.length; i++) {
-  //order_ammount[i]
-  //return "order_ammount" in document.createElement}
