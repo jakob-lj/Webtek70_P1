@@ -5,76 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/booking.css">
     <title>Book bord - Prietzeria</title>
-    <style>
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(1, 1fr);
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
-            padding: 20px;
-            border: 1px solid #d5c7ac;
-            border-radius: 5px;
-            align-items: end;
-        }
-        
-        .form-grid-1 {
-            grid-area: 1 / 1 / 2 / 2;
-        }
-        
-        .form-grid-2 {
-            grid-area: 1 / 2 / 2 / 3;
-        }
-        
-        .form-grid-3 {
-            grid-area: 2 / 1 / 3 / 3;
-        }
-        
-        input,
-        select {
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            height: 40px;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        input[type="number"],
-        select {
-            margin: 5px 0 5px 0;
-            background-color: #f3f3f3;
-            color: #333;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        
-        input[type="submit"],
-        input[type="button"] {
-            background-color: #40916c;
-            color: #f3f3f3;
-            width: 100%;
-            margin: auto;
-            font-weight: bold;
-            border-radius: 5px;
-            border: 0;
-        }
-        
-        #submitBackPart2 {
-            background-color: #d62828;
-        }
-        
-        input:valid,
-        select {
-            border: 1px solid #40916c;
-        }
-        
-        input:invalid {
-            border: 1px solid #d62828;
-        }
-    </style>
 </head>
 
 <body>
@@ -151,7 +83,7 @@
                         <option value="8">8</option>
                     </select>
 
-                    <label for="date">Dato: </label> <br />
+                    <label for="date">Dato: <small>(Det er kun mulig å reservere en måned frem i tid)</small></label> <br />
                     <input type="date" id="date" name="date" value="">
 
                     <label for="time">Klokkeslett: </label> <br />
@@ -185,6 +117,7 @@
 
                 <div class="form-grid-3">
                     <input type="submit" value="Gjennomgå reservasjon" id="submitPart1">
+                    <small><a href="#tilgjengelig">Er ikke ønsket tidspunkt tilgjengelig?</a></small>
                 </div>
             </div>
 
@@ -221,12 +154,23 @@
 
     <div class="hero" id="hero6"></div>
 
-    <section>
+    <section id="tilgjengelig">
         <h1>Er ikke ønsket tidspunkt tilgjengelig?</h1>
 
-        <p>Vi prøver alltid vårt beste for å finne bord til våre gjester. Kanskje vi klarer å oppfylle ønsket ditt likevel?</p>
+        <p>Vi prøver alltid vårt beste for å finne bord til våre gjester. Kanskje vi klarer å oppfylle ønsket ditt likevel? Eventuelt kan du besøke en av våre søsterrestauranter.</p>
 
         <p><strong>Ring oss på telefonnummer <a href="tel:+4798046690">+47 980 46 690</a>, eller send oss en <a href="mailto:post@prietzeria.xyz">e-post</a>.</strong></p>
+
+        <p>
+            <button onclick="sisterVisit();">Besøk en av våre søsterrestauranter</button>
+        </p>
+
+        <div class="border" style="display: none" id="sisterResturants">
+            <p><strong>Olivia Solsiden</strong> - Bedding 7, 7030 Trondheim</p>
+            <p><strong>Super Hero Burger</strong> - Olav Tryggvasons gt. 5, 7010 Trondheim</p>
+            <p><strong>Dinner Oslo</strong> - Karl Johans Gate 3, 1020 Oslo</p>
+            <p></p>
+        </div>
 
     </section>
 
