@@ -1,208 +1,117 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/form.css" />
     <title>Smittesporing - Prietzeria</title>
-    <style>
-      .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        padding: 20px;
-        border: 1px solid #d5c7ac;
-        border-radius: 5px;
-        align-items: end;
-      }
+</head>
 
-      .form-grid-1 {
-        grid-area: 1 / 1 / 2 / 2;
-      }
-
-      .form-grid-2 {
-        grid-area: 1 / 2 / 2 / 3;
-      }
-
-      .form-grid-3 {
-        grid-area: 2 / 1 / 3 / 3;
-      }
-
-      input,
-      select {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
-        height: 40px;
-      }
-
-      input[type="text"],
-      input[type="email"],
-      input[type="date"],
-      input[type="number"],
-      select {
-        margin: 5px 0 5px 0;
-        background-color: #f3f3f3;
-        color: #333;
-        border-radius: 5px;
-        padding: 10px;
-      }
-
-      input[type="submit"],
-      input[type="button"] {
-        background-color: #40916c;
-        color: #f3f3f3;
-        width: 100%;
-        margin: auto;
-        font-weight: bold;
-        border-radius: 5px;
-        border: 0;
-      }
-
-      #submitBackPart2 {
-        background-color: #d62828;
-      }
-
-      input:valid,
-      select {
-        border: 1px solid #40916c;
-      }
-
-      input:invalid {
-        border: 1px solid #d62828;
-      }
-    </style>
-  </head>
-
-  <body>
+<body>
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
     </header>
 
     <div class="nav-col flex">
-      <ul class="noList">
-        <li>
-          <img src="assets/images/icons/location.png" alt="Location" />
-          <a
-            href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094"
-            target="_blank"
-            rel="nofollow"
-            >Kristianstensbakken 70, 7014 Trondheim</a
+        <ul class="noList">
+            <li>
+                <img src="assets/images/icons/location.png" alt="Location" />
+                <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70, 7014 Trondheim</a
           >
         </li>
         <li>
           <img src="assets/images/icons/facebook.png" alt="Facebook" />
           <a href="#" target="_blank" rel="nofollow">Følg oss på Facebook</a>
-        </li>
-        <li>
-          <img src="assets/images/icons/mail.png" alt="Mail" />
-          <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
-        </li>
-        <li>
-          <img src="assets/images/icons/language.png" alt="Language" />
-          <a href="#">Bytt språk</a>
-        </li>
-      </ul>
-      <div class="hamburger-container" onclick="toggleNav(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-      <nav id="navigation" class="hide">
-        <ul class="nav-items">
-          <a href="index.html">
-            <li>Hjem</li>
-          </a>
-          <a href="menu.html">
-            <li>Meny</li>
-          </a>
-          <a href="booking.html">
-            <li>Book bord</li>
-          </a>
-          <a href="contact.html">
-            <li>Kontakt oss</li>
-          </a>
+            </li>
+            <li>
+                <img src="assets/images/icons/mail.png" alt="Mail" />
+                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
+            </li>
+            <li>
+                <img src="assets/images/icons/language.png" alt="Language" />
+                <a href="#">Bytt språk</a>
+            </li>
         </ul>
-      </nav>
+        <div class="hamburger-container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <nav id="navigation" class="hide">
+            <ul class="nav-items">
+                <a href="index.html">
+                    <li>Hjem</li>
+                </a>
+                <a href="menu.html">
+                    <li>Meny</li>
+                </a>
+                <a href="booking.html">
+                    <li>Book bord</li>
+                </a>
+                <a href="contact.html">
+                    <li>Kontakt oss</li>
+                </a>
+            </ul>
+        </nav>
     </div>
 
     <section>
-      <h2>Registrer ditt besøk hos Prietzerria</h2>
-      <form id="bookingForm" onsubmit="covid();">
-        <div class="form-grid" id="formPart1">
-          <div class="form-grid-1">
-            <label for="name">Fullt navn:</label> <br />
-            <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
-            <input
-              type="text"
-              name="name"
-              id="name"
-              pattern="[A-Za-z æøåÆØÅ]+"
-              placeholder="Ola Nordmann"
-              required
-            />
+        <h2>Registrer ditt besøk hos Prietzerria</h2>
+        <form id="covidForm" onsubmit="covid();">
+            <div class="form-grid">
+                <div class="form-grid-1">
+                    <label for="name">Fullt navn:</label> <br />
+                    <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
+                    <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required />
 
-            <label for="phone">Telefonnummer:</label> <br />
-            <!-- Regex pattern: Bare tall, + og mellomrom -->
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              pattern="[1234567890 +]+"
-              placeholder="+47 845 45 945"
-              required
-            />
+                    <label for="phone">Telefonnummer:</label> <br />
+                    <!-- Regex pattern: Bare tall, + og mellomrom -->
+                    <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required />
 
-            <label for="email">E-post:</label> <br />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="ola.nordmann@e-post.no"
-              required
-            />
-          </div>
+                    <label for="email">E-post:</label> <br />
+                    <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
+                </div>
 
-          <div class="form-grid-2">
-            <label for="date">Dato: </label> <br />
-            <input type="date" id="date" name="date" value="" />
+                <div class="form-grid-2">
+                    <label for="date">Dato: </label> <br />
+                    <input type="date" id="date" name="date" value="" />
 
-            <label for="time">Klokkeslett: </label> <br />
-            <select name="time" id="time">
-              <option value="11:00">11:00</option>
-              <option value="11:30">11:30</option>
-              <option value="12:00">12:00</option>
-              <option value="12:30">12:30</option>
-              <option value="13:00">13:00</option>
-              <option value="13:30">13:30</option>
-              <option value="14:00">14:00</option>
-              <option value="14:30">14:30</option>
-              <option value="15:00">15:00</option>
-              <option value="15:30">15:30</option>
-              <option value="16:00">16:00</option>
-              <option value="16:30">16:30</option>
-              <option value="17:00">17:00</option>
-              <option value="17:30">17:30</option>
-              <option value="18:00">18:00</option>
-              <option value="18:30">18:30</option>
-              <option value="19:00">19:00</option>
-              <option value="19:30">19:30</option>
-              <option value="20:00">20:00</option>
-              <option value="20:30">20:30</option>
-              <option value="21:00">21:00</option>
-              <option value="21:30">21:30</option>
-              <option value="22:00">22:00</option>
-              <option value="22:30">22:30</option>
-            </select>
-          </div>
+                    <label for="time">Klokkeslett: </label> <br />
+                    <select name="time" id="time">
+                      <option value="11:00">11:00</option>
+                      <option value="11:30">11:30</option>
+                      <option value="12:00">12:00</option>
+                      <option value="12:30">12:30</option>
+                      <option value="13:00">13:00</option>
+                      <option value="13:30">13:30</option>
+                      <option value="14:00">14:00</option>
+                      <option value="14:30">14:30</option>
+                      <option value="15:00">15:00</option>
+                      <option value="15:30">15:30</option>
+                      <option value="16:00">16:00</option>
+                      <option value="16:30">16:30</option>
+                      <option value="17:00">17:00</option>
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                      <option value="21:30">21:30</option>
+                      <option value="22:00">22:00</option>
+                      <option value="22:30">22:30</option>
+                    </select>
+                </div>
 
-          <div class="form-grid-3">
-            <input type="submit" value="Registrer besøk" id="submitPart1" />
-          </div>
-        </div>
-      </form>
+                <div class="form-grid-3">
+                    <input type="submit" value="Registrer besøk" id="submit" />
+                </div>
+            </div>
+        </form>
     </section>
     <br>
     <div class="hero" id="hero8"></div>
@@ -211,36 +120,27 @@
     <br>
     <br>
     <footer>
-      <div class="footer-col">
-        <p><a href="privacy.html">Personvernerklæring</a></p>
-        <p><a href="covid-19.html">Smittesporing</a></p>
-        <p>© 1970 Prietz AS // Webteknologi</p>
-      </div>
+        <div class="footer-col">
+            <p><a href="privacy.html">Personvernerklæring</a></p>
+            <p><a href="covid-19.html">Smittesporing</a></p>
+            <p>© 1970 Prietz AS // Webteknologi</p>
+        </div>
 
-      <div class="footer-col">
-        <a href="#"
-          ><img
-            class="footerIcon"
-            src="assets/images/icons/apple.png"
-            alt="Download on App Store"
-        /></a>
-      </div>
+        <div class="footer-col">
+            <a href="#"><img class="footerIcon" src="assets/images/icons/apple.png" alt="Download on App Store" /></a>
+        </div>
 
-      <div class="footer-col">
-        <a href="#"
-          ><img
-            class="footerIcon"
-            src="assets/images/icons/resturantchoice.png"
-            alt="The Restaurant Choice"
-        /></a>
-      </div>
+        <div class="footer-col">
+            <a href="#"><img class="footerIcon" src="assets/images/icons/resturantchoice.png" alt="The Restaurant Choice" /></a>
+        </div>
     </footer>
 
     <script src="assets/scripts/mobileNav.js"></script>
     <script>
-      const covid = () => {
-        alert("Du er smittet.");
-      };
+        const covid = () => {
+            alert("Du er smittet.");
+        };
     </script>
-  </body>
+</body>
+
 </html>

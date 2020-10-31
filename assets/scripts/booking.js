@@ -58,6 +58,13 @@ function backPart2() { // Ønsker å gå tilbake til Part 1
 };
 
 function goPart2() { // Bekreftelse på at bookingen er gjennomført
+    var consent = document.getElementById('consent');
+    if (!consent.checked) {
+        alert("Vennligst godta vår personvernerklæring.");
+        consent.focus();
+        return false;
+    }
+
     formPart2.style.display = "none";
     formPart3.style.display = "";
 };

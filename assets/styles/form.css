@@ -34,12 +34,15 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="number"],
-select {
+select,
+textarea {
     margin: 5px 0 5px 0;
     background-color: #f3f3f3;
     color: #333;
     border-radius: 5px;
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="submit"],
@@ -58,10 +61,17 @@ input[type="button"] {
 }
 
 input:valid,
-select {
+select,
+textarea {
     border: 1px solid #40916c;
 }
 
 input:invalid {
     border: 1px solid #d62828;
+}
+
+input[type="checkbox"] {
+    height: initial;
+    width: initial;
+    display: inline;
 }
