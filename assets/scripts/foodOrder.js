@@ -1,7 +1,16 @@
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 
-//Henter navnene på rettene
+function spisHer() { // kvittering
+    var spisHer = document.getElementById('').style; //navn til valgt rett
+    if (spisHer.display == "none") {
+        spisHer.display = "";
+    } else {
+        spisHer.display = "none";
+    }
+}
+
+//Henter navnene på rettene - #orderedDishes".name
 function addName(){
   var li = document.createElement("li")
   var rett = document.getElementById(dishes).name;
