@@ -74,11 +74,7 @@
 #order_ammount {
     display: block;
     text-align: center;
-    padding-top: 8px;
-}
-
-.extra_padding {
-    padding-top: 73px;
+    padding-top: 16px;
 }
 
 input[type="number"] {
@@ -89,7 +85,45 @@ input[type="number"] {
     box-sizing: border-box;
     border: 1px solid #d5c7ac;
     border-radius: 4px;
-    max-width: 64px;
+    max-width: 72px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+         appearance: textfield;
+    height: 36px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+}
+
+.customInput{
+    display: flex;
+    flex-direction: row;
+    width: 72px;
+}
+
+.customInputButtons{
+    position: relative;
+    right: 24px;
+    top: 8px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+.customInputButton{
+    border: 0px;
+    font-size: 12px;
+    min-width: 22px;
+    max-height: 16px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.extra_padding {
+    padding-top: 73px;
 }
 
 @media only screen and (max-width: 1489px) {
