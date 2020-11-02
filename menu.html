@@ -153,21 +153,15 @@
                 <h3>Sum: <span id="totalPrice"></span> ,-</h3>
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
-                    <a href="#"><button class="orderButton" aria-label="Spis her">Spis her</button></a>
-                    <a href="#"><button class="orderButton" aria-label="Bestill fra Foodora">Foodora</button></a>
-                    <a href="#"><button class="orderButton" aria-label="Bestill fra Wolt">Wolt</button></a>
+                    <a href="#"><button onclick="spisHer();" class="orderButton" aria-label="Spis her">Spis her</button></a>
+                    <a href="#"><button class="orderButton" aria-label="Takeaway">Takeaway</button></a>
                 </div>
-                <!--vi må gjre alle knapper mulig å trykke på selv om man ikke kommer til en ny side av å trykke.
-                beskjed fra vigdis. gjelder alle sider-->
-
-                <p>
-                    <button onclick="spisHer();">Spis her</button>
-                </p>
 
                 <div class="border" style="display: none" id="spisHer">
                     <p><strong>Din ordre er bekreftet</strong></p>
                     <p><strong>Antall retter: </strong></p>
                     <p><strong>Sum: </strong></p>
+                    <p><strong>Oppgi ditt bordnummer: </strong></p>
                     <p></p>
                 </div>
 
