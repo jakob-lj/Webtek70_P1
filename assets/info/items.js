@@ -3,21 +3,21 @@ const antipasti = [{
         "name": "Bruschetta",
         "desc": "Hjemmelaget, sprøstekt brød med hvitløk. Toppet med frisk tomat og basilikum.",
         "price": 99,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&1"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&1"
     },
     {
         "id": 1,
         "name": "Caprese",
         "desc": "Tomat, bøffelomozerella og basilikum",
         "price": 109,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&2"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&2"
     },
     {
         "id": 2,
         "name": "Parma e Burrata",
         "desc": "Parmaskinke, mozarella di burrata og basilikum.",
         "price": 125,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&3"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&3"
     }
 ]
 const paste = [{
@@ -25,21 +25,21 @@ const paste = [{
         "name": "Kokkens Favoritt",
         "desc": "La deg overraske.",
         "price": 170,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&4",
+        "img": "https://source.unsplash.com/100x100/?italian%20food&4",
     },
     {
         "id": 4,
         "name": "Sphagetti Bolognese",
         "desc": "Fersk pasta, bolognesesaus og permasan.",
         "price": 170,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&5"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&5"
     },
     {
         "id": 5,
         "name": "Linguine",
         "desc": "Fersk pasta, blåskjell, muslinger, blekksprut, kveite, hvitløk, hvitvin, og tomater.",
         "price": 199,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&6"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&6"
     },
 ]
 const dolci = [{
@@ -47,28 +47,28 @@ const dolci = [{
         "name": "Tiramisù",
         "desc": "Italiensk ostekake med fingerkjeks, mascarpone og kaffe.",
         "price": 110,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&7"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&7"
     },
     {
         "id": 7,
         "name": "Nemesis",
         "desc": "Myk sjokoladekake, bringeværsorbet og bærsaus.",
         "price": 110,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&8"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&8"
     },
     {
         "id": 8,
         "name": "Gelato",
         "desc": "Tre sorter iskrem, frisk frukt, krem og bærsaus.",
         "price": 75,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&9"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&9"
     },
     {
         "id": 9,
         "name": "Panna cotta",
         "desc": "Italiensk fløtepudding med vanilje og bærsaus.",
         "price": 95,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&10"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&10"
     },
 ]
 const pizze = [{
@@ -76,55 +76,55 @@ const pizze = [{
         "name": "Dagens pizza",
         "desc": "La deg overraske.",
         "price": 165,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&11"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&11"
     },
     {
         "id": 11,
         "name": "Margherita",
         "desc": "Tomat, fersk mozzarella, basilikum og olivenolje.",
         "price": 160,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&12"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&12"
     },
     {
         "id": 12,
         "name": "Vesuvio",
         "desc": "Tomat, fersk mozzarella, skinke, sopp, oliven og artisjokk.",
         "price": 190,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&13"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&13"
     },
     {
         "id": 13,
         "name": "Ventricinia",
         "desc": "Tomat, fersk mozzarella, ventricina(sterk salami), rødløk og rød pesto.",
         "price": 195,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&14"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&14"
     },
     {
         "id": 14,
         "name": "Parma",
         "desc": "Tomat, fersk mozzarella, parmaskinke, pinjekjerner, ruccola og parmesan.",
         "price": 185,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&15"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&15"
     },
     {
         "id": 15,
         "name": "N'duja",
         "desc": "Tomat, philadelphia, spinat, N'duja (supersterk pølse).",
         "price": 196,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&16"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&16"
     },
     {
         "id": 16,
         "name": "Ai formaggi",
         "desc": "Tomat, fersk mozarella, parmesan, gorgonzola og tallegio.",
         "price": 187,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&17"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&17"
     },
     {
         "id": 17,
         "name": "Calazone",
         "desc": "Tomat, fersk mozzarella, skinke og sopp (innbakt).",
         "price": 190,
-        "img": "https://source.unsplash.com/400x400/?italian%20food&18"
+        "img": "https://source.unsplash.com/100x100/?italian%20food&18"
     }
 ]
