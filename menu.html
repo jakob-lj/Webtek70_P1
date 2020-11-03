@@ -137,8 +137,8 @@
         </div>
 
         <div class="ordersec-2">
-            <button id="myBtn" onclick="myModal()">Spis her</button>
-            <button id="myBtnT">Takeaway</button>
+            <button id="modalHouseBtn" onclick="modalHouse()">Spis her</button>
+            <button id="modalTakeawayBtn" onclick="modalTakeaway()">Takeaway</button>
         </div>
 
     </section>
@@ -165,7 +165,7 @@
         </div>
     </footer>
 
-    <div id="myModal" class="modal">
+    <div id="modalHouseElem" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Din ordreoversikt</h2>
@@ -183,7 +183,7 @@
         </div>
     </div>
 
-    <div id="myModalT" class="modal">
+    <div id="modalTakeawayElem" class="modal">
         <div class="modal-content">
             <span class="closeT">&times;</span>
             <h2>Våre takeaway samarbeidspartnere</h2>
@@ -199,44 +199,41 @@
 
     </div>
     <script>
-        function myModal() {
+        function modalHouse() {
             // Get the modal
-            var modal = document.getElementById("myModal");
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
+            var modalHouseElem = document.getElementById("modalHouseElem");
             // Get the <span> element that closes the modal
             var span = document.getElementsByClassName("close")[0];
             // When the user clicks the button, open the modal
-            modal.style.display = "block";
+            modalHouseElem.style.display = "block";
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
-                    modal.style.display = "none";
+                    modalHouseElem.style.display = "none";
                 }
                 // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
+                if (event.target == modalHouseElem) {
+                    modalHouseElem.style.display = "none";
                 }
             }
         }
-        // Get the modal takeaway
-        var modal = document.getElementById("myModalT");
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtnT");
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("closeT")[0];
-        // When the user clicks the button, open the modal
-        btn.onclick = function() {
-                modal.style.display = "block";
-            }
+
+        function modalTakeaway() {
+            // Get the modal
+            var modalTakeawayElem = document.getElementById("modalTakeawayElem");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal
+            modalTakeawayElem.style.display = "block";
             // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-                modal.style.display = "none";
-            }
-            // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) { //Denne funker ikke helt....
-            if (event.target == modal) {
-                modal.style.display = "none";
+            span.onclick = function() {
+                    modalTakeawayElem.style.display = "none";
+                }
+                // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modalTakeawayElem) {
+                    modalTakeawayElem.style.display = "none";
+                }
             }
         }
     </script>
