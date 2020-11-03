@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,9 +12,9 @@
     <script src="./assets/scripts/menuSort.js"></script>
     <script src="./assets/scripts/foodOrder.js"></script>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
 
     <title>Meny - Prietzeria</title>
 
@@ -96,13 +96,13 @@
                 <div class="filter_container">
                     <h1>Meny</h1>
                     <div id="selectContainer">
-                        <label for="filter">Filtrer meny:</label><br>
+                        <label for="menuFilter">Filtrer meny:</label><br>
                         <select name="filter" id="menuFilter" onchange="reRender()">
-                  <option value=0>Normal</option>
-                  <option value=1>Alfabetisk</option>
-                  <option value=2>Pris lav-høy</option>
-                  <option value=3>Pris høy-lav</option>
-                </select>
+                            <option value=0>Normal</option>
+                            <option value=1>Alfabetisk</option>
+                            <option value=2>Pris lav-høy</option>
+                            <option value=3>Pris høy-lav</option>
+                        </select>
                     </div>
                 </div>
                 <div class="menu_subsection">
@@ -148,9 +148,9 @@
                                 <h3>Vennligst skriv hvilket bordnummer du har</h3> <input type="number" name="myInput" placeholder="1" required>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med Vipps</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med kort</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med gavekort</button>
+                                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Vipps');">Betal med Vipps</button>
+                                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med kort</button>
+                                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med gavekort</button>
                             </div>
                         </div>
                     </div>
@@ -164,10 +164,8 @@
                                 <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
                             </div>
                             <div class="modal-footer">
-                                <a href="https://www.foodora.no/?ax=54020719093&tx=kwd-128078785769&ap=&dv=c&nt=g&mt=e&pm=1010976&pi=&cr=264401331532&fi=&bc=7513&gclid=CjwKCAiA-f78BRBbEiwATKRRBHPyTaKXsGVbi548watKaxMV8c-k-xQ12-4NL98Z7KUTsV4NFwr7GxoCswIQAvD_BwE">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Foodora</button></a>
-                                <a href="https://wolt.com/nb?gclid=CjwKCAiA-f78BRBbEiwATKRRBAIWJsERttXrlDCQavYsEwONhK2XSXfR96YrWc0u2FzHGA2BqoP21BoCumsQAvD_BwE">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Wolt</button></a>
+                                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">Foodora</button>
+                                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">Wolt</button>
                             </div>
                         </div>
                     </div>
