@@ -9,9 +9,12 @@ body {
 
 body {
     font-family: "Playfair Display", serif;
-    background-color: #171e28; /*mørkeblå*/
-    color: #d5c7ac; /*gull*/
-    border-left: 5vw solid #f3f3f3; /*hvit/grå*/
+    background-color: #171e28;
+    /*mørkeblå*/
+    color: #d5c7ac;
+    /*gull*/
+    border-left: 5vw solid #f3f3f3;
+    /*hvit/grå*/
     border-right: 5vw solid #f3f3f3;
 }
 
@@ -20,7 +23,10 @@ a:visited {
     color: #d5c7ac;
     text-decoration: none;
 }
+
+
 /*Hvit bakgrunn øverst*/
+
 header {
     background-color: #f3f3f3;
     border-left: 5vw solid #f3f3f3;
@@ -93,8 +99,19 @@ video {
     position: relative;
 }
 
-#hero1 {
-    background-image: url('../images/hero1.jpg');
+#noVideo {
+    display: none;
+}
+
+@media screen and (max-width: 940px) {
+    video {
+        display: none;
+    }
+    #noVideo {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 }
 
 #hero2 {
@@ -138,11 +155,13 @@ footer {
 footer div p a,
 footer div p a:link,
 footer div p a:visited {
-    color: #ff841e;/*Orange*/
+    color: #ff841e;
+    /*Orange*/
 }
 
 footer div p a:hover {
-    color: #d5c7ac; /*gull*/
+    color: #d5c7ac;
+    /*gull*/
 }
 
 .footer-col {
