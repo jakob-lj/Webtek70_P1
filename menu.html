@@ -74,35 +74,15 @@
                 <img id="dish_img" src="" />
                 <div id="order_ammount">
                   <label for="ammount">Antall: </label><br />
-                  <div class="customInput">
-                    <input
-                    name="ammount"
-                    class="orderInput"
-                    type="number"
-                    min="0"
-                    max="10"
-                    value="0"
-                  />
-                  <script>
-                      function fireChange(element){
-                        var event = new Event('change');
-                        element.dispatchEvent(event);
-                    }
-                  </script>
-                  <div class="customInputButtons">
-                      <button onclick="
-                      this.parentNode.parentNode.querySelector('input[type=number]').stepUp();
-                      let e = this.parentNode.parentNode.querySelector('input[type=number]');
-                      fireChange(e);
-                      " class="customInputButton">+</button>
-                      <button onclick="
-                      this.parentNode.parentNode.querySelector('input[type=number]').stepDown()
-                      let e = this.parentNode.parentNode.querySelector('input[type=number]');
-                      fireChange(e);
-                      " class="customInputButton">-</button>
-                  </div>
-                  </div>
-
+                  <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); let e = this.parentNode.parentNode.querySelector('input[type=number]'); fireChange(e); " class="customInputButton">-</button>
+                  <input readonly name="ammount" class="orderInput" type="number" min="0" max="10" value="0">
+                  <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp();let e = this.parentNode.parentNode.querySelector('input[type=number]');fireChange(e);" class="customInputButton">+</button>
+                <script>
+                  function fireChange(element){
+                    var event = new Event('change');
+                    element.dispatchEvent(event);
+                }
+                </script>
                 </div>
               </div>
               <div class="menu_text">
@@ -149,28 +129,31 @@
     <section class="orderSection">
         <div class="processOrderContainer">
             <div class="orderSummary">
-                <h2>Din ordre <span id="dishes"></span> </h2> <!--navn på rett, ikke på plass enda-->
+                <h2>Din ordre <span id="dishes"></span> </h2>
+                <!--navn på rett, ikke på plass enda-->
                 <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <h3>Sum: <span id="totalPrice"></span> ,-</h3>
+                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
 
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="myModal()">Spis her</button>
                     <div id="myModal" class="modal">
-                      <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2>Din ordreoversikt</h2>
-                        <div class="modal-body">
-                          <h3>Antall retter: <span id="orderedDishes">0</span></h3> <!--Får ikke med antall og sum. required funker ikke. -->
-                          <h3>Sum: <span id="totalPrice"></span> ,-</h3>
-                          <h3>Vennligst skriv hvilket bordnummer du: <input type="number" name="myInput" placeholder=" 01"required> </h3>
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Din ordreoversikt</h2>
+                            <div class="modal-body">
+                                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                                <!--Får ikke med antall og sum. required funker ikke. -->
+                                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                                <h3>Vennligst skriv hvilket bordnummer du har: </h3> <input type="number" name="myInput" placeholder=" 01" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med Vipps</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med kort</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Betal med gavekort</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Betal med vipps</button>
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Betal med kort</button>
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Betal med gavekort</button>
-                        </div>
-                      </div>
                     </div>
 
                     <button id="myBtnT">Takeaway</button>
@@ -182,61 +165,60 @@
                           <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden</h3>
                         </div>
                         <div class="modal-footer">
-                          <a href="https://www.foodora.no/?ax=54020719093&tx=kwd-128078785769&ap=&dv=c&nt=g&mt=e&pm=1010976&pi=&cr=264401331532&fi=&bc=7513&gclid=CjwKCAiA-f78BRBbEiwATKRRBHPyTaKXsGVbi548watKaxMV8c-k-xQ12-4NL98Z7KUTsV4NFwr7GxoCswIQAvD_BwE">
+                          <a target="_blank" href="https://www.foodora.no/?ax=54020719093&tx=kwd-128078785769&ap=&dv=c&nt=g&mt=e&pm=1010976&pi=&cr=264401331532&fi=&bc=7513&gclid=CjwKCAiA-f78BRBbEiwATKRRBHPyTaKXsGVbi548watKaxMV8c-k-xQ12-4NL98Z7KUTsV4NFwr7GxoCswIQAvD_BwE">
                           <button type="button" class="btn btn-default" data-dismiss="modal">foodora.no</button></a>
-                          <a href="https://wolt.com/nb?gclid=CjwKCAiA-f78BRBbEiwATKRRBAIWJsERttXrlDCQavYsEwONhK2XSXfR96YrWc0u2FzHGA2BqoP21BoCumsQAvD_BwE">
+                          <a target="_blank" href="https://wolt.com/nb?gclid=CjwKCAiA-f78BRBbEiwATKRRBAIWJsERttXrlDCQavYsEwONhK2XSXfR96YrWc0u2FzHGA2BqoP21BoCumsQAvD_BwE">
                           <button type="button" class="btn btn-default" data-dismiss="modal">wolt.com</button></a>
                           <a href="tel: +4798046690">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Ring og bestill</button></a>
                         </div>
-                      </div>
                     </div>
 
-                  </div>
-                  <script>
-                  function myModal(){
-                  // Get the modal
-                  var modal = document.getElementById("myModal");
-                  // Get the button that opens the modal
-                  var btn = document.getElementById("myBtn");
-                  // Get the <span> element that closes the modal
-                  var span = document.getElementsByClassName("close")[0];
-                  // When the user clicks the button, open the modal
-                    modal.style.display = "block";
-                  // When the user clicks on <span> (x), close the modal
-                  span.onclick = function() {
-                    modal.style.display = "none";
-                  }
-                  // When the user clicks anywhere outside of the modal, close it
-                  window.onclick = function(event) {
-                    if (event.target == modal) {
-                      modal.style.display = "none";
+                </div>
+                <script>
+                    function myModal() {
+                        // Get the modal
+                        var modal = document.getElementById("myModal");
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("myBtn");
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        // When the user clicks the button, open the modal
+                        modal.style.display = "block";
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+                            // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
                     }
-                  }
-                  }
-                  // Get the modal takeaway
-                  var modal = document.getElementById("myModalT");
-                  // Get the button that opens the modal
-                  var btn = document.getElementById("myBtnT");
-                  // Get the <span> element that closes the modal
-                  var span = document.getElementsByClassName("closeT")[0];
-                  // When the user clicks the button, open the modal
-                  btn.onclick = function() {
-                    modal.style.display = "block";
-                  }
-                  // When the user clicks on <span> (x), close the modal
-                  span.onclick = function() {
-                    modal.style.display = "none";
-                  }
-                  // When the user clicks anywhere outside of the modal, close it
-                  window.onclick = function(event) {//Denne funker ikke helt....
-                    if (event.target == modal) {
-                      modal.style.display = "none";
+                    // Get the modal takeaway
+                    var modal = document.getElementById("myModalT");
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtnT");
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("closeT")[0];
+                    // When the user clicks the button, open the modal
+                    btn.onclick = function() {
+                            modal.style.display = "block";
+                        }
+                        // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                            modal.style.display = "none";
+                        }
+                        // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) { //Denne funker ikke helt....
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
                     }
-                  }
-                  </script>
-              </div>
+                </script>
             </div>
+        </div>
     </section>
 
     <small> Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>

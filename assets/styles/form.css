@@ -48,9 +48,9 @@ textarea {
 
 input[type="submit"],
 input[type="button"] {
-    background-color: #40916c;
+    background-color: #2d6a4f;
     color: #f3f3f3;
-    width: 100%;
+    width: auto;
     margin: auto;
     font-weight: bold;
     border-radius: 5px;
@@ -63,7 +63,7 @@ input[type="button"] {
 
 /*Samme størrelse som andre knapper*/
 #submitPart1{
-  max-width: 200px;
+  min-width: 200px;
 }
 
 

@@ -5,7 +5,7 @@
     .modal {
       display: none;
       position: fixed;
-      z-index: 1; 
+      z-index: 1;
       padding-top: 100px;
       left: 0;
       top: 0;
@@ -31,27 +31,39 @@
       font-weight: bold;
     }
 
-    .close:hover,
-    .close:focus {
-      color: #d5c7ac;
-      text-decoration: none;
-      cursor: pointer;
-    }
 
-    /* Close Button Takeaway */
-    .closeT {
-      color: #ff841e;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
+/* The Close Button */
 
-    .closeT:hover,
-    .closeT:focus {
-      color: #d5c7ac;
-      text-decoration: none;
-      cursor: pointer;
-    }
+.close {
+    color: #ff841e;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d5c7ac;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* The Close Button Takeaway */
+
+.closeT {
+    color: #ff841e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeT:hover,
+.closeT:focus {
+    color: #d5c7ac;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #menu_container {
     margin: 100px;
@@ -129,6 +141,7 @@
 
 input[type="number"] {
     margin-top: 4px;
+    text-align: center;
     color: #d5c7ac;
     padding: 5px;
     background-color: #171e28;
@@ -136,10 +149,8 @@ input[type="number"] {
     border: 1px solid #d5c7ac;
     border-radius: 4px;
     max-width: 72px;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-         appearance: textfield;
     height: 36px;
+    pointer-events: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -147,13 +158,13 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.customInput{
+.customInput {
     display: flex;
     flex-direction: row;
     width: 72px;
 }
 
-.customInputButtons{
+.customInputButtons {
     position: relative;
     right: 24px;
     top: 8px;
@@ -162,14 +173,15 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
 }
 
-.customInputButton{
-    border: 0px;
-    font-size: 12px;
+.customInputButton {
+    border: 0;
+    font-size: 22px;
     min-width: 22px;
-    max-height: 16px;
+    max-height: 35px;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
 }
 
 .extra_padding {
