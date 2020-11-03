@@ -167,33 +167,37 @@
 
     <div id="modalHouseElem" class="modal">
         <div class="modal-content">
-            <span id="closeHouse" class="close">&times;</span>
-            <h2>Din ordreoversikt</h2>
-            <div class="modal-body">
-                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <!--Får ikke med antall og sum. required funker ikke. -->
-                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
-                <h3>Vennligst skriv hvilket bordnummer du har</h3> <input type="number" name="myInput" placeholder="1" required>
-            </div>
-            <div class="modal-footer">
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Vipps');">Betal med Vipps</button>
-                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med kort</button>
-                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med gavekort</button>
-            </div>
+            <<<<<<< HEAD <span id="closeHouse" class="close">&times;</span>
+                =======
+                <span class="close">&times;</span> >>>>>>> 55e1f2b31f0b8c4a42fca9afbcbc583270573c1f
+                <h2>Din ordreoversikt</h2>
+                <div class="modal-body">
+                    <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                    <!--Får ikke med antall og sum. required funker ikke. -->
+                    <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                    <h3>Vennligst skriv hvilket bordnummer du har</h3> <input type="number" name="myInput" placeholder="1" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Vipps');">Betal med Vipps</button>
+                    <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med kort</button>
+                    <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med gavekort</button>
+                </div>
         </div>
     </div>
 
     <div id="modalTakeawayElem" class="modal">
         <div class="modal-content">
-            <span id="closeTakeaway" class="close">&times;</span>
-            <h2>Våre takeaway samarbeidspartnere</h2>
-            <div class="modal-body">
-                <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
-            </div>
-            <div class="modal-footer">
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">Foodora</button>
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">Wolt</button>
-            </div>
+            <<<<<<< HEAD <span id="closeTakeaway" class="close">&times;</span>
+                =======
+                <span class="closeT">&times;</span> >>>>>>> 55e1f2b31f0b8c4a42fca9afbcbc583270573c1f
+                <h2>Våre takeaway samarbeidspartnere</h2>
+                <div class="modal-body">
+                    <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">Foodora</button>
+                    <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">Wolt</button>
+                </div>
         </div>
     </div>
 
@@ -232,14 +236,12 @@
             // When the user clicks on <span> (x), close the modal
             span.onclick = function() {
                     document.querySelectorAll("body > :not(#modalTakeawayElem)").forEach(element => element.style.filter = "blur()");
-
                     modalTakeawayElem.style.display = "none";
                 }
                 // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modalTakeawayElem) {
                     document.querySelectorAll("body > :not(#modalTakeawayElem)").forEach(element => element.style.filter = "blur(0)");
-
                     modalTakeawayElem.style.display = "none";
                 }
             }
