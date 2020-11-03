@@ -16,8 +16,7 @@ body {
 }
 
 a,
-a:visited,
-a:hover {
+a:visited {
     color: #d5c7ac;
     text-decoration: none;
 }
@@ -28,7 +27,9 @@ header {
     border-right: 5vw solid #f3f3f3;
 }
 
+
 /*Logo*/
+
 header img {
     max-width: 600px;
     display: block;
@@ -121,7 +122,7 @@ video {
 }
 
 #hero8 {
-  background-image: url("../images/hero8.jpg");
+    background-image: url("../images/hero8.jpg");
 }
 
 
