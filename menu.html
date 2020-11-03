@@ -127,6 +127,7 @@
         </div>
     </div>
     <section class="orderSection">
+
         <div class="processOrderContainer">
             <div class="orderSummary">
                 <h2>Din ordre <span id="dishes"></span> </h2>
@@ -134,6 +135,7 @@
                 <h3>Antall retter: <span id="orderedDishes">0</span></h3>
                 <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
 
+                <!--POP UP-->
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="myModal()">Spis her</button>
@@ -173,20 +175,52 @@
                           <button type="button" class="btn btn-default" data-dismiss="modal">Ring og bestill</button></a>
                         </div>
                     </div>
-                    <section class="orderSection">
-                        <div class="ordersec-1">
-                            <p class="cartTitle">Din bestilling</p>
-                            <br />
-                            <p><span id="dishes"></span>Antall retter: <span id="orderedDishes">0</span></p>
-                            <br />
-                            <p>Sum: <span id="totalPrice">0</span> ,-</p>
-                        </div>
 
+                    <script>
+                        function modalHouse() {
+                            // Get the modal
+                            var modalHouseElem = document.getElementById("modalHouseElem");
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+                            // When the user clicks the button, open the modal
+                            modalHouseElem.style.display = "block";
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                    modalHouseElem.style.display = "none";
+                                }
+                                // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modalHouseElem) {
+                                    modalHouseElem.style.display = "none";
+                                }
+                            }
+                        }
+
+                        function modalTakeaway() {
+                            // Get the modal
+                            var modalTakeawayElem = document.getElementById("modalTakeawayElem");
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+                            // When the user clicks the button, open the modal
+                            modalTakeawayElem.style.display = "block";
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                    modalTakeawayElem.style.display = "none";
+                                }
+                                // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if (event.target == modalTakeawayElem) {
+                                    modalTakeawayElem.style.display = "none";
+                                }
+                            }
+                        }
+                    </script>
+<!--
         <div class="ordersec-2">
             <button id="modalHouseBtn" onclick="modalHouse()">Spis her</button>
             <button id="modalTakeawayBtn" onclick="modalTakeaway()">Takeaway</button>
         </div>
-
+-->
     </section>
 
     <small>Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>
@@ -210,14 +244,13 @@
             <a href="#"><img class="footerIcon" src="assets/images/icons/resturantchoice.png" alt="The Restaurant Choice"></a>
         </div>
     </footer>
-
+<!--
     <div id="modalHouseElem" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Din ordreoversikt</h2>
             <div class="modal-body">
                 <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <!--Får ikke med antall og sum. required funker ikke. -->
                 <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
                 <h3>Vennligst skriv hvilket bordnummer du har</h3> <input type="number" name="myInput" placeholder="1" required>
             </div>
@@ -242,47 +275,8 @@
             </div>
         </div>
     </div>
-
     </div>
-    <script>
-        function modalHouse() {
-            // Get the modal
-            var modalHouseElem = document.getElementById("modalHouseElem");
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            // When the user clicks the button, open the modal
-            modalHouseElem.style.display = "block";
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                    modalHouseElem.style.display = "none";
-                }
-                // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modalHouseElem) {
-                    modalHouseElem.style.display = "none";
-                }
-            }
-        }
-
-        function modalTakeaway() {
-            // Get the modal
-            var modalTakeawayElem = document.getElementById("modalTakeawayElem");
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            // When the user clicks the button, open the modal
-            modalTakeawayElem.style.display = "block";
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                    modalTakeawayElem.style.display = "none";
-                }
-                // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modalTakeawayElem) {
-                    modalTakeawayElem.style.display = "none";
-                }
-            }
-        }
-    </script>
+  -->
 
     <script src="assets/scripts/mobileNav.js"></script>
 </body>
