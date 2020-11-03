@@ -130,17 +130,18 @@
 
         <div class="processOrderContainer">
             <div class="orderSummary">
-                <h2>Din ordre <span id="dishes"></span> </h2>
-                <!--navn på rett, ikke på plass enda-->
-                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                <div>
+                    <h2>Din ordre <span id="dishes"></span> </h2>
+                    <!--navn på rett, ikke på plass enda-->
+                    <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                    <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                </div>
 
                 <!--POP UP-->
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="myModal()">Spis her</button>
                     <div id="myModal" class="modal">
-
                         <div class="modal-content">
                             <span class="close">&times;</span>
                             <h2>Din ordreoversikt</h2>
@@ -157,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <br>
                     <button id="myBtnT">Takeaway</button>
                     <div id="myModalT" class="modal">
                       <div class="modal-content">
