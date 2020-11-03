@@ -1,15 +1,6 @@
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 
-function spisHer() { // kvittering
-    var spisHer = document.getElementById('').style; //navn til valgt rett
-    if (spisHer.display == "none") {
-        spisHer.display = "";
-    } else {
-        spisHer.display = "none";
-    }
-}
-
 //Henter navnene på rettene - #orderedDishes".name
 function addName() {
     var li = document.createElement("li")
@@ -89,3 +80,5 @@ function getFoodById(id) {
         }
     }
 }
+
+//Source: https://codemyui.com/sticky-sidebar-navigation-on-scroll/
