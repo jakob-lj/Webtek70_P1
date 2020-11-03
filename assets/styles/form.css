@@ -56,7 +56,8 @@ input:invalid {
 }
 
 input[type="submit"],
-input[type="button"] {
+input[type="button"],
+#submitBackPart2:hover {
     background-color: #d5c7ac;
     color: #171e28;
     width: auto;
@@ -67,7 +68,9 @@ input[type="button"] {
     border: 1px solid #333;
 }
 
-#submitBackPart2 {
+#submitBackPart2,
+input[type="submit"]:hover,
+input[type="button"]:hover {
     background-color: #171e28;
     color: #d5c7ac;
     border: 1px solid #d5c7ac;
