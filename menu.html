@@ -127,18 +127,25 @@
         </div>
     </div>
 
-    <section class="orderSection">
-        <div class="ordersec-1">
-            <p class="cartTitle">Din bestilling</p>
-            <br />
-            <p><span id="dishes"></span>Antall retter: <span id="orderedDishes">0</span></p>
-            <br />
-            <p>Sum: <span id="totalPrice">0</span> ,-</p>
-        </div>
 
-        <div class="ordersec-2">
-            <button id="modalHouseBtn" onclick="modalHouse()">Spis her</button>
-            <button id="modalTakeawayBtn" onclick="modalTakeaway()">Takeaway</button>
+    <section class="orderSection">
+
+        <div class="processOrderContainer">
+            <div class="orderSummary">
+                <div>
+                    <h2>Din ordre <span id="dishes"></span> </h2>
+                    <!--navn på rett, ikke på plass enda-->
+                    <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                    <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                </div>
+
+                <div class="orderButtonContainer" id="order1">
+                    <h2>Hvor vil du spise?</h2>
+                    <button id="myBtn" onclick="modalHouse()">Spis her</button>
+                    <button id="myBtnT" onclick="modalTakeaway()">Takeaway</button>
+                </div>
+
+            </div>
         </div>
 
     </section>
@@ -211,8 +218,12 @@
                 <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">Foodora</button>
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">Wolt</button>
+                <a target="_blank" href="https://www.foodora.no/">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">foodora.no</button></a>
+                <a target="_blank" href="https://wolt.com/">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">wolt.com</button></a>
+                <a href="tel: +4798046690">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ring og bestill</button></a>
             </div>
         </div>
     </div>
