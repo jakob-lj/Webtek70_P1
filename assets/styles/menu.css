@@ -2,20 +2,20 @@
     box-sizing: border-box;
 }
 
-    /* The Modal (background) */
     .modal {
-      display: none; /* Hidden by default */
-      position: fixed; /* Stay in place */
-      z-index: 1; /* Sit on top */
-      padding-top: 100px; /* Location of the box */
+      display: none;
+      position: fixed;
+      z-index: 1; 
+      padding-top: 100px;
       left: 0;
       top: 0;
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      overflow: auto; /* Enable scroll if needed */
+      width: 100%;
+      height: 100%;
+      overflow: auto; /*scroll */
+      background-color: rgb(0,0,0);  /*Fallback */
+      background-color: rgba(0,0,0,0.5);
     }
 
-    /* Modal Content */
     .modal-content {
       background-color: #171e28;
       margin: auto;
@@ -24,7 +24,6 @@
       width: 80%;
     }
 
-    /* The Close Button */
     .close {
       color: #ff841e;
       float: right;
@@ -39,7 +38,7 @@
       cursor: pointer;
     }
 
-    /* The Close Button Takeaway */
+    /* Close Button Takeaway */
     .closeT {
       color: #ff841e;
       float: right;
@@ -52,14 +51,6 @@
       color: #d5c7ac;
       text-decoration: none;
       cursor: pointer;
-    }
-    /*Modal ferdig */
-
-    /*Blur jobber videre senere*/
-    #myBtn #myBtnT {
-      /* Add the blur effect */
-      filter: blur(8px);
-      -webkit-filter: blur(8px);
     }
 
 #menu_container {
