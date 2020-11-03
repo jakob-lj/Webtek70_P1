@@ -43,56 +43,56 @@ const paste = [{
     },
 ]
 const pizze = [{
-        "id": 10,
+        "id": 6,
         "name": "Dagens pizza",
         "desc": "La deg overraske.",
         "price": 165,
         "img": "https://source.unsplash.com/100x100/?italian%20food&11"
     },
     {
-        "id": 11,
+        "id": 7,
         "name": "Margherita",
         "desc": "Tomat, fersk mozzarella, basilikum og olivenolje.",
         "price": 160,
         "img": "https://source.unsplash.com/100x100/?italian%20food&12"
     },
     {
-        "id": 12,
+        "id": 8,
         "name": "Vesuvio",
         "desc": "Tomat, fersk mozzarella, skinke, sopp, oliven og artisjokk.",
         "price": 190,
         "img": "https://source.unsplash.com/100x100/?italian%20food&13"
     },
     {
-        "id": 13,
+        "id": 9,
         "name": "Ventricinia",
         "desc": "Tomat, fersk mozzarella, ventricina(sterk salami), rødløk og rød pesto.",
         "price": 195,
         "img": "https://source.unsplash.com/100x100/?italian%20food&14"
     },
     {
-        "id": 14,
+        "id": 10,
         "name": "Parma",
         "desc": "Tomat, fersk mozzarella, parmaskinke, pinjekjerner, ruccola og parmesan.",
         "price": 185,
         "img": "https://source.unsplash.com/100x100/?italian%20food&15"
     },
     {
-        "id": 15,
+        "id": 11,
         "name": "N'duja",
         "desc": "Tomat, philadelphia, spinat, N'duja (supersterk pølse).",
         "price": 196,
         "img": "https://source.unsplash.com/100x100/?italian%20food&16"
     },
     {
-        "id": 16,
+        "id": 12,
         "name": "Ai formaggi",
         "desc": "Tomat, fersk mozarella, parmesan, gorgonzola og tallegio.",
         "price": 187,
         "img": "https://source.unsplash.com/100x100/?italian%20food&17"
     },
     {
-        "id": 17,
+        "id": 13,
         "name": "Calazone",
         "desc": "Tomat, fersk mozzarella, skinke og sopp (innbakt).",
         "price": 190,
@@ -100,28 +100,28 @@ const pizze = [{
     }
 ]
 const dolci = [{
-        "id": 6,
+        "id": 14,
         "name": "Tiramisù",
         "desc": "Italiensk ostekake med fingerkjeks, mascarpone og kaffe.",
         "price": 110,
         "img": "https://source.unsplash.com/100x100/?italian%20food&7"
     },
     {
-        "id": 7,
+        "id": 15,
         "name": "Nemesis",
         "desc": "Myk sjokoladekake, bringeværsorbet og bærsaus.",
         "price": 110,
         "img": "https://source.unsplash.com/100x100/?italian%20food&8"
     },
     {
-        "id": 8,
+        "id": 16,
         "name": "Gelato",
         "desc": "Tre sorter iskrem, frisk frukt, krem og bærsaus.",
         "price": 75,
         "img": "https://source.unsplash.com/100x100/?italian%20food&9"
     },
     {
-        "id": 9,
+        "id": 17,
         "name": "Panna cotta",
         "desc": "Italiensk fløtepudding med vanilje og bærsaus.",
         "price": 95,
