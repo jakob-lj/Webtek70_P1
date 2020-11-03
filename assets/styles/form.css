@@ -45,21 +45,6 @@ textarea {
     box-sizing: border-box;
 }
 
-input[type="submit"],
-input[type="button"] {
-    background-color: #2d6a4f;
-    color: #f3f3f3;
-    width: auto;
-    margin: auto;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 0;
-}
-
-#submitBackPart2 {
-    background-color: #d62828;
-}
-
 input:valid,
 select,
 textarea {
@@ -68,6 +53,24 @@ textarea {
 
 input:invalid {
     border: 1px solid #d62828;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #d5c7ac;
+    color: #171e28;
+    width: auto;
+    margin: auto;
+    padding: 0 25px 0 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+#submitBackPart2 {
+    background-color: #171e28;
+    color: #d5c7ac;
+    border: 1px solid #d5c7ac;
 }
 
 input[type="checkbox"] {
