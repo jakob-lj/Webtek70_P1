@@ -28,8 +28,9 @@ header {
     border-right: 5vw solid #f3f3f3;
 }
 
+/*Logo*/
 header img {
-    max-width: 400px;
+    max-width: 600px;
     display: block;
     margin-left: auto;
     margin-right: auto;
