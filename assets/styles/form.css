@@ -66,6 +66,7 @@ input[type="button"],
     font-weight: bold;
     border-radius: 5px;
     border: 1px solid #333;
+    cursor: pointer;
 }
 
 #submitBackPart2,
@@ -74,6 +75,7 @@ input[type="button"]:hover {
     background-color: #171e28;
     color: #d5c7ac;
     border: 1px solid #d5c7ac;
+    cursor: pointer;
 }
 
 input[type="checkbox"] {
