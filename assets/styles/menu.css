@@ -208,7 +208,12 @@ input[type=number]::-webkit-outer-spin-button {
       left: 0;
       top: 10;
       border-radius: 0px;
+      border-radius: 0px;
+      width: 100%;
+      max-height: 200px;
       box-sizing: border-box;
+      padding: 8px;
+      padding-left: 24px;
     }
 }
 
@@ -278,13 +283,17 @@ button {
   background-color: #171e28;
   text-transform: uppercase;
 }
-/* ønsker å stoppe opp begge navene før de treffer hero bildet og hover farge*/
-#scrollMenu:hover{
+/* ønsker å stoppe opp begge navene før de treffer hero bildet og hover farge
+:hover{
   color: #d5c7ac;
+}*/
+
+.fixed {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    z-index: 1;
 }
-
-
-
 
 #scrollMenu>ul>li {
   list-style-type: none;
