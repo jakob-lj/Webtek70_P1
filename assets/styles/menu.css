@@ -2,6 +2,68 @@
     box-sizing: border-box;
 }
 
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /*scroll */
+      background-color: rgb(0,0,0);  /*Fallback */
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #171e28;
+      margin: auto;
+      padding: 20px;
+      border: 5px solid #ff841e;
+      width: 80%;
+    }
+
+    .close {
+      color: #ff841e;
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+
+/* The Close Button */
+
+.close {
+    color: #ff841e;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #d5c7ac;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* The Close Button Takeaway */
+
+.closeT {
+    color: #ff841e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeT:hover,
+.closeT:focus {
+    color: #d5c7ac;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #menu_container {
     margin: 100px;
@@ -79,6 +141,7 @@
 
 input[type="number"] {
     margin-top: 4px;
+    text-align: center;
     color: #d5c7ac;
     padding: 5px;
     background-color: #171e28;
@@ -90,20 +153,21 @@ input[type="number"] {
     -moz-appearance: textfield;
          appearance: textfield;
     height: 36px;
+    pointer-events: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.customInput{
+.customInput {
     display: flex;
     flex-direction: row;
     width: 72px;
 }
 
-.customInputButtons{
+.customInputButtons {
     position: relative;
     right: 24px;
     top: 8px;
@@ -112,14 +176,15 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
 }
 
-.customInputButton{
-    border: 0px;
-    font-size: 12px;
+.customInputButton {
+    border: 0;
+    font-size: 22px;
     min-width: 22px;
-    max-height: 16px;
+    max-height: 35px;
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
 }
 
 .extra_padding {
@@ -135,38 +200,61 @@ input[type=number]::-webkit-outer-spin-button {
     }
 }
 
-.orderSummary {
-    min-width: 200px;
-    text-align: start;
-}
+
+/* Floating Cart */
 
 .orderSection {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    margin: 0 auto;
-}
-
-.processOrderContainer {
-    max-width: 300px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    border: 2px dotted #d5c7ac;
-    padding: 12px;
-    margin-bottom: 100px;
-}
-
-.orderButtonContainer {
-    display: flex;
-    flex-direction: column;
+    background-color: #3e1313;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     align-items: center;
-    max-width: 800px;
+    text-align: left;
+    z-index: 1;
+    margin: 0;
+    padding: 25px;
+    border-left: 5vw solid #f3f3f3;
+    border-right: 5vw solid #f3f3f3;
+    box-sizing: border-box;
 }
 
-.orderButtonContainer>h2 {
-    margin-bottom: 12px;
+@media only screen and (max-width: 1200px) {
+    .orderSection {
+        border: 0;
+    }
+}
+
+.orderSection p {
+    display: inline;
+}
+
+.orderSection button {
+    margin-bottom: 5px;
+}
+
+.ordersec-1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ordersec-2 {
+    grid-area: 1 / 3 / 2 / 4;
+    justify-self: end;
+}
+
+.ordersec-3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.ordersec-4 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.cartTitle {
+    font-size: 19px;
 }
 
 .partnerContainer {
@@ -195,4 +283,8 @@ button {
 
 .orderSection {
     padding-top: 12px;
+}
+
+footer {
+    padding-bottom: 150px;
 }

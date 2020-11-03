@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/form.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+
     <title>Kontakt oss - Prietzeria</title>
 
     <style>
@@ -53,7 +58,7 @@
 
 <body>
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
     </header>
 
     <div class="nav-col flex">
@@ -97,19 +102,17 @@
     <section>
         <h1>Kontakt oss</h1>
         <ul id="contactList">
-            <p>
-                <li>Telefonnummer: </li>
-                +47 980 46 690 <br>
-                <br>
-                <li>E-postadresse: </li>
-                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
-                <br><br>
-                <li>Adresse: </li>
-                <a target="_blank" rel="nofollow" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
+            <li>Telefonnummer: </li>
+            +47 980 46 690 <br>
+            <br>
+            <li>E-postadresse: </li>
+            <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
+            <br><br>
+            <li>Adresse: </li>
+            <a target="_blank" rel="nofollow" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
                 Kristianstenbakken 60 <br>
                 7014 Trondheim <br>
                 </a>
-            </p>
             <br>
         </ul>
     </section>
@@ -117,13 +120,12 @@
     <section>
         <h1>Kart</h1>
 
-        <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=10.407646894454958%2C63.426034647052546%2C10.413494110107424%2C63.42760166521223&amp;layer=mapnik"
-            style="filter: grayscale(100%);">
+        <iframe src="https://snazzymaps.com/embed/271476" width="100%" height="300px" style="border:none;">
             <img src="assets/images/bilder/kontakt oss/map1.png" width="100%" alt="Kart av Trondheim">
         </iframe>
 
         <br/>
-        <small><a href="https://www.openstreetmap.org/#map=18/63.42682/10.41057">Vis større kart</a></small>
+        <small><a href="https://snazzymaps.com/build-a-map/" target="_blank" rel="nofollow">Kilde: SnazzyMaps / Google Maps</a></small>
 
         <h1>Gavekort</h1>
         <p>
@@ -135,11 +137,44 @@
     <section>
         <h1>Jobb hos oss</h1>
         <p>
-            Dyktige, engasjerte mennesker med sans for lun og sjarmerende service er det alltid plass for i Prietzeria. Ønsker du å jobbe hos oss kan du bruke lenken under og fortelle hvorfor vi, du og kundene våre er en god match. Dersom du søker til en spesifikk
-            stilling velg kun den restauranten det gjelder for at søknaden skal gå til rett restaurant.
-            <br> <br> Klikk her for å se hvilke stillinger som ligge ute for øyeblikket.
+            Dyktige, engasjerte mennesker med sans for lun og sjarmerende service er det alltid plass for i Prietzeria. Ønsker du å jobbe hos oss kan du bruke knappen under og fortelle hvorfor vi, du og kundene våre er en god match. Vennligst spesifiser hvilken stilling
+            du ønsker.
+            <br> <br>
         </p>
-        <a href="contact.html"><button>Søk stilling</button></a>
+
+        <p>
+            <button onclick="showForm();">Søk stilling</button>
+        </p>
+
+        <form style="display: none" id="hiddenForm" onsubmit="submitHiddenForm();">
+            <div class="form-grid">
+                <div class="form-grid-1">
+                    <label for="name">Fullt navn:</label> <br />
+                    <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
+                    <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required />
+
+                    <label for="phone">Telefonnummer:</label> <br />
+                    <!-- Regex pattern: Bare tall, + og mellomrom -->
+                    <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required />
+
+                    <label for="email">E-post:</label> <br />
+                    <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
+                </div>
+
+                <div class="form-grid-2">
+                    <label for="text">Søknadstekst: </label> <br />
+                    <textarea id="text" name="text" rows="10" required placeholder="Din søknadstekst..."></textarea>
+                </div>
+
+                <div class="form-grid-3">
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
+                    <br /><br />
+                    <input type="submit" value="Send søknad" id="submitForm" style="min-width: 200px;" >
+                    <p id="formReply" style="display: none;"><strong>Takk for din henvedelse!</strong> Vi vil ta kontakt med deg.</p>
+                </div>
+            </div>
+        </form>
+
     </section>
 
     <section>
@@ -166,7 +201,7 @@
             </div>
 
             <div class="quote-6">
-                “Verdt hver eneste krone!” <br /> - Olav Kjevik
+                “Varm og koselig atmosfære!” <br /> - Olav Kjevik
             </div>
         </div>
     </section>
@@ -174,7 +209,7 @@
     <footer>
         <div class="footer-col">
             <p><a href="privacy.html">Personvernerklæring</a></p>
-            <p><a href="covid-19.html">Smittesporing</a></p>
+            <p><a href="covid-19.html">Smitteoppsporing</a></p>
             <p>© 1970 Prietz AS // Webteknologi </p>
         </div>
 
@@ -188,6 +223,8 @@
     </footer>
 
     <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/hiddenForm.js"></script>
+
 </body>
 
 </html>

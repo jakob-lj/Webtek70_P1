@@ -5,13 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
-    <link rel="stylesheet" href="assets/styles/booking.css">
+    <link rel="stylesheet" href="assets/styles/form.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
     <title>Book bord - Prietzeria</title>
 </head>
 
 <body>
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
     </header>
 
     <div class="nav-col flex">
@@ -53,7 +56,7 @@
     </div>
 
     <section>
-        <h2>Book bord hos Prietzerria</h2>
+        <h2>Book bord</h2>
         <form id="bookingForm" onsubmit="goPart1();">
             <div class="form-grid" id="formPart1">
                 <div class="form-grid-1">
@@ -115,8 +118,9 @@
                     </select>
                 </div>
 
-                <div class="form-grid-3">
-                    <input type="submit" value="Gjennomgå reservasjon" id="submitPart1">
+                <div class="form-grid-3" >
+                  <br>
+                    <input type="submit" value="Gjennomgå reservasjon" id="submitPart1"  style="">
                     <small><a href="#tilgjengelig">Er ikke ønsket tidspunkt tilgjengelig?</a></small>
                 </div>
             </div>
@@ -128,6 +132,9 @@
                 </div>
 
                 <div class="form-grid-2">
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
+                    <br /><br />
+
                     <input type="button" value="Bekreft reservasjon" onclick="goPart2();" id="submitPart2">
                 </div>
 
@@ -153,7 +160,7 @@
     </section>
 
     <div class="hero" id="hero6"></div>
-    <small> <a href="https://www.bostonmagazine.com/restaurants/best-north-end-restaurants/">Kilde</a></small>
+    <small> <a href="https://www.bostonmagazine.com/restaurants/best-north-end-restaurants/" target="_blank" rel="nofollow">Kilde</a></small>
 
     <section id="tilgjengelig">
         <h1>Er ikke ønsket tidspunkt tilgjengelig?</h1>
@@ -167,9 +174,9 @@
         </p>
 
         <div class="border" style="display: none" id="sisterResturants">
-            <p><strong>Olivia Solsiden</strong> - Bedding 7, 7030 Trondheim</p>
-            <p><strong>Super Hero Burger</strong> - Olav Tryggvasons gt. 5, 7010 Trondheim</p>
-            <p><strong>Dinner Oslo</strong> - Karl Johans Gate 3, 1020 Oslo</p>
+            <p><strong>Prietzeria Solsiden</strong> - Bedding 7, 7030 Trondheim</p>
+            <p><strong>Prietzeria Midtbyen</strong> - Olav Tryggvasons gt. 5, 7010 Trondheim</p>
+            <p><strong>Prietzeria Oslo</strong> - Karl Johans Gate 3, 1020 Oslo</p>
             <p></p>
         </div>
 
@@ -178,7 +185,7 @@
     <footer>
         <div class="footer-col">
             <p><a href="privacy.html">Personvernerklæring</a></p>
-            <p><a href="covid-19.html">Smittesporing</a></p>
+            <p><a href="covid-19.html">Smitteoppsporing</a></p>
             <p>© 1970 Prietz AS // Webteknologi </p>
         </div>
 
