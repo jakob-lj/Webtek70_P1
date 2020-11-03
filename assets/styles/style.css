@@ -24,6 +24,11 @@ a:visited {
     text-decoration: none;
 }
 
+a:hover {
+    color: #ff841e;
+    text-decoration: none;
+}
+
 
 /*Hvit bakgrunn øverst*/
 
