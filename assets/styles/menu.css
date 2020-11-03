@@ -2,84 +2,65 @@
     box-sizing: border-box;
 }
 
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+    }
 
-/* The Modal (background) */
+    /* Modal Content */
+    .modal-content {
+      background-color: #171e28;
+      margin: auto;
+      padding: 20px;
+      border: 5px solid #ff841e;
+      width: 80%;
+    }
 
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-}
+    /* The Close Button */
+    .close {
+      color: #ff841e;
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
+    }
 
+    .close:hover,
+    .close:focus {
+      color: #d5c7ac;
+      text-decoration: none;
+      cursor: pointer;
+    }
 
-/* Modal Content */
+    /* The Close Button Takeaway */
+    .closeT {
+      color: #ff841e;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-.modal-content {
-    background-color: #171e28;
-    margin: auto;
-    padding: 20px;
-    border: 5px solid #ff841e;
-    width: 80%;
-}
+    .closeT:hover,
+    .closeT:focus {
+      color: #d5c7ac;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /*Modal ferdig */
 
-
-/* The Close Button */
-
-.close {
-    color: #ff841e;
-    float: right;
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #d5c7ac;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* The Close Button Takeaway */
-
-.closeT {
-    color: #ff841e;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closeT:hover,
-.closeT:focus {
-    color: #d5c7ac;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/*Modal ferdig */
-
-
-/*Blur jobber videre senere*/
-
-#myBtn #myBtnT {
-    /* Add the blur effect */
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
+    /*Blur jobber videre senere*/
+    #myBtn #myBtnT {
+      /* Add the blur effect */
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+    }
 
 #menu_container {
     margin: 100px;
@@ -157,7 +138,6 @@
 
 input[type="number"] {
     margin-top: 4px;
-    text-align: center;
     color: #d5c7ac;
     padding: 5px;
     background-color: #171e28;
@@ -165,8 +145,10 @@ input[type="number"] {
     border: 1px solid #d5c7ac;
     border-radius: 4px;
     max-width: 72px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+         appearance: textfield;
     height: 36px;
-    pointer-events: none;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -174,13 +156,13 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
 
-.customInput {
+.customInput{
     display: flex;
     flex-direction: row;
     width: 72px;
 }
 
-.customInputButtons {
+.customInputButtons{
     position: relative;
     right: 24px;
     top: 8px;
@@ -189,15 +171,14 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: column;
 }
 
-.customInputButton {
-    border: 0;
-    font-size: 22px;
+.customInputButton{
+    border: 0px;
+    font-size: 12px;
     min-width: 22px;
-    max-height: 35px;
+    max-height: 16px;
     text-align: center;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
+    padding: 0px;
+    margin: 0px;
 }
 
 .extra_padding {
