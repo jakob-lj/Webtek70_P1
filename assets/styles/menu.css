@@ -91,6 +91,9 @@ input[type="number"] {
     max-width: 72px;
     height: 36px;
     pointer-events: none;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+         appearance: textfield;
 }
 
 input[type=number]::-webkit-inner-spin-button,
