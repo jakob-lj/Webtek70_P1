@@ -42,35 +42,6 @@ const paste = [{
         "img": "https://source.unsplash.com/100x100/?italian%20food&6"
     },
 ]
-const dolci = [{
-        "id": 6,
-        "name": "Tiramisù",
-        "desc": "Italiensk ostekake med fingerkjeks, mascarpone og kaffe.",
-        "price": 110,
-        "img": "https://source.unsplash.com/100x100/?italian%20food&7"
-    },
-    {
-        "id": 7,
-        "name": "Nemesis",
-        "desc": "Myk sjokoladekake, bringeværsorbet og bærsaus.",
-        "price": 110,
-        "img": "https://source.unsplash.com/100x100/?italian%20food&8"
-    },
-    {
-        "id": 8,
-        "name": "Gelato",
-        "desc": "Tre sorter iskrem, frisk frukt, krem og bærsaus.",
-        "price": 75,
-        "img": "https://source.unsplash.com/100x100/?italian%20food&9"
-    },
-    {
-        "id": 9,
-        "name": "Panna cotta",
-        "desc": "Italiensk fløtepudding med vanilje og bærsaus.",
-        "price": 95,
-        "img": "https://source.unsplash.com/100x100/?italian%20food&10"
-    },
-]
 const pizze = [{
         "id": 10,
         "name": "Dagens pizza",
@@ -127,4 +98,33 @@ const pizze = [{
         "price": 190,
         "img": "https://source.unsplash.com/100x100/?italian%20food&18"
     }
+]
+const dolci = [{
+        "id": 6,
+        "name": "Tiramisù",
+        "desc": "Italiensk ostekake med fingerkjeks, mascarpone og kaffe.",
+        "price": 110,
+        "img": "https://source.unsplash.com/100x100/?italian%20food&7"
+    },
+    {
+        "id": 7,
+        "name": "Nemesis",
+        "desc": "Myk sjokoladekake, bringeværsorbet og bærsaus.",
+        "price": 110,
+        "img": "https://source.unsplash.com/100x100/?italian%20food&8"
+    },
+    {
+        "id": 8,
+        "name": "Gelato",
+        "desc": "Tre sorter iskrem, frisk frukt, krem og bærsaus.",
+        "price": 75,
+        "img": "https://source.unsplash.com/100x100/?italian%20food&9"
+    },
+    {
+        "id": 9,
+        "name": "Panna cotta",
+        "desc": "Italiensk fløtepudding med vanilje og bærsaus.",
+        "price": 95,
+        "img": "https://source.unsplash.com/100x100/?italian%20food&10"
+    },
 ]
