@@ -126,66 +126,28 @@
             </div>
         </div>
     </div>
+
+
     <section class="orderSection">
 
         <div class="processOrderContainer">
             <div class="orderSummary">
-                <h2>Din ordre <span id="dishes"></span> </h2>
-                <!--navn på rett, ikke på plass enda-->
-                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                <div>
+                    <h2>Din ordre <span id="dishes"></span> </h2>
+                    <!--navn på rett, ikke på plass enda-->
+                    <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                    <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                </div>
 
-                <!--POP UP-->
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="modalHouse()">Spis her</button>
-                    <div id="modalHouseElem" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2>Din ordreoversikt</h2>
-                            <div class="modal-body">
-                                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                                <!--Får ikke med antall og sum. required funker ikke. -->
-                                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
-                                <h3>Vennligst skriv hvilket bordnummer du har:  <input type="number" name="myInput" placeholder=" 01" required></h3>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Vipps');">Betal med Vipps</button>
-                                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med kort</button>
-                                <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med gavekort</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button id="myBtnT" onclick="modalTakeaway()" >Takeaway</button>
-                    <div id="modalTakeawayElem" class="modal">
-                      <div class="modal-content">
-                        <span class="close">&times;</span> <!--close funker ikke-->
-                        <h2>Våre takeaway samarbeidspartnere</h2>
-                        <div class="modal-body">
-                          <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden</h3>
-                        </div>
-                        <div class="modal-footer">
-                          <a target="_blank" href="https://www.foodora.no/?ax=54020719093&tx=kwd-128078785769&ap=&dv=c&nt=g&mt=e&pm=1010976&pi=&cr=264401331532&fi=&bc=7513&gclid=CjwKCAiA-f78BRBbEiwATKRRBHPyTaKXsGVbi548watKaxMV8c-k-xQ12-4NL98Z7KUTsV4NFwr7GxoCswIQAvD_BwE">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">foodora.no</button></a>
-                          <a target="_blank" href="https://wolt.com/nb?gclid=CjwKCAiA-f78BRBbEiwATKRRBAIWJsERttXrlDCQavYsEwONhK2XSXfR96YrWc0u2FzHGA2BqoP21BoCumsQAvD_BwE">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">wolt.com</button></a>
-                          <a href="tel: +4798046690">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Ring og bestill</button></a>
-                        </div>
-                    </div>
-                  </div>
+                    <button id="myBtnT" onclick="modalTakeaway()">Takeaway</button>
                 </div>
+
             </div>
-          </div>
-
-
-<!--
-        <div class="ordersec-2">
-            <button id="modalHouseBtn" onclick="modalHouse()">Spis her</button>
-            <button id="modalTakeawayBtn" onclick="modalTakeaway()">Takeaway</button>
         </div>
--->
+
     </section>
 
     <small>Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>
@@ -197,7 +159,7 @@
     <footer>
         <div class="footer-col">
             <p><a href="privacy.html">Personvernerklæring</a></p>
-            <p><a href="covid-19.html">Smitteoppsporing</a></p>
+            <p><a href="covid-19.html">Smittesporing</a></p>
             <p>© 1970 Prietz AS // Webteknologi </p>
         </div>
 
@@ -210,16 +172,36 @@
         </div>
     </footer>
 
-
     <div id="modalHouseElem" class="modal">
         <div class="modal-content">
             <span id="closeHouse" class="close">&times;</span>
             <h2>Din ordreoversikt</h2>
             <div class="modal-body">
-                <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
-                <h3>Vennligst skriv hvilket bordnummer du har</h3> <input type="number" name="myInput" placeholder="1" required>
+                <h3>Antall retter: <span id="finalDishes">0</span></h3>
+                <!--Får ikke med antall og sum. required funker ikke. -->
+                <h3>Sum: <span id="finalPrice">0</span> ,-</h3>
+                <label for="tableNr">Bordnummer: </label>
+                <br />
+                <select name="tableNr" id="tableNr">
+                    <optgroup label="Inne">
+                        <option value="1">#1</option>
+                        <option value="2">#2</option>
+                        <option value="3">#3</option>
+                        <option value="4">#4</option>
+                    </optgroup>
+                    <optgroup label="Ute">
+                        <option value="5">#5</option>
+                        <option value="6">#6</option>
+                        <option value="7">#7</option>
+                        <option value="8">#8</option>
+                        <option value="9">#9</option>
+                        <option value="10">#10</option>
+                        <option value="11">#11</option>
+                        <option value="12">#12</option>
+                    </optgroup>
+                </select>
             </div>
+            <br />
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Vipps');">Betal med Vipps</button>
                 <button type="button" data-dismiss="modal" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest');">Betal med kort</button>
@@ -236,58 +218,18 @@
                 <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
             </div>
             <div class="modal-footer">
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">Foodora</button>
-                <button type="button" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">Wolt</button>
+                <a target="_blank" href="https://www.foodora.no/">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Foodora');">foodora.no</button></a>
+                <a target="_blank" href="https://wolt.com/">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="alert('Brukeren blir sendt til Wolt');">wolt.com</button></a>
+                <a href="tel: +4798046690">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ring og bestill</button></a>
             </div>
         </div>
     </div>
-    </div>
-    <script>
-        function modalHouse() {
-            document.querySelectorAll("body > :not(#modalHouseElem)").forEach(element => element.style.filter = "blur(5px)");
-            // Get the modal
-            var modalHouseElem = document.getElementById("modalHouseElem");
-            // Get the <span> element that closes the modal
-            var span = document.getElementById("closeHouse");
-            // When the user clicks the button, open the modal
-            modalHouseElem.style.display = "block";
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                    modalHouseElem.style.display = "none";
-                    document.querySelectorAll("body > :not(#modalHouseElem)").forEach(element => element.style.filter = "blur(0)");
-                }
-                // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modalHouseElem) {
-                    modalHouseElem.style.display = "none";
-                    document.querySelectorAll("body > :not(#modalHouseElem)").forEach(element => element.style.filter = "blur(0)");
-                }
-            }
-        }
 
-        function modalTakeaway() {
-            document.querySelectorAll("body > :not(#modalTakeawayElem)").forEach(element => element.style.filter = "blur(5px)");
-            // Get the modal
-            var modalTakeawayElem = document.getElementById("modalTakeawayElem");
-            // Get the <span> element that closes the modal
-            var span = document.getElementById("closeTakeaway");
-            // When the user clicks the button, open the modal
-            modalTakeawayElem.style.display = "block";
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                    document.querySelectorAll("body > :not(#modalTakeawayElem)").forEach(element => element.style.filter = "blur()");
-                    modalTakeawayElem.style.display = "none";
-                }
-                // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modalTakeawayElem) {
-                    document.querySelectorAll("body > :not(#modalTakeawayElem)").forEach(element => element.style.filter = "blur(0)");
-                    modalTakeawayElem.style.display = "none";
-                }
-            }
-        }
-    </script>
     <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/foodCart.js"></script>
 </body>
 
 </html>
