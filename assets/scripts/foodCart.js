@@ -42,13 +42,13 @@ function modalTakeaway() {
 /* Modalene er basert på kode fra: https://www.cssscript.com/simple-modal-window-with-background-blur-effect/ */
 
 /* Brukeren må ha scrollet ned 300px før ScrollMenu og Cart vises */
+/* og skjuler før den når footer */
 window.onscroll = function() {
 
     // document.body er <body>. document.documentElement er <html>. Velger den lengste av disse to, da forskjellige nettlesere har forskjellig standard
     var userScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     var bodyLength = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     var footerLength = bodyLength - userScroll;
-    console.log(footerLength);
 
     if (userScroll > 300 && footerLength > 1000) {
         document.querySelector(".orderSection").style.visibility = "visible";
