@@ -76,6 +76,7 @@
                 <div class="form-grid-2">
                     <label for="quantity">Antall besøkende: </label>
                     <select name="quantity" id="quantity">
+                        <option disabled selected value>-- Velg antall --</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -90,7 +91,8 @@
                     <input type="date" id="date" name="date" value="">
 
                     <label for="time">Klokkeslett: </label> <br />
-                    <select name="time" id="time">
+                    <select name="time" id="time" required>
+                        <option disabled selected value>-- Velg tidspunkt --</option>
                         <option value="11:00">11:00</option>
                         <option value="11:30">11:30</option>
                         <option value="12:00">12:00</option>

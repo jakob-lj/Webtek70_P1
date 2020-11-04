@@ -73,11 +73,12 @@
                 </div>
 
                 <div class="form-grid-2">
-                    <label for="date">Dato: </label> <br />
-                    <input type="date" id="date" name="date" value="" />
+                    <label for="date">Besøksdato: </label> <br />
+                    <input type="date" id="date" name="date" value="" required>
 
-                    <label for="time">Klokkeslett: </label> <br />
-                    <select name="time" id="time">
+                    <label for="time">Ankomsttidspunkt: </label> <br />
+                    <select name="time" id="time" required>
+                        <option disabled selected value>-- Velg tidspunkt --</option>
                       <option value="11:00">11:00</option>
                       <option value="11:30">11:30</option>
                       <option value="12:00">12:00</option>
@@ -110,6 +111,7 @@
                 <div class="form-grid-3">
                     <input type="submit" value="Registrer besøk" id="submitForm">
                     <p id="formReply" style="display: none;"><strong>Takk for du registrer deg!</strong> Dataen er sendt til Trondheim kommune.</p>
+                    <br />
                 </div>
             </div>
         </form>
