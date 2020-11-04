@@ -31,6 +31,8 @@ function render(item, id) {
         content.querySelector('#price').innerHTML = item.price + ",-";
         content.querySelector('img').src = item.img;
         content.querySelector('input').id = "item_" + item.id;
+        content.querySelector('label').setAttribute("for", "item_" + item.id);
+        content.querySelector('img').setAttribute("alt", "Bilde av " + item.name);
         const clone = document.importNode(content, true);
         document.querySelector(id).appendChild(clone);
     } else {
