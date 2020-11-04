@@ -224,20 +224,25 @@ footer div p a:hover {
     display: flex;
 }
 
-.nav-items li {
+.nav-items a {
+    display: inline-block;
     padding: 10px;
-    margin: 0 20px;
-    border-bottom: 2px solid #d5c7ac;
+    box-sizing: border-box;
 }
 
-.nav-items li:hover {
-    color: #ff841e;
-    border-color: #ff841e;
+.nav-items li {
+    margin: 0 20px;
+    border-bottom: 2px solid #d5c7ac;
 }
 
 .nav-items li.nav-active {
     border-top: 2px solid #d5c7ac;
     border-bottom: none;
+}
+
+.nav-items li:hover {
+    color: #ff841e;
+    border-color: #ff841e;
 }
 
 
