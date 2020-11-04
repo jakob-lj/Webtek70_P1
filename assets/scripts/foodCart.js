@@ -15,7 +15,7 @@ function modalHouse() {
             modalHouseElem.style.display = "none";
         }
     }
-
+    document.getElementById("nameDishes").innerHTML = document.getElementById("dishes").innerHTML;
     document.getElementById("finalDishes").innerHTML = document.getElementById("orderedDishes").innerHTML;
     document.getElementById("finalPrice").innerHTML = document.getElementById("totalPrice").innerHTML;
 }
@@ -37,4 +37,6 @@ function modalTakeaway() {
             modalTakeawayElem.style.display = "none";
         }
     }
+    document.getElementById("finalDishesT").innerHTML = document.getElementById("orderedDishes").innerHTML;
+    document.getElementById("finalPriceT").innerHTML = document.getElementById("totalPrice").innerHTML;
 }

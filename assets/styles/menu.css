@@ -185,10 +185,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #171e28;
   text-transform: uppercase;
 }
-/* ønsker å stoppe opp begge navene før de treffer hero bildet og hover farge
-:hover{
-  color: #d5c7ac;
-}*/
+/* ønsker å stoppe opp begge navene før de treffer hero bildet */
 
 
 #scrollMenu>ul>li {

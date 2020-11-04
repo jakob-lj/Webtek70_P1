@@ -1,7 +1,7 @@
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 
-//Henter navnene på rettene - #orderedDishes".name
+//Henter navnene på rettene - #orderedDishes.name
 function addName() {
     var li = document.createElement("li")
     var rett = document.getElementById(dishes).name;
@@ -10,6 +10,7 @@ function addName() {
     //document.getElementById("dishes").prepend(li); //item_name item_name[i].name
     document.querySelector("#dishes").innerHTML = rett;
 }
+//let name = event.target.name addName();
 
 //Henter totalprisen basert på dishes[]
 function setTotalPrice() {
@@ -80,5 +81,3 @@ function getFoodById(id) {
         }
     }
 }
-
-//Source: https://codemyui.com/sticky-sidebar-navigation-on-scroll/
