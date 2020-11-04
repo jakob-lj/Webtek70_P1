@@ -1,5 +1,5 @@
 /*
-    JavaScipt for å rendre rettene til html. Avhenger av menuSort. Brukes på menu.html
+    JavaScript for å rendre rettene til html. Avhenger av menuSort. Brukes på menu.html
 */
 
 const supportsTemplate = function() {
