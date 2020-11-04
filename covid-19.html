@@ -57,7 +57,7 @@
 
     <section>
         <h2>Registrer ditt besøk hos Prietzerria</h2>
-        <form id="covidForm" onsubmit="covid();">
+        <form id="hiddenForm" onsubmit="submitHiddenForm();">
             <div class="form-grid">
                 <div class="form-grid-1">
                     <label for="name">Fullt navn:</label> <br />
@@ -103,11 +103,13 @@
                       <option value="22:00">22:00</option>
                       <option value="22:30">22:30</option>
                     </select>
+                    <br />
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
                 </div>
 
                 <div class="form-grid-3">
-                    <br>
-                    <input type="submit" value="Registrer besøk" id="submit" style="min-width: 200px;" />
+                    <input type="submit" value="Registrer besøk" id="submitForm">
+                    <p id="formReply" style="display: none;"><strong>Takk for du registrer deg!</strong> Dataen er sendt til Trondheim kommune.</p>
                 </div>
             </div>
         </form>
@@ -135,11 +137,8 @@
     </footer>
 
     <script src="assets/scripts/mobileNav.js"></script>
-    <script>
-        const covid = () => {
-            alert("Din informasjon er sendt til kommunen.");
-        };
-    </script>
+    <script src="assets/scripts/hiddenForm.js"></script>
+
 </body>
 
 </html>
