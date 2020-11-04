@@ -177,6 +177,31 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 8px;
 }
 
+#scrollMenu{
+  position: fixed;
+  left: 5%;
+  top: 400px;
+  max-height: 300px;
+  margin: 0;
+  padding-right: 24px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background-color: #171e28;
+  text-transform: uppercase;
+}
+/* ønsker å stoppe opp begge navene før de treffer hero bildet */
+
+
+#scrollMenu>ul>li {
+  list-style-type: none;
+  color: #ff841e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*smooth fungerer kun på chrome*/
+
 @media only screen and (max-width:800px) {
     .orderSection {
         position: fixed;
@@ -205,6 +230,19 @@ input[type=number]::-webkit-outer-spin-button {
         height: 30px;
         font-size: 12px;
         padding: 2px;
+    }
+    /* Står statisk øverst på mobil */
+
+    #scrollMenu {
+      position: sticky;
+      left: 0;
+      top: 0;
+      border-radius: 0px;
+      width: 100%;
+      max-height: 200px;
+      box-sizing: border-box;
+      padding: 8px;
+      padding-left: 24px;
     }
 }
 

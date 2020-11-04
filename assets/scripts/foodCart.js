@@ -38,4 +38,6 @@ function modalTakeaway() {
             modalTakeawayElem.style.display = "none";
         }
     }
+    document.getElementById("finalDishesT").innerHTML = document.getElementById("orderedDishes").innerHTML;
+    document.getElementById("finalPriceT").innerHTML = document.getElementById("totalPrice").innerHTML;
 }

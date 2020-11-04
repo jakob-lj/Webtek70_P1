@@ -47,18 +47,18 @@
         </div>
         <nav id="navigation" class="hide">
             <ul class="nav-items">
-                <a href="index.html">
-                    <li>Hjem</li>
-                </a>
-                <a href="menu.html">
-                    <li class="nav-active">Meny</li>
-                </a>
-                <a href="booking.html">
-                    <li>Book bord</li>
-                </a>
-                <a href="contact.html">
-                    <li>Kontakt oss</li>
-                </a>
+                <li>
+                    <a href="index.html">Hjem</a>
+                </li>
+                <li class="nav-active">
+                    <a href="menu.html">Meny</a>
+                </li>
+                <li>
+                    <a href="booking.html">Book bord</a>
+                </li>
+                <li>
+                    <a href="contact.html">Kontakt oss</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -105,6 +105,17 @@
                         </select>
                     </div>
                 </div>
+                <nav>
+                    <div class="navbar" id="scrollMenu">
+                        <ul>
+                            <li><a href="#menu_antipasti">Antipasti</a></li>
+                            <li><a href="#menu_paste">Paste</a></li>
+                            <li><a href="#menu_pizze">Pizze</a></li>
+                            <li><a href="#menu_dolci">Dolci</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
                 <div class="menu_subsection">
                     <h2>Antipasti</h2>
                     <div id="menu_antipasti"></div>
@@ -113,29 +124,27 @@
                     <h2>Paste</h2>
                     <div id="menu_paste"></div>
                 </div>
+                <div id="subsection_container2">
+                    <div class="menu_subsection">
+                        <h2 class="extra_padding">Pizze</h2>
+                        <div id="menu_pizze"></div>
+                    </div>
+                </div>
                 <div class="menu_subsection">
                     <h2>Dolci</h2>
                     <div id="menu_dolci"></div>
                 </div>
             </div>
-            <div id="subsection_container2">
-                <div class="menu_subsection">
-                    <h2 class="extra_padding">Pizze</h2>
-                    <div id="menu_pizze"></div>
-                </div>
-            </div>
         </div>
     </div>
-
-
     <section class="orderSection">
-
         <div class="processOrderContainer">
             <div class="orderSummary">
                 <div>
                     <h2>Din ordre <span id="dishes"></span> </h2>
                     <h3>Antall retter: <span id="orderedDishes">0</span></h3>
-                    <h3>Sum: <span id="totalPrice">0</span> ,-</h3>
+                    <h3>Sum: <span id="totalPrice">0</span></h3>
+                    <!--fjernet ,- fra span prisen siden det så dårlig ut på mobilversjon-->
                 </div>
 
                 <div class="orderButtonContainer" id="order1">
@@ -159,7 +168,7 @@
         <div class="footer-col">
             <p><a href="privacy.html">Personvernerklæring</a></p>
             <p><a href="covid-19.html">Smittesporing</a></p>
-            <p>© 1970 Prietz AS // Webteknologi </p>
+            <p>© 1970 Prietz AS</p>
         </div>
 
         <div class="footer-col">
@@ -214,6 +223,10 @@
             <span id="closeTakeaway" class="close">&times;</span>
             <h2>Våre takeaway samarbeidspartnere</h2>
             <div class="modal-body">
+                <h3>Antall retter: <span id="finalDishesT">0</span></h3>
+                <!--Får ikke med navn til rettene... -->
+                <h3>Sum: <span id="finalPriceT">0</span> ,-</h3>
+                <br>
                 <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
             </div>
             <div class="modal-footer">

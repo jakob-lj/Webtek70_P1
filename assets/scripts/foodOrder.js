@@ -56,6 +56,7 @@ function addName() {
     //document.getElementById("dishes").prepend(li); //item_name item_name[i].name
     document.querySelector("#dishes").innerHTML = rett;
 }
+//let name = event.target.name addName();
 
 //Henter totalprisen basert på dishes[]
 function setTotalPrice() {
