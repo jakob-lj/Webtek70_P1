@@ -75,12 +75,13 @@ input[type="button"] {
 }
 
 input:valid,
-textarea,
+textarea:valid,
 select:valid {
     border: 1px solid #40916c;
 }
 
 input:invalid,
+textarea:invalid,
 select:invalid {
     border: 1px solid #d62828;
 }
