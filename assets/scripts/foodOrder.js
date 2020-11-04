@@ -47,17 +47,6 @@ function renderReceipt(dishes, targetElement) {
     }
 }
 
-//Henter navnene på rettene - #orderedDishes".name
-function addName() {
-    var li = document.createElement("li")
-    var rett = document.getElementById(dishes).name;
-    var t = document.createTextNode(rett);
-    var rett = li.appendChild(t);
-    //document.getElementById("dishes").prepend(li); //item_name item_name[i].name
-    document.querySelector("#dishes").innerHTML = rett;
-}
-//let name = event.target.name addName();
-
 //Henter totalprisen basert på dishes[]
 function setTotalPrice() {
     let sum = 0;
