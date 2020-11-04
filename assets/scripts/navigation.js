@@ -29,7 +29,7 @@ const nav =
 </div>\
 <nav id="navigation" class="hide">\
     <ul class="nav-items">\
-        <li class="nav-active">\
+        <li>\
             <a href="index.html">Hjem</a>\
         </li>\
         <li>\
