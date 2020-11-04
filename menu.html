@@ -25,75 +25,41 @@
         <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
     </header>
 
-    <div class="nav-col flex">
-        <ul class="noList">
-            <li>
-                <img src="assets/images/icons/location.png" alt="Location">
-                <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70</a>
-            </li>
-            <li>
-                <img src="assets/images/icons/facebook.png" alt="Facebook">
-                <a href="#" target="_blank" rel="nofollow">Følg oss på Facebook</a>
-            </li>
-            <li>
-                <img src="assets/images/icons/mail.png" alt="Mail">
-                <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
-            </li>
-        </ul>
-        <div class="hamburger-container" onclick="toggleNav(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <nav id="navigation" class="hide">
-            <ul class="nav-items">
-                <li>
-                    <a href="index.html">Hjem</a>
-                </li>
-                <li class="nav-active">
-                    <a href="menu.html">Meny</a>
-                </li>
-                <li>
-                    <a href="booking.html">Book bord</a>
-                </li>
-                <li>
-                    <a href="contact.html">Om oss</a>
-                </li>
-            </ul>
-        </nav>
+    <div id="nav-placeholder">
+        Noe har gått galt med lastingen av navigasjonsmenyen
     </div>
-
+    
     <div class="hero" id="hero4"></div>
     <small> <a href="https://www.youtube.com/watch?v=kDtpVBzKhhE" target="_blank" rel="nofollow">Kilde</a></small>
-
+    
     <div id="menu_container">
         <div id="dishes_container">
             <template id="dish_template">
             <div class="dish_container">
-              <div class="img_container">
+                <div class="img_container">
                 <img id="dish_img" src="" />
                 <div id="order_ammount">
-                  <label for="ammount">Antall: </label><br />
-                  <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); let e = this.parentNode.parentNode.querySelector('input[type=number]'); fireChange(e); " class="customInputButton">-</button>
-                  <input readonly name="ammount" class="orderInput" type="number" min="0" max="10" value="0">
+                    <label for="ammount">Antall: </label><br />
+                    <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); let e = this.parentNode.parentNode.querySelector('input[type=number]'); fireChange(e); " class="customInputButton">-</button>
+                    <input readonly name="ammount" class="orderInput" type="number" min="0" max="10" value="0">
                   <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp();let e = this.parentNode.parentNode.querySelector('input[type=number]');fireChange(e);" class="customInputButton">+</button>
-                <script>
-                  function fireChange(element){
-                    var event = new Event('change');
+                  <script>
+                      function fireChange(element){
+                          var event = new Event('change');
                     element.dispatchEvent(event);
                 }
                 </script>
                 </div>
-              </div>
-              <div class="menu_text">
+            </div>
+            <div class="menu_text">
                 <h2 id="item_name"></h2>
                 <p id="item_description"></p>
                 <p id="price"></p>
-              </div>
             </div>
+        </div>
           </template>
-            <div id="subsection_container1">
-                <div class="filter_container">
+          <div id="subsection_container1">
+              <div class="filter_container">
                     <h1>Meny</h1>
                     <div id="selectContainer">
                         <label for="menuFilter">Filtrer meny:</label><br>
@@ -115,7 +81,7 @@
                         </ul>
                     </div>
                 </nav>
-
+                
                 <div class="menu_subsection">
                     <h2>Antipasti</h2>
                     <div id="menu_antipasti"></div>
@@ -145,7 +111,7 @@
                     <h3>Antall retter: <span id="orderedDishes">0</span></h3>
                     <h3>Sum: <span id="totalPrice">0</span></h3>
                 </div>
-
+                
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="modalHouse()">Spis her</button>
@@ -153,34 +119,20 @@
                     <br>
                     <button id="myBtnT" onclick="modalTakeaway()">Takeaway</button>
                 </div>
-
+                
             </div>
         </div>
 
     </section>
-
+    
     <small>Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>
 
     <div class="hero" id="hero5"></div>
     <small><a href="https://www.elle.com/culture/travel-food/g27227/how-to-host-an-italian-dinner-party/" target="_blank" rel="nofollow">Kilde</a></small>
     <br /><br /><br /><br /><br />
-
-    <footer>
-        <div class="footer-col">
-            <p><a href="privacy.html">Personvernerklæring</a></p>
-            <p><a href="covid-19.html">Smittesporing</a></p>
-            <p>© 1970 Prietz AS</p>
-        </div>
-
-        <div class="footer-col">
-            <a href="#"><img class="footerIcon" src="assets/images/icons/apple.png" alt="Download on App Store"></a>
-        </div>
-
-        <div class="footer-col">
-            <a href="#"><img class="footerIcon" src="assets/images/icons/resturantchoice.png" alt="The Restaurant Choice"></a>
-        </div>
-    </footer>
-
+    
+    <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
+    
     <div id="modalHouseElem" class="modal">
         <div class="modal-content">
             <span id="closeHouse" class="close">&times;</span>
@@ -216,7 +168,7 @@
             </div>
         </div>
     </div>
-
+    
     <div id="modalTakeawayElem" class="modal">
         <div class="modal-content">
             <span id="closeTakeaway" class="close">&times;</span>
@@ -233,9 +185,11 @@
             <button type="button" onclick="alert('Så hyggelig du vil ringe oss! \n\nDu kan nå oss på +47 980 46 690'); window.location.href='tel:+4798046690';">Ring og bestill</button>
         </div>
     </div>
-
+    
     <script src="assets/scripts/mobileNav.js"></script>
     <script src="assets/scripts/foodCart.js"></script>
+    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/footer.js"></script>
 </body>
 
 </html>
