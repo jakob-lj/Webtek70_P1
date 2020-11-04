@@ -1,10 +1,10 @@
 var hiddenForm = document.getElementById('hiddenForm').style;
 
-document.getElementById("hiddenForm").addEventListener("submit", function(event) {
+document.getElementById("hiddenForm").addEventListener("submit", function(event) { // Ikke submit form
     event.preventDefault()
 });
 
-function showForm() { // Vis del: Nyhetsbrevskjema
+function showForm() { // Blir callet av trykk på knapp, viser skjema hvis ikke allerede vist. Hvis skjemaet er allerede vist blir det skjult.
     if (hiddenForm.display == "none") {
         hiddenForm.display = "";
     } else {
@@ -12,7 +12,7 @@ function showForm() { // Vis del: Nyhetsbrevskjema
     }
 }
 
-function submitHiddenForm() {
+function submitHiddenForm() { // Har brukeren godkjent personvernerklæringen?
     var consent = document.getElementById('consent');
     if (!consent.checked) {
         alert("Vennligst godta vår personvernerklæring.");
@@ -20,6 +20,7 @@ function submitHiddenForm() {
         return false;
     }
 
+    // Skjuler input-fields, og viser tilbakemelding
     document.getElementById('submitForm').style.display = "none";
     consent.style.display = "none";
     document.getElementsByClassName('form-grid-1')[0].style.display = "none";

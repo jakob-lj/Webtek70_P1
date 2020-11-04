@@ -8,6 +8,7 @@ var mmtwo = today.getMonth() + 2;
 var yyyy = today.getFullYear();
 var time = today.getHours();
 
+// Legger til 0 foran tallet hvis verdien er {1-9}
 if (dd < '10') {
     dd = '0' + dd;
 };
@@ -20,6 +21,7 @@ if (time < '10') {
 dateInput.setAttribute('value', yyyy + '-' + mm + '-' + dd);
 dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
 dateInput.setAttribute('max', yyyy + '-' + mmtwo + '-' + dd);
+
 
 /* Submit Bookingskjema */
 var formPart1 = document.getElementById('formPart1');

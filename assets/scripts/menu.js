@@ -1,24 +1,23 @@
-
-const supportsTemplate = function(){
+const supportsTemplate = function() {
     return 'content' in document.createElement('template');
 }
 
-function renderItems(){
-    antipasti.forEach((item) => {render(item,'#menu_antipasti')});
-    paste.forEach((item) => {render(item,'#menu_paste')});
-    dolci.forEach((item) => {render(item,'#menu_dolci')});
-    pizze.forEach((item) => {render(item,'#menu_pizze')});
+function renderItems() {
+    antipasti.forEach((item) => { render(item, '#menu_antipasti') });
+    paste.forEach((item) => { render(item, '#menu_paste') });
+    dolci.forEach((item) => { render(item, '#menu_dolci') });
+    pizze.forEach((item) => { render(item, '#menu_pizze') });
     // Adds event listner to inputs
     queryInput();
 }
 
-function removeItems(){
-    document.querySelectorAll('.dish_container').forEach((container) => {container.remove()});
+function removeItems() {
+    document.querySelectorAll('.dish_container').forEach((container) => { container.remove() });
 }
 
-function render(item, id){
+function render(item, id) {
     // Removes existing elements
-    if(supportsTemplate()){
+    if (supportsTemplate()) {
         console.log('Browser supports templates');
         let t = document.querySelector('#dish_template');
         let content = t.content;
@@ -34,7 +33,7 @@ function render(item, id){
         content.querySelector('input').id = "item_" + item.id;
         const clone = document.importNode(content, true);
         document.querySelector(id).appendChild(clone);
-    }else{
+    } else {
         console.log('Browser does not support templates');
     }
 }

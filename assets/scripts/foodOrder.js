@@ -1,29 +1,29 @@
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 
-function makeOrderArray(dishes){
+function makeOrderArray(dishes) {
     Array.prototype.contains = function(v) {
         for (var i = 0; i < this.length; i++) {
-          if (this[i] === v) return true;
+            if (this[i] === v) return true;
         }
         return false;
-      };
-      
+    };
+
     Array.prototype.unique = function() {
         var arr = [];
         for (var i = 0; i < this.length; i++) {
-          if (!arr.contains(this[i])) {
-            arr.push(this[i]);
-          }
+            if (!arr.contains(this[i])) {
+                arr.push(this[i]);
+            }
         }
         return arr;
     }
     let unique = dishes.unique();
     // Tell antall retter av hvert slag
-    for (order of unique){
+    for (order of unique) {
         count = 0;
-        for (dish of dishes){
-            if (dish === order){
+        for (dish of dishes) {
+            if (dish === order) {
                 count++;
             }
         }
@@ -32,17 +32,17 @@ function makeOrderArray(dishes){
     return unique;
 }
 
-function renderReceipt(dishes){
+function renderReceipt(dishes, targetElement) {
     let receipt = makeOrderArray(dishes);
-    var parent = document.querySelector('#orderReceipt');
+    var parent = document.querySelector(targetElement);
     // Clear the ul first
     parent.innerHTML = "";
-    for(order of receipt){
+    for (order of receipt) {
         var element = document.createElement("li");
         let ammount = order.count;
         let name = order.name;
         let price = ammount * order.price;
-        element.append(ammount+ "x " + name + " - " + price + "kr" );
+        element.append(ammount + "x " + name + " - " + price + "kr");
         parent.appendChild(element);
     }
 }
