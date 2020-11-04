@@ -182,7 +182,7 @@ input[type=number]::-webkit-outer-spin-button {
     visibility: hidden;
     /* Hidden onload, blir visible i foodCart.js */
     position: fixed;
-    left: 5%;
+    left: 6%;
     top: 400px;
     max-height: 300px;
     margin: 0;
