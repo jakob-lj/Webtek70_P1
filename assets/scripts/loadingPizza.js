@@ -31,27 +31,33 @@ const updateCountdown = (i, initVal, countdown) => {
 }
 
 const updateLanding = (root, boot) => {
+    sessionStorage.setItem('loaded', 'true')
     boot.style.display = 'none'
     root.style.display = 'block'
 }
 
 window.onload = () => {
-    const slider = document.getElementById('slider')
-    const countDown = document.getElementById('countdownTimer')
     const sliderWrapper = document.getElementById('loadingPizza')
     const root = document.getElementById('root')
-    let i = 0;
-    let goal = 100;
-    let width = 0;
-    let countDownFrom = 16;
-    let int = setInterval(() => {
-        width += step(i)
-        updateStatus(width, slider)
-        i += 1
-        updateCountdown(i, countDownFrom, countDown)
-        if (i === 160) {
-            clearInterval(int)
-            updateLanding(root, sliderWrapper)
-        }
-    }, 100)
+    if (sessionStorage.getItem('loaded') === 'true') {
+        updateLanding(root, sliderWrapper)
+    } else {
+        const slider = document.getElementById('slider')
+        const countDown = document.getElementById('countdownTimer')
+        let i = 0;
+        let goal = 100;
+        let width = 0;
+        let countDownFrom = 16;
+        let int = setInterval(() => {
+            width += step(i)
+            updateStatus(width, slider)
+            i += 1
+            updateCountdown(i, countDownFrom, countDown)
+            if (i === 160) {
+                clearInterval(int)
+                updateLanding(root, sliderWrapper)
+            }
+        }, 100)
+
+    }
 }
