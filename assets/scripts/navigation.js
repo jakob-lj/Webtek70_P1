@@ -1,5 +1,5 @@
 const nav =
-  '<div class="nav-col flex">\
+    '<div class="nav-col flex">\
 <ul class="noList">\
     <li>\
         <img src="assets/images/icons/location.png" alt="Location">\
@@ -16,11 +16,6 @@ const nav =
         <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>\
     </li>\
     <!--Kilde til ikon: https://toppng.com/show_download/182525/mail-white-icon/large-->\
-    <li>\
-        <img src="assets/images/icons/language.png" alt="Language">\
-        <a href="#">Bytt språk</a>\
-    </li>\
-    <!--Kilde til ikon: https://toppng.com/show_download/17636/settings-icon-android-kitkat/large-->\
 </ul>\
 <div class="hamburger-container" onclick="toggleNav(this)">\
     <div class="bar1"></div>\
