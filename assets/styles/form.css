@@ -10,6 +10,12 @@
     align-items: end;
 }
 
+@media (max-width: 900px) {
+    .form-grid {
+        display: block;
+    }
+}
+
 .form-grid-1 {
     grid-area: 1 / 1 / 2 / 2;
 }
