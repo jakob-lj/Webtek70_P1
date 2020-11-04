@@ -1,3 +1,7 @@
+/*
+    Henter bestilling fra menyskjema og kan presentere gjeldende ordre i en handlekurv. Lager også kvittering når bruker bestiller.
+*/
+
 // Dette er en global variabel som til enhver tid har alle retter i bestillingen.
 var dishes = [];
 

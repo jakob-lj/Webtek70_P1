@@ -1,3 +1,7 @@
+/*
+    Inneholder informasjonen om alle matrettene - brukes i menu.js
+*/
+
 const antipasti = [{
         "id": 0,
         "name": "Bruschetta",

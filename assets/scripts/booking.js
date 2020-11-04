@@ -1,3 +1,7 @@
+/*
+    JavaScript brukes til formvalidering og interaktivt bookingskjema på booking.html
+*/
+
 /* Input-field: Date */
 // Tillater bare reservasjoner fra dagens dato og en måned frem i tid
 var dateInput = document.getElementById('date');

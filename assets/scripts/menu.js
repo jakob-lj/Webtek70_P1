@@ -1,3 +1,7 @@
+/*
+    JavaScipt for å rendre rettene til html. Avhenger av menuSort. Brukes på menu.html
+*/
+
 const supportsTemplate = function() {
     return 'content' in document.createElement('template');
 }

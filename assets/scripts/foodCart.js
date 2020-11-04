@@ -1,3 +1,9 @@
+/*
+
+Bestillingsmodaler på menu.html, samt styling av ScrollMenu og Cart
+
+*/
+
 /* Modalen med bestilling */
 function modalHouse() {
     var modalHouseElem = document.getElementById("modalHouseElem");
@@ -39,13 +45,13 @@ function modalTakeaway() {
     renderReceipt(dishes, '#orderReceiptTakeaway');
 }
 
-/* Modalene er basert på kode fra: https://www.cssscript.com/simple-modal-window-with-background-blur-effect/ */
+/* JavaScript funksjonen for å åpne og lukke modalene er basert på kode fra: https://www.cssscript.com/simple-modal-window-with-background-blur-effect/ */
 
-/* Brukeren må ha scrollet ned 300px før ScrollMenu og Cart vises */
+/* Styling: Brukeren må ha scrollet ned 300px før ScrollMenu og Cart vises */
 /* og skjuler før den når footer */
 window.onscroll = function() {
 
-    // document.body er <body>. document.documentElement er <html>. Velger den lengste av disse to, da forskjellige nettlesere har forskjellig standard
+    // document.body er <body>. document.documentElement er <html>. Velger den lengste av disse to, da forskjellige nettlesere gir forskjellig lengde
     var userScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
     var bodyLength = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
     var footerLength = bodyLength - userScroll;
