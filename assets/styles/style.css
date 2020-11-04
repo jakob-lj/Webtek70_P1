@@ -73,6 +73,11 @@ button:hover {
     cursor: pointer;
 }
 
+button:active,
+button:focus {
+    outline: none;
+}
+
 .border {
     display: inline-block;
     border: 1px solid #d5c7ac;
@@ -192,6 +197,7 @@ footer div p a:hover {
 
 .nav-col ul img {
     width: 15px;
+    vertical-align: middle;
 }
 
 .nav-col ul {

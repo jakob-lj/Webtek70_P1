@@ -1,3 +1,7 @@
+/*
+    Håndterer skjemadata og styling til skjemaene nyhetsbrev (index.html), jobbsøknad (contact.html) og smittesporing (covid-19.html)
+*/
+
 var hiddenForm = document.getElementById('hiddenForm').style;
 
 document.getElementById("hiddenForm").addEventListener("submit", function(event) { // Ikke submit form
