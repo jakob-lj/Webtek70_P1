@@ -15,9 +15,10 @@ function modalHouse() {
             modalHouseElem.style.display = "none";
         }
     }
-    document.getElementById("nameDishes").innerHTML = document.getElementById("dishes").innerHTML;
     document.getElementById("finalDishes").innerHTML = document.getElementById("orderedDishes").innerHTML;
     document.getElementById("finalPrice").innerHTML = document.getElementById("totalPrice").innerHTML;
+    // Renders the receipt based on the dishes array
+    renderReceipt(dishes);
 }
 
 function modalTakeaway() {

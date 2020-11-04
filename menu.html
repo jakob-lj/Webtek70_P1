@@ -142,7 +142,6 @@
             <div class="orderSummary">
                 <div>
                     <h2>Din ordre <span id="dishes"></span> </h2>
-                    <!--navn på rett, ikke på plass enda-->
                     <h3>Antall retter: <span id="orderedDishes">0</span></h3>
                     <h3>Sum: <span id="totalPrice">0</span></h3>
                     <!--fjernet ,- fra span prisen siden det så dårlig ut på mobilversjon-->
@@ -187,11 +186,7 @@
             <h2>Din ordreoversikt</h2>
             <div class="modal-body">
                 <h3>Antall retter: <span id="finalDishes">0</span></h3>
-                <p>Liste:</p>
-                <ul id="myUL">
-                    <span id="nameDishes">Valgt rett</span>
-                </ul>
-                <!--Får ikke med navn til rettene... -->
+                <ul id="orderReceipt"></ul>
                 <h3>Sum: <span id="finalPrice">0</span> ,-</h3>
                 <label for="tableNr">Bordnummer: </label>
                 <br />

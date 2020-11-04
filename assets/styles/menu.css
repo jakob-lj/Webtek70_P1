@@ -90,7 +90,11 @@ input[type="number"] {
     border: 1px solid #d5c7ac;
     border-radius: 4px;
     max-width: 72px;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+         appearance: textfield;
     height: 36px;
+
     pointer-events: none;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
