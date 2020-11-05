@@ -21,36 +21,46 @@
             grid-row-gap: 6%;
             text-align: center;
         }
-
+        
         .quotes>* {
             border: 1px solid #152846;
             background-color: #152846;
             border-radius: 20px;
             padding: 5%;
         }
-
+        
         .quote-1 {
             grid-area: 1 / 1 / 2 / 2;
         }
-
+        
         .quote-2 {
             grid-area: 1 / 2 / 2 / 3;
         }
-
+        
         .quote-3 {
             grid-area: 1 / 3 / 2 / 4;
         }
-
+        
         .quote-4 {
             grid-area: 2 / 1 / 3 / 2;
         }
-
+        
         .quote-5 {
             grid-area: 2 / 2 / 3 / 3;
         }
-
+        
         .quote-6 {
             grid-area: 2 / 3 / 3 / 4;
+        }
+        
+        #contactList li {
+            margin-bottom: 1.5em;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
         }
     </style>
 
@@ -68,27 +78,22 @@
     <section>
         <h1>Om oss</h1>
         <ul id="contactList">
-            <li>Telefonnummer: </li>
-            +47 980 46 690 <br>
-            <br>
-            <li>E-postadresse: </li>
-            <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
-            <br><br>
-            <li>Adresse: </li>
-            <a target="_blank" rel="nofollow" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">
-                Kristianstenbakken 60 <br>
-                7014 Trondheim <br>
-                </a>
-                <br>
+            <li>
+                Telefonnummer: <br /> +47 980 46 690
+            </li>
+            <li>
+                E-postadresse: <br /> <a href="mailto:post@prietzeria.xyz">post@prietzeria.xyz</a>
+            </li>
+            <li>
+                Adresse: <br /> <a target="_blank" rel="nofollow" href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094">Kristianstenbakken 60<br /> 7014 Trondheim</a>
+            </li>
         </ul>
     </section>
 
     <section>
         <h1>Kart</h1>
 
-        <iframe src="https://snazzymaps.com/embed/271476" width="100%" height="300px" style="border:none;">
-            <img src="assets/images/bilder/kontakt oss/map1.png" width="100%" alt="Kart av Trondheim">
-        </iframe>
+        <iframe src="https://snazzymaps.com/embed/271476"></iframe>
 
         <br/>
         <small><a href="https://snazzymaps.com/build-a-map/" target="_blank" rel="nofollow">Kilde: SnazzyMaps / Google Maps</a></small>
