@@ -40,20 +40,20 @@ const nav =
 </nav>\
 </div>';
 
-function setNavMarker(){
-    let url  = window.location.href;
+function setNavMarker() {
+    let url = window.location.pathname;
+
     let link;
-    if (url === "https://prietzeria.xyz/index.html"){
-       link = document.querySelector("#homeLink");
-    }
-    else if (url === "https://prietzeria.xyz/menu.html"){
+    if (url === "/index.html" || url === "/") {
+        link = document.querySelector("#homeLink");
+    } else if (url === "/menu.html") {
         link = document.querySelector("#menuLink");
-    }
-    else if (url === "https://prietzeria.xyz/booking.html"){
+    } else if (url === "/booking.html") {
         link = document.querySelector("#bookingLink");
-    }
-    else if (url === "https://prietzeria.xyz/contact.html"){
+    } else if (url === "/contact.html") {
         link = document.querySelector("#contactLink");
+    } else {
+        return false; // Smittesporing + Privacy skal ikke ha styling, avslutter funksjonen
     }
     link.style.borderBottom = "0px";
     link.style.borderTop = "2px solid #d5c7ac"
