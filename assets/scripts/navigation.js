@@ -3,7 +3,7 @@ const nav =
 <ul class="noList">\
     <li>\
         <img src="assets/images/icons/location.png" alt="Location">\
-        <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70, 7014 Trondheim</a>\
+        <a href="https://www.google.com/maps/place/Kristiansten+festning/@63.4262262,10.4110418,17z/data=!4m5!3m4!1s0x0:0xaf189e2e4edc5934!8m2!3d63.4269223!4d10.4106094" target="_blank" rel="nofollow">Kristianstensbakken 70</a>\
     </li>\
     <!--Kilde til ikon: https://toppng.com/show_download/175888/white-directions-icon-location-flat-icon-white/large-->\
     <li>\
