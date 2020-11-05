@@ -124,7 +124,7 @@ navbar.className = "nav-col flex";
         let url = window.location.pathname;
         if (url === item.file) {
             li.className = "nav-active";
-        } else if (item.id = "homeLink" && url === "/") { // Hvis brukeren kun er på domenet, ikke index.html
+        } else if (item.id === "homeLink" && url === "/") { // Hvis brukeren kun er på domenet, ikke index.html
             li.className = "nav-active";
         }
 
