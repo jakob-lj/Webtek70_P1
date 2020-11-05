@@ -24,20 +24,41 @@ const nav =
 </div>\
 <nav id="navigation" class="hide">\
     <ul class="nav-items">\
-        <li>\
+        <li id="homeLink">\
             <a href="index.html">Hjem</a>\
         </li>\
-        <li>\
+        <li id="menuLink">\
             <a href="menu.html">Meny</a>\
         </li>\
-        <li>\
+        <li id="bookingLink">\
             <a href="booking.html">Book bord</a>\
         </li>\
-        <li>\
+        <li id="contactLink">\
             <a href="contact.html">Om oss</a>\
         </li>\
     </ul>\
 </nav>\
 </div>';
 
+function setNavMarker(){
+    let url  = window.location.href;
+    let link;
+    if (url === "https://prietzeria.xyz/index.html"){
+       link = document.querySelector("#homeLink");
+    }
+    else if (url === "https://prietzeria.xyz/menu.html"){
+        link = document.querySelector("#menuLink");
+    }
+    else if (url === "https://prietzeria.xyz/booking.html"){
+        link = document.querySelector("#bookingLink");
+    }
+    else if (url === "https://prietzeria.xyz/contact.html"){
+        link = document.querySelector("#contactLink");
+    }
+    link.style.borderBottom = "0px";
+    link.style.borderTop = "2px solid #d5c7ac"
+    link.className = "selectedNavElement"
+}
+
 document.getElementById("nav-placeholder").innerHTML = nav;
+setNavMarker();
