@@ -4,7 +4,7 @@ table = ""
 
 lastLine = "\n"
 first = True
-with open('v1.dat', 'r') as f:
+with open('v2.dat', 'r') as f:
     data = f.readlines()
     
     for line in data:
