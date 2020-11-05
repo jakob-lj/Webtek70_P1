@@ -122,7 +122,8 @@ navbar.className = "nav-col flex";
 
         // Hvis brukeren er på siden som vises i menyen, får den class nav-active
         let url = window.location.pathname;
-        if (url === item.file) {
+        let file = "/" + item.file;
+        if (url === file) {
             li.className = "nav-active";
         } else if (item.id === "homeLink" && url === "/") { // Hvis brukeren kun er på domenet, ikke index.html
             li.className = "nav-active";
