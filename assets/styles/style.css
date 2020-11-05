@@ -13,9 +13,9 @@ body {
     /*mørkeblå*/
     color: #d5c7ac;
     /*gull*/
-    border-left: 5vw solid #f3f3f3;
+    border-left: 5vw solid #E5E5E5;
     /*hvit/grå*/
-    border-right: 5vw solid #f3f3f3;
+    border-right: 5vw solid #E5E5E5;
 }
 
 a,
@@ -33,9 +33,9 @@ a:hover {
 /*Hvit bakgrunn øverst*/
 
 header {
-    background-color: #f3f3f3;
-    border-left: 5vw solid #f3f3f3;
-    border-right: 5vw solid #f3f3f3;
+    background-color: #E5E5E5;
+    border-left: 5vw solid #E5E5E5;
+    border-right: 5vw solid #E5E5E5;
 }
 
 
