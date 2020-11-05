@@ -295,6 +295,11 @@ Kilde for koden til hamburgermenyen: https://www.w3schools.com/howto/howto_css_m
         margin: 5px 20px;
         border: none;
     }
+    
+    .selectedNavElement{
+        border-top: 0px;
+        border-bottom: 2px solid #d5c7ac ;
+    }
 }
 
 .bar1,
