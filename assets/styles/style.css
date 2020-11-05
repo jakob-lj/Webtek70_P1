@@ -248,7 +248,13 @@ footer div p a:hover {
 }
 
 
-/* Mobile Navigation */
+/* 
+
+Mobile Navigation
+
+Kilde for koden til hamburgermenyen: https://www.w3schools.com/howto/howto_css_menu_icon.asp
+
+*/
 
 .hamburger-container {
     display: none;
