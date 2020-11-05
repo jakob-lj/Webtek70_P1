@@ -36,12 +36,17 @@ const updateLanding = (root, boot) => {
     root.style.display = 'block'
 }
 
+const showPizza = (el) => {
+    el.style.display = 'block'
+}
+
 window.onload = () => {
     const sliderWrapper = document.getElementById('loadingPizza')
     const root = document.getElementById('root')
     if (sessionStorage.getItem('loaded') === 'true') {
         updateLanding(root, sliderWrapper)
     } else {
+        showPizza(sliderWrapper)
         const slider = document.getElementById('slider')
         const countDown = document.getElementById('countdownTimer')
         let i = 0;

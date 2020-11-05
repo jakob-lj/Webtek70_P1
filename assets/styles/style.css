@@ -329,6 +329,10 @@ Kilde for koden til hamburgermenyen: https://www.w3schools.com/howto/howto_css_m
   display: flex;
 }
 
+#loadingPizza {
+  display: none;
+}
+
 #pizza {
   margin-top: 8em;
   animation: spin 2s linear infinite;
