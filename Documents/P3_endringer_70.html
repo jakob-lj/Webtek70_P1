@@ -15,7 +15,9 @@
   </head>
   <body>
     <header>
-      <h1><span>P3 Design Changes - </span><span id="logo">Prietzeria</span></h1>
+      <h1>
+        <span>P3 Design Changes - </span><span id="logo">Prietzeria</span>
+      </h1>
       <h3>
         Håvard Hjelmeseth, Henrik Holen, Hanne Prietz Theisen, Marcus Birkeland
         og Jakob Lund Johannessen
@@ -38,8 +40,273 @@
 
       <h2>3. Endringer</h2>
       <p>
-
+        Antall tilhørende html-filer til nettsiden er seks og har forblitt
+        uendret. Det har blitt noen flere filer i “assets”-mappen, blant annet
+        bilder, ikoner, css-filer og javascript-filer. Det er også gjort noen få
+        designendringer for nettsiden sin style.css som er gjeldende for alle
+        seks html-filene. Oppsummeringen av disse endringene er som følger:
       </p>
+
+      <h5>Generelle endringer</h5>
+
+      <ul>
+        <li>
+          Favicon på alle sider er lagt til. Dette er lagt til for estetiske
+          hensyn, og fører til flere filer i assets-mappen. Favicon gir et mer
+          profesjonelt inntrykk av Prietzeria sin nettside.
+        </li>
+        <li>
+          Logoen er gjort større etter tilbakemeldinger vi fikk ved
+          brukertester.
+        </li>
+        <li>
+          Fonten er byttet til “Playfair Display” fordi den passer bedre og har
+          bedre leselighet enn “Audrey” som vi planla å bruke fra P2.
+        </li>
+
+        <li>
+          Alle knapper ble kodet om slik at brukeren kan trykke på de, selv om
+          noen av knappene er statiske og ikke nødvendigvis fører brukeren til
+          en ny nettside. Disse knappene er linket til den tilhørende siden som
+          brukeren befinner seg på. Vi har også tilført flere funksjoner til
+          knappene for å gjøre nettsiden mer interaktiv.
+        </li>
+
+        <li>
+          Fargene avviker noe fra P2. Der stod det at viktig informasjon på
+          nettsiden skulle ha fargen rød (#C72A36). Vi så at dette ikke passet
+          inn med nettsidens design. Vi har å bruke plassering, størrelse og
+          avstand for å fremheve viktig informasjon. Det stod også at lenker
+          skulle ha fargen gul (#FF9034), dette ble også droppet med hensyn til
+          designet. Vi har også fjernet grønn-skyggen på knappene.
+        </li>
+        <li>
+          Footer: Lenkene for personvernerklæring og smitteoppsporing er justert
+          til venstre og når man “hoverer” over de så går fargen fra orange til
+          gullaktig.
+        </li>
+        <li>
+          I mockups på P2 var ikke adressen, link til Facebook og e-post øverst
+          til venstre i navbar kun inkludert på index.html. Vi har valgt å
+          inkludere dette på alle sider. Footer inneholder ikke lengre tekst med
+          e-post og adresse (som beskrevet i P2), da vi så det ble nok med å kun
+          ha dette i navbar.
+        </li>
+        <li>
+          Navbar: Øverst ved “hjem”, “meny”, “book bord” og “kontakt oss” blir
+          teksten oransje når man “hoverer” disse knappene til de ulike sidene.
+          Alle andre lenker som viderekobler brukeren har “hover”- farge i
+          oransje. Disse fargene er endret fra P2. Dette gjelder for eksempel
+          adressen oppe til venstre som linker til Google Maps.
+        </li>
+        <li>
+          Vi har til enhver tid hatt fokus på WCAG-standarden. Dette er en
+          omfattende standard, og vi har dermed hatt størst fokus på å følge de
+          viktigste prinsippene. Fargekontraster, tydelig navigasjon, multimedia
+          tilgjengelighet (for eksempel alt-tags på alle bilder), samt
+          beskrivelser til alle input-felt (labels).
+        </li>
+      </ul>
+
+      <h5>index.html</h5>
+      <ul>
+        <li>
+          Videoen øverst på siden blir kun lastet inn på enheter med
+          device-width større enn 940 piksler. Dette fører til at mobilbrukere
+          ikke ser videoen. Vi mener dette er mer brukervennlig, da video fører
+          til unødvendig bruk av mobildata. Dette var en vurdering vi måtte
+          bruke tid på for å finne ut av hvilke argumenter som var viktigst.
+        </li>
+        <li>
+          Bildet til høyre for teksten om vinsmaking er fjernet. Dette ble gjort
+          for å holde designet enkelt og ryddig. Vi så at det holdt med en video
+          og to bilder på hjemmesiden, dermed droppet vi det tredje lille bilde
+          fra mockupen.
+        </li>
+        <li>
+          Vi la til link i adressen på index.html som viderefører brukeren til
+          restaurantens lokalisasjon på google maps.
+        </li>
+        <li>
+          Vi rettet på noen skrivefeil ved seksjonen om vinsmaking på
+          hjemmesiden og byttet ut den ene quoten under anmeldelser, slik at det
+          ikke ble noen like anmeldelser. Skrev også om litt av teksten på
+          hjemmesiden for å unngå overdrevne utsagn slik som “ et uendelig
+          tilbud”. Dette var for å unngå å skape for høye forventninger hos
+          brukeren, da dette kunne resultere i at de ble skuffet.
+        </li>
+      </ul>
+
+      <h5>Menu.html</h5>
+
+      <ul>
+        <li>
+          Vi droppet å ta med bilde av Foodora og Wolt for å holde menysidens
+          utseende enkelt.
+        </li>
+        <li>
+          Bilde nederst på menu.html ble byttet til et annet bilde som passet
+          bedre med den italienske stemningen og varme atmosfæren.
+        </li>
+        <li>
+          Vi endret antall knapper fra fire til tre for ordren. Før testing var
+          det tre knapper som het “Spis her”, “Wolt” og “Foodora”. Fra P2 planla
+          vi å ha en fjerde knapp som skulle hete “takeaway” og denne har vi
+          tatt bort siden Foodora og Wolt er samarbeidspartnerne for takeaway.
+          Videre fjernet vi enda mer og endret etter testing og dette
+          spesifiseres i P4.
+        </li>
+        <li>
+          Vi la til et standardbilde av en pizza for hver rett som visualiserer
+          at vi ønsker å ha et bilde ved siden av beskrivelsen av hver enkelt
+          rett. Ved senere endringer la vi til tilfeldige bilder gjennom
+          Unsplash siden det skal være ulike retter og ikke passer med samme
+          bilde.
+        </li>
+
+        <li>
+          Flere funksjoner for menu.html:
+          <ul>
+            <li>
+              Kan velge antall matretter (max: 10), for å deretter se ordren med
+              antall retter og totalsum i en handlekurv nederst til høyre.
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h5>JavaScript for menu.html</h5>
+
+      <ul>
+        <li>
+          Endret filformat for lagring av meny informasjon fra json til js
+        </li>
+        <li>
+          menuSort.js har ikke en søkefunksjon da vi kom fram til at dette ikke
+          egentlig er nødvendig for en god brukeropplevelse. Dette er fordi
+          filtrering på pris og alfabetisk er bra nok, når man har en meny på
+          under 20 retter.
+        </li>
+        <li>
+          menuSort.js har ikke sortering etter allergener. Dette er ønskelig,
+          men både implementasjon i items.js og sorteringen av dette ble for mye
+          arbeid. Vi droppet dermed knappen som skulle hete “Informasjon om
+          allergener”.
+        </li>
+        <li>
+          RenderItems.js har blitt en del av menu.js i stedet for en egen fil,
+          fordi dette ga bedre oversikt.
+        </li>
+        <li>
+          foodCart.js styrer modalene som åpner seg når kunden velger å gå
+          videre med matbestillingen. Denne viser antall retter og totalpris
+          kunden har valgt på menu.html. foodCart passer også på at elementene
+          som flyter på siden ikke vises når kunden scroller på toppen og bunnen
+          av siden.
+        </li>
+        <li>
+          foodOrder.js styrer antallet på rettene, navnene på rettene, listen og
+          totalsummen slik at dette kommer opp i handlekurven og som en
+          kvittering i pop up vinduene.
+        </li>
+      </ul>
+
+      <h5>Booking.html</h5>
+
+      <ul>
+        <li>
+          Bookingskjemaet er endret. input[type=date] er valgt som datovelger,
+          som gjør utseende annerledes enn i P2. Dette ble endret som følge av
+          at vi ønsket at skjemaet skulle ta mindre plass, samt at dette
+          fungerer bedre på mobil. Ulempen er at Safari og Internet Explorer
+          ikke støtter dette like godt som andre nettlesere.
+        </li>
+        <li>
+          Søsterrestauranter er flyttet ned under bookingskjemaet fordi vi
+          ønsker å ha fokus på reservasjon til vår hovedrestaurant. Ordet
+          søsterrestaurant henviser til flere steder der du kan reservere hos en
+          Prietzeria restaurant.
+        </li>
+        <li>
+          Bildet er flyttet til bunnen av nettsiden, og teksten er flyttet
+          lengre opp, etter tilbakemelding fra brukertesting.
+        </li>
+      </ul>
+
+      <h5>booking.js</h5>
+      <ul>
+        <li>
+          Følger utgangspunktet satt i P2. Filen validerer booking-skjemaet på
+          booking.html. Istedenfor å vise en kvittering for bordbestilling når
+          brukeren bestiller bord, er det heller valgt å lage et to-stegs skjema
+          der kunden bekrefter bestillingen, eller gjør endringer.
+        </li>
+      </ul>
+
+      <h5>covid-19.html</h5>
+
+      <ul>
+        <li>
+          Smittesporingsskjemaet er stylet annerledes enn i mockup, for å passe
+          bedre inn med resten av designet.
+        </li>
+      </ul>
+
+      <h5>
+        CSS og JavaScript for skjemaene på booking.html, index.html,
+        contact.html og covid-19.html
+      </h5>
+
+      <ul>
+        <li>
+          Disse skjemaene har felles styling med form.css. Her er det brukt CSS
+          grids for enheter med skjerm større enn 900 piksler.
+        </li>
+        <li>
+          Det valideres og gis tilbakemelding i hiddenForm.js for disse
+          skjemaene, med unntak av booking-skjemaet som er et to-stegs skjema, i
+          det tilfellet brukes booking.js.
+        </li>
+      </ul>
+
+      <h5>contact.html</h5>
+
+      <ul>
+        <li>
+          Vi la til SnazzyMaps som kart, gjennom en iframe. Dette kan brukeren
+          kun interagere med om brukeren aktivt trykker på pluss- eller
+          minustegnet på bildet for å zoome inn og ut. Det er også mulig å
+          flytte rundt på kartet, og det er et lokalisasjonsikon som viser hvor
+          restauranten ligger. Utseendet til kartet er i blåtoner og hvitt for å
+          passe med layoutdesignet til selve siden.
+        </li>
+        <li>
+          Denne siden har også fått en egen CSS-fil contact.css, med styling av
+          listen med kontaktinformasjon, kartet og anmeldelsene nederst.
+        </li>
+      </ul>
+
+      <h5>privacy.html</h5>
+
+      <ul>
+        <li>
+          Forblitt det samme med autofyll av latinsk tekst og tre overskrifter:
+          personvern, smittesporing og bestilt mat.
+        </li>
+      </ul>
+
+      <h5>Modularity</h5>
+      <ul>
+        <li>
+          navigation.js: Gjeldende for alle sider. Inneholder navigasjonsmenyen.
+          Koden sjekker også hvilken side brukeren er på, og gir denne lenken er
+          active-class, som synliggjøres i CSS.
+        </li>
+        <li>
+          footer.js: Gjeldende for alle sidene til Prietzeria og inneholder link
+          til personvernerklæring og smitteoppsporing.
+        </li>
+      </ul>
 
       <h2>4. Endelig filstruktur</h2>
       <ul>
@@ -90,17 +357,17 @@
                 <li>
                   icons/
                   <ul>
-                  <li>apple.png</li>
-                  <li>facebook.png</li>
-                  <li>language.png</li>
-                  <li>location.png</li>
-                  <li>mail.png</li>
-                  <li>resturantchoice.png</li>
-                </ul>
-              </li>
+                    <li>apple.png</li>
+                    <li>facebook.png</li>
+                    <li>language.png</li>
+                    <li>location.png</li>
+                    <li>mail.png</li>
+                    <li>resturantchoice.png</li>
+                  </ul>
+                </li>
 
-              <li>dishes? legge til i images</li>
-              <li>bilder? droppe</li>
+                <li>dishes? legge til i images</li>
+                <li>bilder? droppe</li>
               </ul>
             </li>
 
@@ -119,11 +386,11 @@
                 <li>video-pizza.mp4</li>
               </ul>
             </li>
-
-          </ul> <!--assets-->
+          </ul>
+          <!--assets-->
         </li>
-
-      </ul> <!--Hele listen. Ta med mappen for documents?-->
+      </ul>
+      <!--Hele listen. Ta med mappen for documents?-->
 
       <h2>5. Endelig arbeidsfordeling</h2>
 
@@ -215,7 +482,10 @@
             <td>25.10.2020</td>
           </tr>
           <tr>
-            <td>renderItems.js - plassert i menu.js i stedet for å være en egen fil</td>
+            <td>
+              renderItems.js - plassert i menu.js i stedet for å være en egen
+              fil
+            </td>
             <td>
               JavaScipt for å rendre rettene til html. Avhenger av menuSort.
             </td>
@@ -277,9 +547,18 @@
 
       <h2>Kommentarer</h2>
       <ul>
-        <li>dato for reservasjon og smitteoppsporing som åpner kalender vindu eller drop-down for dato, måned og år</li>
-        <li>legge til ulike bilder til hver rett som stemmer overens i stedet for å benytte seg av et pizza bildet for alle rettene</li>
-        <li>plassere + tegnet til høyre og - til venstre slik at antallet står i midten og det er lettere å trykke riktig</li>
+        <li>
+          dato for reservasjon og smitteoppsporing som åpner kalender vindu
+          eller drop-down for dato, måned og år
+        </li>
+        <li>
+          legge til ulike bilder til hver rett som stemmer overens i stedet for
+          å benytte seg av et pizza bildet for alle rettene
+        </li>
+        <li>
+          plassere + tegnet til høyre og - til venstre slik at antallet står i
+          midten og det er lettere å trykke riktig
+        </li>
       </ul>
     </section>
 
