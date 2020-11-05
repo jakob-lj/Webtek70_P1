@@ -36,7 +36,6 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
-    align-items: space-around;
     background-color: #171e28;
     padding: 12px;
 }
@@ -90,15 +89,13 @@ input[type="number"] {
     border: 1px solid #d5c7ac;
     border-radius: 4px;
     max-width: 72px;
-    -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
     height: 36px;
     pointer-events: none;
     -webkit-appearance: textfield;
-    -moz-appearance: textfield;
-    appearance: textfield;
 }
+
+
+/* Disse -webkit-stylingene er for Firefox, og er gyldige i følge Mozilla Developer Network Docs */
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
