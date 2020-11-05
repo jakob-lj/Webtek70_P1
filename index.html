@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 <html lang="no">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/form.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/images/icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/images/icons/favicon-16x16.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico" />
     <title>Prietzeria Resturant</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div id="loadingPizza">
-      <div class="pizzaWrapper">
-        <img id="pizza" alt="Loading animation" src="assets/images/pizza.svg" />
-        <div class="sliderWrapper">
-          <div class="slider" id="slider"></div>
+        <div class="pizzaWrapper">
+            <img id="pizza" alt="Loading animation" src="assets/images/pizza.svg" />
+            <div class="sliderWrapper">
+                <div class="slider" id="slider"></div>
+            </div>
+            <p id="countdown">
+                Loading... Estimat: <span id="countdownTimer">--:--</span>
+            </p>
         </div>
-        <p id="countdown">
-          Loading... Estimat: <span id="countdownTimer">--:--</span>
-        </p>
-      </div>
     </div>
     <div id="root" style="display: none">
-      <header>
-        <a href="index.html"
-          ><img src="assets/images/logo.png" alt="Prietzeria"
-        /></a>
-      </header>
 
-      <div id="nav-placeholder">
-        Noe har gått galt med lastingen av navigasjonsmenyen
-      </div>
+        <div id="top-placeholder">
+            Noe har gått galt med lastingen av innholdet av header og meny
+        </div>
 
-      <div id="screen">
-        <img id="noVideo" src="assets/images/hero1.png" alt="" />
-        <video autoplay muted loop poster="assets/images/hero1.png">
+        <!--Kilde til ikoner til venstre i navbar:
+          https://toppng.com/show_download/175888/white-directions-icon-location-flat-icon-white/large
+          https://freepikpsd.com/fb-white-png-transparent-images/787586/
+          https://toppng.com/show_download/182525/mail-white-icon/large
+        -->
+
+        <div id="screen">
+            <img id="noVideo" src="assets/images/hero1.png" alt="" />
+            <video autoplay muted loop poster="assets/images/hero1.png">
           <source src="assets/video/video-pizza.mp4" type="video/mp4" />
         </video>
-      </div>
+        </div>
 
-      <small>
+        <small>
         <a href="https://www.youtube.com/watch?v=kDtpVBzKhhE">Kilde</a></small
       >
       <section>
@@ -119,41 +111,28 @@
         >
       </small>
 
-      <section>
-        <h2>Vinsmaking</h2>
+        <section>
+            <h2>Vinsmaking</h2>
 
-        <p>
-          Omvisninger i vinkjelleren vår foregår den siste søndagen hver måned.
-          Send oss en mail ved interesse! Vil du vite hva som skjer på
-          spisestedene våre, om nyheter på menyen, tilbud, arrangementer eller
-          andre matgleder? Meld deg på nyhetsbrevet vårt, så sender vi deg siste
-          nytt.
-        </p>
+            <p>
+                Omvisninger i vinkjelleren vår foregår den siste søndagen hver måned. Send oss en mail ved interesse! Vil du vite hva som skjer på spisestedene våre, om nyheter på menyen, tilbud, arrangementer eller andre matgleder? Meld deg på nyhetsbrevet vårt, så
+                sender vi deg siste nytt.
+            </p>
 
-        <p>
-          <button onclick="showForm();">Ja, jeg vil ha nyhetsbrev</button>
-        </p>
+            <p>
+                <button onclick="showForm();">Ja, jeg vil ha nyhetsbrev</button>
+            </p>
 
-        <form
-          style="display: none"
-          id="hiddenForm"
-          onsubmit="submitHiddenForm();"
-        >
-          <div class="form-grid">
-            <div class="form-grid-1">
-              <label for="email">E-post:</label> <br />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="ola.nordmann@e-post.no"
-                required
-              />
-            </div>
+            <form style="display: none" id="hiddenForm" onsubmit="submitHiddenForm();">
+                <div class="form-grid">
+                    <div class="form-grid-1">
+                        <label for="email">E-post:</label> <br />
+                        <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
+                    </div>
 
-            <div class="form-grid-2">
-              <input type="checkbox" id="consent" name="consent" value="yes" />
-              <label for="consent">
+                    <div class="form-grid-2">
+                        <input type="checkbox" id="consent" name="consent" value="yes" />
+                        <label for="consent">
                 Jeg ønsker nyhetsbrev, og godtar
                 <u
                   ><a href="privacy.html" target="_blank"
@@ -189,12 +168,19 @@
       <div id="footer-placeholder">
         Noe har gått galt med lastingen av navigasjonsmenyen
       </div>
+
+        <!--Kilde til Apple og Resturant Choice-ikoner:
+          https://developer.apple.com/app-store/marketing/guidelines
+          https://www.restaurantchoice.com.au
+        -->
+
     </div>
 
     <script src="assets/scripts/mobileNav.js"></script>
     <script src="assets/scripts/hiddenForm.js"></script>
-    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/top-modularity.js"></script>
     <script src="assets/scripts/loadingPizza.js"></script>
-    <script src="assets/scripts/footer.js"></script>
+    <script src="assets/scripts/footer-modularity.js"></script>
+
   </body>
 </html>
