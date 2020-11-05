@@ -1,0 +1,114 @@
+
+index.html
+Hjemmesiden
+Alle
+
+
+menu.html
+Side for meny hvor brukeren har oversikt over alle retter og kan bestille. Siden har et skjema som blir brukt til å behandle bestilling
+Marcus, Henrik
+
+
+contact.html
+Kontaktinfo og søke jobb hos oss
+Hanne
+
+
+contact.css
+Styling av listen med kontaktinformasjon, kartet og anmeldelsene nederst på contact.html
+Hanne, Henrik
+
+
+booking.html
+Side for booking av bord ved hjelp av skjema. Brukes sammen med booking.js
+Henrik
+
+
+privacy.html
+Personvernerklæring. Kun en side som sier at vi tar hensyn til personens personvern i forhold til COVID-19 sporing
+Håvard
+
+
+covid-19.html
+Side hvor man kan sende inn informasjon om sitt besøk på restauranten
+Jakob
+
+
+logo.png
+Logo for header. En pizza med teksten Prietzeria (Photoshop)
+Hanne
+
+
+mobileNav.js
+JavaScript for en hamburgermeny som blir benyttet som navigasjon for mobile enheter
+Håvard
+
+
+menuSort.js
+JavaScript for å søke og sortere bestillingsmenyen etter brukerdefinerte parametere eks. pris, allergener osv. I tillegg skal den ha en søkefunksjon
+Marcus
+
+
+navigation.js
+Modularitet for navigasjonen på toppen av siden
+Håvard
+
+
+renderItems.js
+JavaScript for å rendre rettene til html. Avhenger av menuSort
+Marcus
+
+
+booking.js
+Formvalidering og responderer på brukerinteraksjon i bordbooking-skjemaet
+Henrik
+
+
+hiddenForm.js
+Håndterer skjemadata og styling til skjemaene nyhetsbrev (index.html), jobbsøknad (contact.html) og smittesporing (covid-19.html)
+Henrik
+
+
+footer.js
+Håndterer footer for alle sidene til Prietzeria med link til personvernerklæring og smitteoppsporing samt to knapper (modularitet)
+Alle 
+
+
+foodOrder.js
+Henter bestilling fra menyskjema og kan presentere gjeldende ordre i en handlekurv. Lager også kvittering når bruker bestiller
+Hanne, Marcus
+
+
+foodCart.js
+Kode som henter bestillingsoversikten for kunden og viser det i handlekurv og pop up vindu. Er også med på å styre styling til elementene som flyter på menu.html
+Henrik
+
+
+style.css
+CSS filen som inneholder all stylingen og design til nettsiden
+Alle
+
+
+form.css
+CSS style til alle elementer knyttet til skjemaer på siden
+Henrik
+
+
+menu.css
+CSS-fil som inneholder styling for menu.html, vises kun på denne siden
+Marcus, Henrik, Hanne
+
+
+main.css
+Utseende til P-dokumentene
+Alle
+
+
+items.js
+Informasjon rundt alle rettene som er tilgjengelige
+Marcus
+
+
+loadingPizza.js
+Loader siden med en pizza-loader
+Jakob
