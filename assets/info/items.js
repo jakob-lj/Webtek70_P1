@@ -1,5 +1,6 @@
 /*
     Inneholder informasjonen om alle matrettene - brukes i menu.js
+    Tekstinnholdet er basert på: https://www.unapizzeria.no/no/una+solsiden/meny
 */
 
 const antipasti = [{
