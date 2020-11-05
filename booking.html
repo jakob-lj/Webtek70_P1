@@ -13,15 +13,10 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
-    </header>
-
-    
-    <div id="nav-placeholder">
-        Noe har gått galt med lastingen av navigasjonsmenyen
+    <div id="top-placeholder">
+        Noe har gått galt med lastingen av innholdet av header og meny
     </div>
-    
+
     <section>
         <h2>Book bord</h2>
         <form id="bookingForm" onsubmit="goPart1();">
@@ -30,16 +25,16 @@
                     <label for="name">Fullt navn:</label> <br />
                     <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
                     <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required>
-                    
+
                     <label for="phone">Telefonnummer:</label> <br />
                     <!-- Regex pattern: Bare tall, + og mellomrom -->
                     <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required>
-                    
+
                     <label for="email">E-post:</label> <br />
                     <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required>
 
                 </div>
-                
+
                 <div class="form-grid-2">
                     <label for="quantity">Antall besøkende: </label>
                     <select name="quantity" id="quantity" required>
@@ -86,7 +81,7 @@
                         <option value="22:30">22:30</option>
                     </select>
                 </div>
-                
+
                 <div class="form-grid-3">
                     <br>
                     <input type="submit" value="Gjennomgå reservasjon" id="submitPart1">
@@ -123,13 +118,13 @@
                 </div>
             </div>
         </form>
-        
-        
+
+
     </section>
-    
+
     <section id="tilgjengelig">
         <h1>Er ikke ønsket tidspunkt tilgjengelig?</h1>
-        
+
         <p>Vi prøver alltid vårt beste for å finne bord til våre gjester. Kanskje vi klarer å oppfylle ønsket ditt likevel? Eventuelt kan du besøke en av våre søsterrestauranter.</p>
 
         <p><strong>Ring oss på telefonnummer <a href="tel:+4798046690">+47 980 46 690</a>, eller send oss en <a href="mailto:post@prietzeria.xyz">e-post</a>.</strong></p>
@@ -146,18 +141,19 @@
         </div>
 
     </section>
-    
+
     <div class="hero" id="hero6"></div>
     <small> <a href="https://www.bostonmagazine.com/restaurants/best-north-end-restaurants/" target="_blank" rel="nofollow">Kilde</a></small>
 
     <br /><br />
 
     <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
-    
+
     <script src="assets/scripts/mobileNav.js"></script>
     <script src="assets/scripts/booking.js"></script>
-    <script src="assets/scripts/navigation.js"></script>
-    <script src="assets/scripts/footer.js"></script>
+    <script src="assets/scripts/top-modularity.js"></script>
+    <script src="assets/scripts/footer-modularity.js"></script>
+
 
 </body>
 

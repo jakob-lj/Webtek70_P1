@@ -21,17 +21,13 @@
 </head>
 
 <body onload="renderItems()">
-    <header>
-        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
-    </header>
-
-    <div id="nav-placeholder">
-        Noe har gått galt med lastingen av navigasjonsmenyen
+    <div id="top-placeholder">
+        Noe har gått galt med lastingen av innholdet av header og meny
     </div>
-    
+
     <div class="hero" id="hero4"></div>
     <small> <a href="https://www.youtube.com/watch?v=kDtpVBzKhhE" target="_blank" rel="nofollow">Kilde</a></small>
-    
+
     <div id="menu_container">
         <div id="dishes_container">
             <template id="dish_template">
@@ -58,8 +54,8 @@
             </div>
         </div>
           </template>
-          <div id="subsection_container1">
-              <div class="filter_container">
+            <div id="subsection_container1">
+                <div class="filter_container">
                     <h1>Meny</h1>
                     <div id="selectContainer">
                         <label for="menuFilter">Filtrer meny:</label><br>
@@ -81,7 +77,7 @@
                         </ul>
                     </div>
                 </nav>
-                
+
                 <div class="menu_subsection">
                     <h2>Antipasti</h2>
                     <div id="menu_antipasti"></div>
@@ -111,7 +107,7 @@
                     <h3>Antall retter: <span id="orderedDishes">0</span></h3>
                     <h3>Sum: <span id="totalPrice">0</span></h3>
                 </div>
-                
+
                 <div class="orderButtonContainer" id="order1">
                     <h2>Hvor vil du spise?</h2>
                     <button id="myBtn" onclick="modalHouse()">Spis her</button>
@@ -119,20 +115,20 @@
                     <br>
                     <button id="myBtnT" onclick="modalTakeaway()">Takeaway</button>
                 </div>
-                
+
             </div>
         </div>
 
     </section>
-    
+
     <small>Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>
 
     <div class="hero" id="hero5"></div>
     <small><a href="https://www.elle.com/culture/travel-food/g27227/how-to-host-an-italian-dinner-party/" target="_blank" rel="nofollow">Kilde</a></small>
     <br /><br /><br /><br /><br />
-    
+
     <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
-    
+
     <div id="modalHouseElem" class="modal">
         <div class="modal-content">
             <span id="closeHouse" class="close">&times;</span>
@@ -168,7 +164,7 @@
             </div>
         </div>
     </div>
-    
+
     <div id="modalTakeawayElem" class="modal">
         <div class="modal-content">
             <span id="closeTakeaway" class="close">&times;</span>
@@ -185,11 +181,11 @@
             <button type="button" onclick="alert('Så hyggelig du vil ringe oss! \n\nDu kan nå oss på +47 980 46 690'); window.location.href='tel:+4798046690';">Ring og bestill</button>
         </div>
     </div>
-    
+
     <script src="assets/scripts/mobileNav.js"></script>
     <script src="assets/scripts/foodCart.js"></script>
-    <script src="assets/scripts/navigation.js"></script>
-    <script src="assets/scripts/footer.js"></script>
+    <script src="assets/scripts/top-modularity.js"></script>
+    <script src="assets/scripts/footer-modularity.js"></script>
 </body>
 
 </html>

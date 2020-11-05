@@ -13,14 +13,10 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
-    </header>
-
-    <div id="nav-placeholder">
-        Noe har gått galt med lastingen av navigasjonsmenyen
+    <div id="top-placeholder">
+        Noe har gått galt med lastingen av innholdet av header og meny
     </div>
-    
+
     <section>
         <h2>Registrer ditt besøk hos Prietzerria</h2>
         <form id="hiddenForm" onsubmit="submitHiddenForm();">
@@ -29,19 +25,19 @@
                     <label for="name">Fullt navn:</label> <br />
                     <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
                     <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required />
-                    
+
                     <label for="phone">Telefonnummer:</label> <br />
                     <!-- Regex pattern: Bare tall, + og mellomrom -->
                     <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required />
-                    
+
                     <label for="email">E-post:</label> <br />
                     <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
                 </div>
-                
+
                 <div class="form-grid-2">
                     <label for="date">Besøksdato: </label> <br />
                     <input type="date" id="date" name="date" value="" required>
-                    
+
                     <label for="time">Ankomsttidspunkt: </label> <br />
                     <select name="time" id="time" required>
                         <option disabled selected value>-- Velg tidspunkt --</option>
@@ -89,12 +85,12 @@
     <br>
     <br>
     <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
-    
+
     <script src="assets/scripts/mobileNav.js"></script>
     <script src="assets/scripts/hiddenForm.js"></script>
-    <script src="assets/scripts/navigation.js"></script>
-    <script src="assets/scripts/footer.js"></script>
-    
+    <script src="assets/scripts/top-modularity.js"></script>
+    <script src="assets/scripts/footer-modularity.js"></script>
+
 </body>
 
 </html>
