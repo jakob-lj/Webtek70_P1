@@ -106,6 +106,10 @@
           tilgjengelighet (for eksempel alt-tags på alle bilder), samt
           beskrivelser til alle input-felt (labels).
         </li>
+        <li>
+          Da vi utviklet siden oppdaget vi skriftstørrelsene vi valgte i P2 ga
+          noe dårlig lesbarhet. Vi har derfor valgt å gå bort i fra dette.
+        </li>
       </ul>
 
       <h5>index.html</h5>
@@ -319,16 +323,14 @@
 
         <li>
           assets/
-          <ul>
-            <li>main.css</li>
 
+          <ul>
             <li>
-              info
+              info/
               <ul>
-                <li>items.json</li>
+                <li>items.js</li>
               </ul>
             </li>
-
             <li>
               scripts/
               <ul>
@@ -338,9 +340,12 @@
                 <li>menu.js</li>
                 <li>menuSort.js</li>
                 <li>mobileNav.js</li>
+                <li>navigation.js</li>
+                <li>foodCart.js</li>
+                <li>loadingPizza.js</li>
+                <li>footer.js</li>
               </ul>
             </li>
-
             <li>
               images/
               <ul>
@@ -352,41 +357,54 @@
                 <li>hero5.jpg</li>
                 <li>hero6.jpg</li>
                 <li>hero7.jpg</li>
-                <li>hero8.jpg</li>
 
                 <li>
                   icons/
                   <ul>
                     <li>apple.png</li>
                     <li>facebook.png</li>
-                    <li>language.png</li>
                     <li>location.png</li>
                     <li>mail.png</li>
                     <li>resturantchoice.png</li>
+                    <li>favicon-16x16.png</li>
+                    <li>favicon-32x32.png</li>
+                    <li>favicon.ico</li>
                   </ul>
                 </li>
-
-                <li>dishes? legge til i images</li>
-                <li>bilder? droppe</li>
               </ul>
             </li>
 
             <li>
-              styles/
-              <ul>
-                <li>style.css</li>
-                <li>menu.css</li>
-                <li>booking.css</li>
-              </ul>
-            </li>
-
-            <li>
-              Video
+              video/
               <ul>
                 <li>video-pizza.mp4</li>
               </ul>
             </li>
           </ul>
+
+          <ul>
+            <li>
+              Documents/
+              <ul>
+                <li>index.html</li>
+                <li>P1_requirements_70.html</li>
+                <li>P2_design_70.html</li>
+                <li>P3_changes_70.html</li>
+                <li>P4_testing_70.html</li>
+                <li>
+                  assets/
+                  <ul>
+                    <li>main.css</li>
+                    <li>style.css</li>
+                    <li>pizza.svg</li>
+                    <li>Italiana-Regular.ttf</li>
+                    <li>p2/images/[...]</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
           <!--assets-->
         </li>
       </ul>
@@ -400,32 +418,37 @@
             <th>Filnavn</th>
             <th>Beskrivelse</th>
             <th>Ansvar</th>
-            <th>Frist</th>
           </tr>
         </thead>
 
         <tbody>
+          <tr></tr>
           <tr>
             <td>index.html</td>
             <td>Hjemmesiden</td>
             <td>Alle</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
-            <td>menu.html</td>
+            <td>menu.html → menu.js</td>
             <td>
               Side for meny hvor brukeren har oversikt over alle retter og kan
               bestille. Siden har et skjema som blir brukt til å behandle
-              bestilling.
+              bestilling
             </td>
-            <td>Marcus</td>
-            <td>25.10.2020</td>
+            <td>Marcus, Henrik</td>
           </tr>
           <tr>
             <td>contact.html</td>
-            <td>Kontaktinfo og søke jobb hos oss.</td>
+            <td>Kontaktinfo og søke jobb hos oss</td>
             <td>Hanne</td>
-            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>contact.css</td>
+            <td>
+              Styling av listen med kontaktinformasjon, kartet og anmeldelsene
+              nederst på contact.html
+            </td>
+            <td>Hanne, Henrik</td>
           </tr>
           <tr>
             <td>booking.html</td>
@@ -434,25 +457,22 @@
               booking.js
             </td>
             <td>Henrik</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
             <td>privacy.html</td>
             <td>
-              Personvernserklæring. Kun en side som sier at vi tar hensyn til
-              personens personvern i forhold til COVID-19 sporing.
+              Personvernerklæring. Kun en side som sier at vi tar hensyn til
+              personens personvern i forhold til COVID-19 sporing
             </td>
             <td>Håvard</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
             <td>covid-19.html</td>
             <td>
               Side hvor man kan sende inn informasjon om sitt besøk på
-              resturanten.
+              restauranten
             </td>
             <td>Jakob</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
             <td>logo.png</td>
@@ -460,16 +480,14 @@
               Logo for header. En pizza med teksten Prietzeria (Photoshop)
             </td>
             <td>Hanne</td>
-            <td>15.10.2020</td>
           </tr>
           <tr>
             <td>mobileNav.js</td>
             <td>
               JavaScript for en hamburgermeny som blir benyttet som navigasjon
-              for mobile enheter.
+              for mobile enheter
             </td>
             <td>Håvard</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
             <td>menuSort.js</td>
@@ -478,42 +496,74 @@
               brukerdefinerte parametere eks. pris, allergener osv. I tillegg
               skal den ha en søkefunksjon
             </td>
-            <td>Marcus, Jakob</td>
-            <td>25.10.2020</td>
+            <td>Marcus</td>
           </tr>
           <tr>
+            <td>navigation.js</td>
+            <td>Modularitet for navigasjonen på toppen av siden</td>
+            <td>Håvard</td>
+          </tr>
+          <tr>
+            <td>renderItems.js</td>
             <td>
-              renderItems.js - plassert i menu.js i stedet for å være en egen
-              fil
+              JavaScript for å rendre rettene til html. Avhenger av menuSort
             </td>
-            <td>
-              JavaScipt for å rendre rettene til html. Avhenger av menuSort.
-            </td>
-            <td>Jakob</td>
-            <td>25.10.2020</td>
+            <td>Marcus</td>
           </tr>
           <tr>
             <td>booking.js</td>
             <td>
-              Presenterer en kvittering av bordbooking etter brukerinteraksjon.
+              Formvalidering og responderer på brukerinteraksjon i
+              bordbooking-skjemaet
             </td>
             <td>Henrik</td>
-            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>hiddenForm.js</td>
+            <td>
+              Håndterer skjemadata og styling til skjemaene nyhetsbrev
+              (index.html), jobbsøknad (contact.html) og smittesporing
+              (covid-19.html)
+            </td>
+            <td>Henrik</td>
+          </tr>
+          <tr>
+            <td>footer.js</td>
+            <td>
+              Håndterer footer for alle sidene til Prietzeria med link til
+              personvernerklæring og smitteoppsporing samt to knapper
+              (modularitet)
+            </td>
+            <td>Alle</td>
           </tr>
           <tr>
             <td>foodOrder.js</td>
             <td>
               Henter bestilling fra menyskjema og kan presentere gjeldende ordre
-              i en handlekurv. Lager også kvittering når bruker bestiller.
+              i en handlekurv. Lager også kvittering når bruker bestiller
             </td>
-            <td>Hanne</td>
-            <td>25.10.2020</td>
+            <td>Hanne, Marcus</td>
           </tr>
           <tr>
-            <td>styling.css</td>
-            <td>CSS filen som inneholder all stylingen til nettsiden</td>
+            <td>foodCart.js</td>
+            <td>
+              Kode som henter bestillingsoversikten for kunden og viser det i
+              handlekurv og pop up vindu. Er også med på å styre styling til
+              elementene som flyter på menu.html
+            </td>
+            <td>Henrik</td>
+          </tr>
+          <tr>
+            <td>style.css</td>
+            <td>
+              CSS filen som inneholder all stylingen og design til nettsiden
+            </td>
             <td>Alle</td>
-            <td>01.11.2020</td>
+          </tr>
+          <tr>
+            <td>form.css</td>
+            <td>CSS style til alle elementer knyttet til skjemaer på siden</td>
+            <td>Henrik</td>
           </tr>
           <tr>
             <td>menu.css</td>
@@ -521,26 +571,22 @@
               CSS-fil som inneholder styling for menu.html, vises kun på denne
               siden
             </td>
-            <td>Marcus</td>
-            <td>01.11.2020</td>
+            <td>Marcus, Henrik, Hanne</td>
           </tr>
           <tr>
-            <td>items.json</td>
+            <td>main.css</td>
+            <td>Utseende til P-dokumentene</td>
+            <td>Alle</td>
+          </tr>
+          <tr>
+            <td>items.json → items.js</td>
             <td>Informasjon rundt alle rettene som er tilgjengelige</td>
             <td>Marcus</td>
-            <td>25.10.2020</td>
           </tr>
           <tr>
-            <td>loadingPizza.js - mangler</td>
+            <td>loadingPizza.js</td>
             <td>Loader siden med en pizza-loader</td>
             <td>Jakob</td>
-            <td>25.10.2020</td>
-          </tr>
-          <tr>
-            <td>Sluttevaluering</td>
-            <td>Dobbeltsjekke hver fil for feil, sjekke JavaScript og css</td>
-            <td>Alle</td>
-            <td>01.11.2020</td>
           </tr>
         </tbody>
       </table>
