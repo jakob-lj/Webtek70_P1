@@ -34,7 +34,7 @@ const nav =
             <a href="booking.html">Book bord</a>\
         </li>\
         <li>\
-            <a href="contact.html">Kontakt oss</a>\
+            <a href="contact.html">Om oss</a>\
         </li>\
     </ul>\
 </nav>\
